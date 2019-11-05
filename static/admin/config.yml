@@ -2,7 +2,7 @@
 
 backend: 
     name: github
-    repo: [YOUR-GITHUB-USERNAME]/[YOUR-REPO-NAME]
+    repo: MajaL1/gatsbyNews
 
 media_folder: static/assets
 public_folder: assets
