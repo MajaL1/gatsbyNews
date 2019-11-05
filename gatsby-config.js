@@ -65,6 +65,6 @@ module.exports = {
       },
       'gatsby-transformer-remark',
       // ... other plugins
-      ],
+      
   ],
 }
