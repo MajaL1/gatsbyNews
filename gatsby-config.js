@@ -14,28 +14,10 @@ module.exports = {
       },
     },
        `gatsby-plugin-netlify-cms`,
-   /*  {
-        new webpack.ProvidePlugin({
-        "React": "react",
-    })}
-      ,*/
-   /* {
-      resolve: 'gatsby-source-strapi',
-      options: {
-        apiURL: 'http://localhost:1337',
-        contentTypes: [ // List of the Content Types you want to be able to request from Gatsby.
-          'article',
-          'user'
-        ],
-        loginData: {
-              identifier:"Maja1",
-              password:"MajaLok"
-          },
-        queryLimit: 100,
-      },
-    },*/
+ 
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
+      'gatsby-transformer-remark',
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -62,8 +44,9 @@ module.exports = {
         name: `pages`,
         path: `${__dirname}/src/pages/`,
     
-      },
-      'gatsby-transformer-remark'
+      }
+      }
+      
       // ... other plugins
       
   ],
