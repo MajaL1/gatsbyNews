@@ -13,6 +13,7 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+       `gatsby-plugin-netlify-cms`,
    /*  {
         new webpack.ProvidePlugin({
         "React": "react",
