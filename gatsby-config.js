@@ -19,7 +19,7 @@ module.exports = {
         "React": "react",
     })}
       ,*/
-    {
+   /* {
       resolve: 'gatsby-source-strapi',
       options: {
         apiURL: 'http://localhost:1337',
@@ -33,7 +33,7 @@ module.exports = {
           },
         queryLimit: 100,
       },
-    },
+    },*/
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     {
