@@ -59,9 +59,9 @@ module.exports = {
       {
         resolve: `gatsby-source-filesystem`,
         options: {
-          name: content,
-          path: ${__dirname}/content,
-        },
+        name: `pages`,
+        path: `${__dirname}/src/pages/`,
+    
       },
       'gatsby-transformer-remark',
       // ... other plugins
