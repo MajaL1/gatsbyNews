@@ -19,6 +19,7 @@
     "gatsby-plugin-sharp": "^2.2.31",
     "gatsby-source-filesystem": "^2.1.33",
     "gatsby-source-strapi": "0.0.10",
+    "gatsby-transformer-remark": "^2.6.32",
     "gatsby-transformer-sharp": "^2.2.23",
     "graphql": "^14.5.8",
     "jquery": "^3.3.1",
