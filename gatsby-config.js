@@ -63,7 +63,7 @@ module.exports = {
         path: `${__dirname}/src/pages/`,
     
       },
-      'gatsby-transformer-remark',
+      'gatsby-transformer-remark'
       // ... other plugins
       
   ],
