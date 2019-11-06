@@ -1,6 +1,6 @@
 ---
-title: test1
-intro: test1
+title: maja testira2
+intro: maja test2
 image: /assets/importprojektov.png
 ---
 
