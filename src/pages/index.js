@@ -1,12 +1,7 @@
 import React from 'react'
 import { Link, graphql, Image } from 'gatsby'
 import Layout from '../components/layout'
-import {Router, Link as LinkRouter} from '@reach/router'
 import "../css/main.css"
-
-const publishDate = "Objavljeno: 29.10.2019"
-
-// In your index.js file
 
 const IndexPage = (props) => {
   const data = props.data.allFile.edges[0].node.childMarkdownRemark.frontmatter

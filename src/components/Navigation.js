@@ -1,8 +1,6 @@
 import React from 'react'
-
-import Contact from './Contact';
-import { Router, Link } from '@reach/router'
-import { Nav, Navbar, NavDropdown, NavbarBrand, NavbarNav, NavbarToggler, Collapse, NavItem, NavLink, Dropdown, DropdownToggle, DropdownMenu, DropdownItem, Form, FormControl, Button } from 'react-bootstrap';
+import { Link } from '@reach/router'
+import { Nav, Navbar, NavDropdown } from 'react-bootstrap';
 //import '../css/navigation.css'
 import '../lib/bootstrap.min.css'
 
