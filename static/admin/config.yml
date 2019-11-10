@@ -10,11 +10,11 @@ public_folder: assets
 collections:
   - label: "Pages"
     name: "pages"
-    widget: "list"
     files:
       - label: "Home Page"
         name: "home"
         file: "content/home.md"
+        widget: "list"
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Intro text, name: intro, widget: text}
