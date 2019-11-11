@@ -6,7 +6,7 @@ import "../css/main.css"
 const IndexPage = (props) => {
   //const data = props.data;//.allFile.edges[0].node.childMarkdownRemark.frontmatter
   //const data = props.data.allFile.edges[0].node.childMarkdownRemark.frontmatter
-  
+
   const posts = props.data.allMarkdownRemark.edges
 
   return (
@@ -14,24 +14,25 @@ const IndexPage = (props) => {
 
 
       <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-        
-      {posts.map(({ node }) => {
+
+        {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           return (
             <article key={node.fields.slug}>
               <header>
+              <small>{node.frontmatter.date}</small>
                 <h3
                 >
                   <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
                     {title}
                   </Link>
                 </h3>
-                <small>{node.frontmatter.date}</small>
+                
               </header>
               <section>
                 <p
                   dangerouslySetInnerHTML={{
-                    __html: node.frontmatter.description || node.excerpt,
+                    __html: node.frontmatter.intro || node.excerpt,
                   }}
                 />
               </section>
@@ -41,9 +42,9 @@ const IndexPage = (props) => {
 
 
 
-      <ul>
-      
-   {/*    {data.allFile.edges.map(document => (
+        <ul>
+
+          {/*    {data.allFile.edges.map(document => (
        
         <li className="news-title" key={document.node.id}>
           <p className="news-content">test {document.childMarkdownRemark}</p>
@@ -58,8 +59,8 @@ const IndexPage = (props) => {
           <hr/>
         </li>
       ))} */}
-      
-      </ul>
+
+        </ul>
       </div>
       <Link to="/page-2/">Go to page 2</Link>
     </Layout>
@@ -75,7 +76,7 @@ query {
       title
     }
   }
-  allMarkdownRemark {
+  allMarkdownRemark (sort: { fields: [frontmatter___date], order: DESC }){
     edges {
       node {
         excerpt
@@ -83,7 +84,7 @@ query {
           slug
         }
         frontmatter {
-         
+          date
           title
           intro
         }

@@ -1,5 +1,8 @@
 ---
 title: My First Post
+intro: '999999'
+image: /assets/cave.png
+date: 'November 10, 2009'
 ---
 
-Hey y'all, this is my awesome new blog!
+vsebina

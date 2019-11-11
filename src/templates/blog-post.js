@@ -14,7 +14,7 @@ class BlogPostTemplate extends React.Component {
       <Layout location={this.props.location} title={siteTitle}>
         <SEO
           title={post.frontmatter.title}
-          description={post.frontmatter.description || post.excerpt}
+          description={post.frontmatter.intro || post.excerpt}
         />
         <article>
           <header>
@@ -31,10 +31,13 @@ class BlogPostTemplate extends React.Component {
                 display: `block`,
 
               }}
+              
             >
               {post.frontmatter.date}
+              {post.createdAt}
             </p>
           </header>
+          <p>{post.frontmatter.intro}</p>
           <section dangerouslySetInnerHTML={{ __html: post.html }} />
           <hr/>
           <footer>
@@ -88,7 +91,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        
+        date
         intro
       }
     }

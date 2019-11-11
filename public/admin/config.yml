@@ -18,4 +18,6 @@ collections:
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Intro text, name: intro, widget: text}
+          - {label: Content, name: excerpt, widget: text}
           - {label: Image, name: image, widget: image}
+          - {label: Date, name: date,  widget: datetime }
