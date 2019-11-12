@@ -3,6 +3,24 @@ import { Link, graphql, Image } from 'gatsby'
 import Layout from '../components/layout'
 import "../css/main.css"
 
+const netlifyIdentity = window.netlifyIdentity
+
+if(netlifyIdentity){
+  netlifyIdentity.open();
+}
+else{
+  console.log('netlify identity not defined');
+}
+
+class NetlifyIdentity extends Component {
+  componentDidMount(){
+    initNetlifyIdentity();
+  }
+  render(){
+    return(<div></div>);
+  }
+}
+
 const IndexPage = (props) => {
   //const data = props.data;//.allFile.edges[0].node.childMarkdownRemark.frontmatter
   //const data = props.data.allFile.edges[0].node.childMarkdownRemark.frontmatter
@@ -11,8 +29,9 @@ const IndexPage = (props) => {
 
   return (
     <Layout>
+    <NetlifyIdentity/>
 
-
+    <h3 onClick={() => {openNetlifyModal()}}>Login</h3>
       <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
 
         {posts.map(({ node }) => {
