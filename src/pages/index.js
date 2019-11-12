@@ -1,23 +1,39 @@
 import React from 'react'
+import { Component} from 'react'
 import { Link, graphql, Image } from 'gatsby'
 import Layout from '../components/layout'
 import "../css/main.css"
 
-const netlifyIdentity = window.netlifyIdentity
 
-if(netlifyIdentity){
-  netlifyIdentity.open();
+function initNetlifyIdentity(){
+  console.log("initNetlifyIdentity called")
+  const script = document.createElement('script')
+
+  script.src="https://identity.netlify.com/v1/netlify-identity-widget.js"
+  script.async=true;
+  document.body.appendChild(script);
 }
-else{
-  console.log('netlify identity not defined');
+
+function openNetlifyModal() {
+  const netlifyIdentity = window.netlifyIdentity
+
+  if (netlifyIdentity) {
+    netlifyIdentity.open();
+  }
+  else {
+    console.log('netlify identity not defined');
+  }
+
+
+
 }
 
 class NetlifyIdentity extends Component {
-  componentDidMount(){
+  componentDidMount() {
     initNetlifyIdentity();
   }
-  render(){
-    return(<div></div>);
+  render() {
+    return (<div></div>);
   }
 }
 
@@ -29,9 +45,9 @@ const IndexPage = (props) => {
 
   return (
     <Layout>
-    <NetlifyIdentity/>
+      <NetlifyIdentity />
 
-    <h3 onClick={() => {openNetlifyModal()}}>Login</h3>
+      <h3 onClick={() => { openNetlifyModal() }}>Login</h3>
       <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
 
         {posts.map(({ node }) => {
@@ -39,14 +55,14 @@ const IndexPage = (props) => {
           return (
             <article key={node.fields.slug}>
               <header>
-              <small>{node.frontmatter.date}</small>
+                <small>{node.frontmatter.date}</small>
                 <h3
                 >
                   <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
                     {title}
                   </Link>
                 </h3>
-                
+
               </header>
               <section>
                 <p
