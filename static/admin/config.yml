@@ -8,11 +8,10 @@ public_folder: assets
 
 collections:
       - name: "home"
-        label: "Home Page"
+        label: "Novica"
         description: "test"
         folder: "content/blog"
         create: true
-        slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
         editor:
          preview: false
         fields:
