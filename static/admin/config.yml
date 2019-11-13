@@ -14,6 +14,9 @@ collections:
         create: true
         editor:
          preview: false
+        filter:
+         - field: publication_url
+         - value: ""
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Intro text, name: intro, widget: text}
