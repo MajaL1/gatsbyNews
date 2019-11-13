@@ -12,7 +12,7 @@ collections:
     files:
       - label: "Home Page"
         name: "home"
-        file: "content/home.md"
+        file: "content/blog"
         widget: "list"
         fields:
           - {label: Title, name: title, widget: string}
