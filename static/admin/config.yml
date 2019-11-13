@@ -12,6 +12,7 @@ collections:
         description: "test"
         folder: "content/blog"
         create: true
+        slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
         editor:
          preview: false
         filter:

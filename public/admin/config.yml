@@ -8,17 +8,20 @@ public_folder: assets
 
 collections:
       - name: "home"
-        label: "Home Page"
+        label: "Novica"
         description: "test"
         folder: "content/blog"
         create: true
-        slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+        slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
         editor:
          preview: false
+        filter:
+         - field: publication_url
+         - value: ""
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Intro text, name: intro, widget: text}
           - {label: Content, name: excerpt, widget: text}
-          - {label: Image, name: image, widget: image}
+          - {label: Image, name: image, widget: image, required: false}
           - {label: Date, name: date,  widget: datetime }
         widget: list
