@@ -22,7 +22,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `posts`,
-        path: `${__dirname}/content/posts`, // for the path you can change it based on your preferred folder structure
+        path: `${__dirname}/content/blog`, // for the path you can change it based on your preferred folder structure
       },
 },
     {
