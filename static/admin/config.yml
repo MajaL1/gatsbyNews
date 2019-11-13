@@ -16,7 +16,6 @@ collections:
         create: true
         widget: "list"
         slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-        file: "*.md"
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Intro text, name: intro, widget: text}
