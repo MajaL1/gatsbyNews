@@ -12,7 +12,8 @@ collections:
     files:
       - label: "Home Page"
         name: "home"
-        file: "content/blog"
+        folder: "content/blog"
+        create: true
         widget: "list"
         fields:
           - {label: Title, name: title, widget: string}
