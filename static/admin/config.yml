@@ -1,8 +1,7 @@
 # In your static/admin/config.yml file
 
 backend: 
-    name: github
-    repo: MajaL1/gatsbyNews
+   name: test-repo
 
 media_folder: static/assets
 public_folder: assets
