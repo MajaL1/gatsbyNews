@@ -10,11 +10,13 @@ collections:
   - label: "Pages"
     name: "pages"
     files:
-      - label: "Home Page"
-        name: "home"
+      - name: "home"
+        label: "Home Page"
         folder: "content/blog"
         create: true
         slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+        editor:
+         preview: false
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Intro text, name: intro, widget: text}
