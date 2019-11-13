@@ -7,9 +7,6 @@ media_folder: static/assets
 public_folder: assets
 
 collections:
-  - label: "Pages"
-    name: "pages"
-    files:
       - name: "home"
         label: "Home Page"
         description: "test"
@@ -24,3 +21,4 @@ collections:
           - {label: Content, name: excerpt, widget: text}
           - {label: Image, name: image, widget: image}
           - {label: Date, name: date,  widget: datetime }
+        widget: list
