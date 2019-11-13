@@ -17,7 +17,14 @@ module.exports = {
  
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
-      'gatsby-transformer-remark',
+      `gatsby-transformer-remark`,
+{
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `posts`,
+        path: `${__dirname}/content/posts`, // for the path you can change it based on your preferred folder structure
+      },
+},
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
