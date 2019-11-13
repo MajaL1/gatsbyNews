@@ -68,3 +68,9 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   }
 }
 
+exports.onCreatePage = async ({ page, actions }) => {     
+    const { createPage } = actions     
+    page.matchPath = "/*/*"     
+    createPage(page) 
+}
+
