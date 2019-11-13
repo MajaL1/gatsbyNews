@@ -12,6 +12,7 @@ collections:
     files:
       - name: "home"
         label: "Home Page"
+        description: "test"
         folder: "content/blog"
         create: true
         slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
