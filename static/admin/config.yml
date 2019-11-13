@@ -11,7 +11,7 @@ collections:
     name: "pages"
     files:
       - label: "Home Page"
-        name: "home"
+        name: "blog"
         folder: "content/blog"
         create: true
         widget: "list"
