@@ -37,7 +37,7 @@ class BlogPostTemplate extends React.Component {
               {post.createdAt}
             </p>
           </header>
-          <p>{post.frontmatter.intro}</p>
+          
           <section dangerouslySetInnerHTML={{ __html: post.html }} />
           <hr/>
           <footer>
@@ -92,7 +92,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date
-        intro
+        
       }
     }
   }

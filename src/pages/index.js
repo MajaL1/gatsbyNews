@@ -65,11 +65,7 @@ const IndexPage = (props) => {
 
               </header>
               <section>
-                <p
-                  dangerouslySetInnerHTML={{
-                    __html: node.frontmatter.intro || node.excerpt,
-                  }}
-                />
+                
               </section>
             </article>
           )
@@ -128,20 +124,3 @@ query {
   }
 }
 `
-
-/* export const query = graphql`
-  query {
-    allFile (filter: {sourceInstanceName: {eq: "content"} name: {eq: "home"}}) {
-      edges {
-        node {
-          childMarkdownRemark {
-            frontmatter {
-              title
-              intro
-              image
-          }
-        }
-      }
-    }
-  }
-}` */
