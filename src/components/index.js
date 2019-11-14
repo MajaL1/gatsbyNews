@@ -10,7 +10,6 @@ const IndexPage = ({ data }) => (
   <Layout>
     <p className="content-title">Aktualno</p>
     <h1>{data.title}</h1>
-      <p>{data.intro}</p>
       <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
         
       </div>
@@ -29,9 +28,7 @@ export const query = graphql`
         node {
           childMarkdownRemark {
             frontmatter {
-              title
-              intro
-              
+              title           
           }
         }
       }
