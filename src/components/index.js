@@ -12,7 +12,7 @@ const IndexPage = ({ data }) => (
     <h1>{data.title}</h1>
       <p>{data.intro}</p>
       <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-        <Image />
+        
       </div>
     <Link to="/about">About</Link>
     <Link to="/homepage">homepage</Link>
@@ -31,7 +31,7 @@ export const query = graphql`
             frontmatter {
               title
               intro
-              image
+              
           }
         }
       }
