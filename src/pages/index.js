@@ -121,7 +121,7 @@ query {
         frontmatter {
           date
           
-          intro
+          
         }
       }
     }
