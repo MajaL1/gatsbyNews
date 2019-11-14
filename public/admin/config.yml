@@ -10,8 +10,14 @@ collections:
       - name: "home"
         label: "Novica"
         description: "test"
-        file: "content/blog/news.yml"
+        folder: "content/blog"
         create: true
+        slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+        editor:
+         preview: false
+        filter:
+         - field: publication_url
+         - value: ""
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Intro text, name: intro, widget: text}
