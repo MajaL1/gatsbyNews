@@ -120,7 +120,7 @@ query {
         }
         frontmatter {
           date
-          title
+          
           intro
         }
       }
