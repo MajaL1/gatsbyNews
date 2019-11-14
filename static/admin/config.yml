@@ -8,9 +8,9 @@ public_folder: assets
 
 collections:
       - name: "home"
-        label: "Novica"
+        label: "Novica11"
         description: "test"
-        folder: "content/blog"
+        folder: "content/blog/home.md"
         create: true
         slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
         editor:

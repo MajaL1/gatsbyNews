@@ -10,14 +10,18 @@ collections:
       - name: "home"
         label: "Novica11"
         description: "test"
-        folder: "content/blog"
+        folder: "content/blog/home.md"
         create: true
         slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
         editor:
          preview: false
+        filter:
+         - field: publication_url
+         - value: ""
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Intro text, name: intro, widget: text}
           - {label: Content, name: excerpt, widget: text}
           - {label: Image, name: image, widget: image, required: false}
           - {label: Date, name: date,  widget: datetime }
+        widget: list
