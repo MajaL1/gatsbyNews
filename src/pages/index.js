@@ -115,7 +115,7 @@ query {
           slug
         }
         frontmatter {
-          date
+          date(formatString: "DD.MM.YYYY")
           
           
         }
