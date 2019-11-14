@@ -9,6 +9,7 @@ public_folder: assets
 collections:
   - name: home
     label: Blog
+    description: "test1"
     folder: "content/blog"
     create: true
     fields:
