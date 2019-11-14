@@ -1,14 +1,14 @@
 # In your static/admin/config.yml file
 
 backend: 
-   name: test-repo
+  name: git-gateway
 
 media_folder: static/assets
 public_folder: assets
 
 collections: # A list of collections the CMS should be able to edit
   - name: "post" # Used in routes, ie.: /admin/collections/:slug/edit
-    label: "Post" # Used in the UI, ie.: "New Post"
+    label: "Post12" # Used in the UI, ie.: "New Post"
     folder: "site/content/post" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
