@@ -25,6 +25,7 @@ class BlogPostTemplate extends React.Component {
               }}
             >
               {post.frontmatter.title}
+        
             </h1>
             <p
               style={{
@@ -33,9 +34,11 @@ class BlogPostTemplate extends React.Component {
               }}
               
             >
+        
               {post.frontmatter.date}
               {post.createdAt}
             </p>
+        <p>{post.frontmatter.intro}</p>
           </header>
           
           <section dangerouslySetInnerHTML={{ __html: post.html }} />
@@ -92,6 +95,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date
+        intro
         
       }
     }

@@ -61,7 +61,8 @@ const IndexPage = (props) => {
                   <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
                     {title}
                   </Link>
-                </h3>
+               </h3>
+              <p>{node.frontmatter.intro}</p>               
 
               </header>
               <section>
@@ -115,6 +116,8 @@ query {
           slug
         }
         frontmatter {
+          title
+          intro
           date(formatString: "DD.MM.YYYY")
           
           
