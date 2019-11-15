@@ -24,9 +24,9 @@ const Layout = ({ children, test="test" }) => (
       <div className="top-div">
         <Helmet>
       
-            <title>My Awesome Website</title>
-            <meta name="title" content="Prostovoljno gasilsko drustvo Stangarske poljane" />
-            <meta name="description" content="Uradna stran prostovoljnega gasilskega drustva Stangarske Poljane" />
+            <title>"Prostovoljno gasilsko društvo Štangarske Poljane</title>
+            <meta name="title" content="Prostovoljno gasilsko društvo Štangarske poljane" />
+            <meta name="description" content="Uradna stran prostovoljnega gasilskega društva Štangarske Poljane" />
             {/* <!-- Open Graph / Facebook --> */}
            {/* <meta property="og:type" content="website" />
             <meta property="og:url" content="http://myawesomewebsite.com/" />
