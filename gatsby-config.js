@@ -5,6 +5,7 @@ module.exports = {
     author: 'Maja L'
   },
   plugins: [
+    'gatsby-theme-gallery',
     'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-source-filesystem`,

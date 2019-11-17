@@ -1,4 +1,7 @@
 var plugins = [{
+      plugin: require('C:/Maja/gatsbyNews/node_modules/gatsby-plugin-theme-ui/gatsby-ssr'),
+      options: {"plugins":[]},
+    },{
       plugin: require('C:/Maja/gatsbyNews/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
       options: {"plugins":[]},
     },{

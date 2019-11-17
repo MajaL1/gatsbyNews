@@ -23,7 +23,8 @@ const Header = ({ siteTitle, subtitle, description }) => (
             color: `lightGray`,
             textDecoration: `none`,
             textAlign: `center`,
-            fontFamily: `Arial Black`
+            fontFamily: `Arial Black`,
+            textShadow: `5px 0 #444242, 0 1px black, 1px 0 black, 0 -1px black`
           }}
         >
           {siteTitle}
@@ -33,7 +34,8 @@ const Header = ({ siteTitle, subtitle, description }) => (
         color: `#d6d673`,
         textDecoration: `none`,
         textAlign: `center`,
-        fontFamily: `Candara`
+        fontFamily: `Candara`,
+        textShadow: `black 1px 0px, black 0px 1px, black 1px 0px, black 0px 1px`
       }}><i>
          {subtitle}
         </i></p>
