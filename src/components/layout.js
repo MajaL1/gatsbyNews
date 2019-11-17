@@ -24,15 +24,9 @@ const Layout = ({ children, test="test" }) => (
       <div className="top-div">
         <Helmet>
       
-            <title>"Prostovoljno gasilsko društvo Štangarske Poljane</title>
+            <title>Prostovoljno gasilsko društvo Štangarske Poljane</title>
             <meta name="title" content="Prostovoljno gasilsko društvo Štangarske poljane" />
             <meta name="description" content="Uradna stran prostovoljnega gasilskega društva Štangarske Poljane" />
-            {/* <!-- Open Graph / Facebook --> */}
-           {/* <meta property="og:type" content="website" />
-            <meta property="og:url" content="http://myawesomewebsite.com/" />
-            <meta property="og:title" content="My Awesome Website" />
-            <meta property="og:description" content="This website is so awesome that I really don't think you can handle how much awesome that is happening here." />
-            <meta property="og:image" content="http://myawesomewebsite.com/facebookimage.png" /> */}
         </Helmet>
         <Header siteTitle={data.site.siteMetadata.title} subtitle={data.site.siteMetadata.subtitle}   />
         <Navigation />
@@ -50,10 +44,7 @@ const Layout = ({ children, test="test" }) => (
           <main className="main-content" test={"test"}>{children}</main>
 
           <footer>
-            {/*  © {new Date().getFullYear()}, Built with
-            {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a> and <a href="https://strapi.io">Strapi</a>
- */}          </footer>
+          </footer>
         </div>
       </div>
     )}
