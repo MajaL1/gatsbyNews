@@ -42,9 +42,6 @@ const Navigation = class extends React.Component {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
-              {/* <NavDropdown.Item href="/">Domov</NavDropdown.Item>
-            <NavDropdown.Item href="about">O nas</NavDropdown.Item>
-            */}
               <Link className="navigation-link" to="/">Domov</Link>
               <Link className="navigation-link" to="/about">O&nbsp;nas</Link>
               <NavDropdown title="Operativa" id="basic-nav-dropdown" className="navigation-link">
@@ -67,17 +64,6 @@ const Navigation = class extends React.Component {
             </Nav>
           </Navbar.Collapse>
         </Navbar>
-        {/*<nav>
-  <Link to="/">Domov</Link>
-   <Link to="operativa">Operativa</Link>
-</nav>
-       <Router>   
-          <Home path="/home" />
-          <Operativa path="operativa">
-            <VozniPark path="/voznipark" />
-            <PozarniNacrt path="/pozarninacrt" />
-          </Operativa>
-      </Router> */}
       </div>
     )
   }
