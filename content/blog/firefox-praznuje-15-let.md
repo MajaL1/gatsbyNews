@@ -1,7 +1,7 @@
 ---
 title: Firefox praznuje 15 let
 date: 2019-11-18T10:33:53.902Z
-description: >
+intro: >
   Pred petnajstimi leti je bila spletna krajina bistveno drugačna, skorajda
   enoumna. Žezlo je v rokah trdno držal Microsoft, katerega Internet Explorer so
   uporabljali praktično vsi. Njegov tržni delež je presegal 90 odstotkov,

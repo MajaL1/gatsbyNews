@@ -1,7 +1,7 @@
 ---
 title: Microsoft izpopolnjuje shranjevanje podatkov v steklu
 date: 2019-11-18T10:33:07.973Z
-description: >-
+intro: >-
   V Microsoftovem raziskovalnem oddelku so v obstojno stekleno ploščico uspešno
   "zapekli" in nato prebrali dolgometražni film ter s tem dokazali smiselnost
   ideje o tovrstnem shranjevanju posnetkov, ki jo razvijajo v okviru projekta

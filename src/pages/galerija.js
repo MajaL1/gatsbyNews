@@ -31,13 +31,14 @@ const Galerija = () => (
 
     <p className="content-title">Galerija</p>
     <section id="two">
-
+<div className="gallery-content">
       <ImageGallery images={DEFAULT_IMAGES.map(({ id, source, thumbnail, caption, description }) => ({
         source,
         thumbnail,
         caption,
         description
       }))} />
+ </div>     
 
       <ul className="actions">
         <li><a href="#" className="button">Full Portfolio</a></li>

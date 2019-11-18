@@ -1,7 +1,7 @@
 ---
 title: Motorola uradno oznanila vrnitev telefona Razr - s prepogljivim zaslonom
 date: 2019-11-18T10:32:21.482Z
-description: >-
+intro: >-
   Po mnogih namigih in pobegih informacij so pri Motoroli naposled razgrnili vse
   podrobnosti oživitve legendarne serije telefonov Razr. Novinec bo poklopni
   telefon klasične zasnove z upogljivim zaslonom in Androidom ter z zasoljeno
