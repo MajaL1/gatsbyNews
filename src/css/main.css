@@ -5,7 +5,8 @@
 .main-content {
   background-color: #f1ecec;
   padding: 10px;
-  height: 600px;
+  width: 88%;
+  margin: 0 auto;
 }
 
 .content-title {
@@ -56,18 +57,25 @@ li {
 .news-item-title{
   color: whitesmoke;
   background-color: grey;
-  padding: 10px;
+  /*background-image: linear-gradient(#cacaca, #e6e6e6,#d8d5d5);*/
+  padding: 5px;
   width: 100%;
+  padding-left: 15px;
   display: block;
+  font-weight: bold;
+  border-bottom: 5px #c6c6c6 solid;
+
 }
 
 .news-item-header {
 background-color: white;
 margin-bottom: 30px;
 padding: 10px;
+
+border-bottom: #c9c7c7 3px solid;
 }
-.news-item {
- 
+.news-item-link {
+ font-size: smaller;
 }
 
 .news-item-date {
@@ -79,6 +87,6 @@ padding: 10px;
 }
 
 .news-item-intro {
-  color: grey;
+  color: black;
   padding-left: 15px;
 }

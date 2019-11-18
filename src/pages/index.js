@@ -64,7 +64,7 @@ const IndexPage = (props) => {
                 </h5>
                 <p className="news-item-intro">{node.frontmatter.intro}</p>
                 <hr/>
-                <Link to={node.fields.slug}>
+                <Link className="news-item-link" to={node.fields.slug}>
                   {"Preberi celotni prispevek >> "}
                 </Link>
                 
