@@ -76,6 +76,8 @@ border-bottom: #c9c7c7 3px solid;
 }
 .news-item-link {
  font-size: smaller;
+  line-height: 1.0;
+  display: block;
 }
 
 .news-item-date {
