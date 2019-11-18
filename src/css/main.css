@@ -71,9 +71,9 @@ li {
 background-color: white;
 margin-bottom: 30px;
 padding: 10px;
-
 border-bottom: #c9c7c7 3px solid;
 }
+
 .news-item-link {
  font-size: smaller;
   line-height: 1.0;
@@ -96,4 +96,9 @@ border-bottom: #c9c7c7 3px solid;
 
 .gallery-content {
   margin-left: 7px;
+  color: black;
+}
+
+.news-content-section {
+  color: black;
 }

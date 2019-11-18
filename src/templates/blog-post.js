@@ -18,11 +18,11 @@ class BlogPostTemplate extends React.Component {
         />
         <article>
           <header>
-            <h1 className="news-item-title"
+            <h5 className="news-item-title"
             >
               {post.frontmatter.title}
 
-            </h1>
+            </h5>
             <p
               style={{
                 display: `block`,
@@ -30,14 +30,13 @@ class BlogPostTemplate extends React.Component {
               }}
 
             >
-
-              {post.frontmatter.date}
-              {post.createdAt}
+              <small className="news-item-date">{"Objavljeno: "}{post.frontmatter.date}</small>
+               
             </p>
-            <p>{post.frontmatter.intro}</p>
+            <p className="news-content-section">{post.frontmatter.intro}</p>
           </header>
 
-          <section dangerouslySetInnerHTML={{ __html: post.html }} />
+          <section className="news-content-section" dangerouslySetInnerHTML={{ __html: post.html }} />
           <hr />
           <footer>
 
@@ -90,7 +89,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        date
+        date(formatString: "DD.MM.YYYY")
         intro
         
       }
