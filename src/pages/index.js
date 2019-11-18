@@ -1,16 +1,16 @@
 import React from 'react'
-import { Component} from 'react'
+import { Component } from 'react'
 import { Link, graphql, Image } from 'gatsby'
 import Layout from '../components/layout'
 import "../css/main.css"
 
 
-function initNetlifyIdentity(){
+function initNetlifyIdentity() {
   console.log("initNetlifyIdentity called")
   const script = document.createElement('script')
 
-  script.src="https://identity.netlify.com/v1/netlify-identity-widget.js"
-  script.async=true;
+  script.src = "https://identity.netlify.com/v1/netlify-identity-widget.js"
+  script.async = true;
   document.body.appendChild(script);
 }
 
@@ -48,25 +48,29 @@ const IndexPage = (props) => {
       <NetlifyIdentity />
 
       <h3 onClick={() => { openNetlifyModal() }}>Login</h3>
-      <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
+      <div style={{ marginBottom: `1.45rem` }}>
 
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           return (
-            <article key={node.fields.slug}>
-              <header>
-                <small>{node.frontmatter.date}</small>
-                <h3
-                >
-                  <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
+
+            <article className="news-item" key={node.fields.slug}>
+              <header class="news-item-header">
+                <small className="news-item-date">{"Objavljeno: "}{node.frontmatter.date}</small>
+                <h5>
+                  <Link className="news-item-title" style={{ boxShadow: `none` }} to={node.fields.slug}>
                     {title}
                   </Link>
-               </h3>
-              <p>{node.frontmatter.intro}</p>               
-
+                </h5>
+                <p className="news-item-intro">{node.frontmatter.intro}</p>
+                <hr/>
+                <Link to={node.fields.slug}>
+                  {"Preberi celotni prispevek >> "}
+                </Link>
+                
               </header>
               <section>
-                
+
               </section>
             </article>
           )

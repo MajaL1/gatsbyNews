@@ -5,7 +5,6 @@
 .main-content {
   background-color: #f1ecec;
   padding: 10px;
-  border-left: rgb(204, 200, 200) 5px solid;
   height: 600px;
 }
 
@@ -52,4 +51,34 @@ li {
 
 .news-header {
   display: inline-block;
+}
+
+.news-item-title{
+  color: whitesmoke;
+  background-color: grey;
+  padding: 10px;
+  width: 100%;
+  display: block;
+}
+
+.news-item-header {
+background-color: white;
+margin-bottom: 30px;
+padding: 10px;
+}
+.news-item {
+ 
+}
+
+.news-item-date {
+  color:black;
+  padding-left: 15px;
+  margin-bottom: 10px;
+  display: block;
+  font-style: italic;
+}
+
+.news-item-intro {
+  color: grey;
+  padding-left: 15px;
 }

@@ -14,37 +14,33 @@ class BlogPostTemplate extends React.Component {
       <Layout location={this.props.location} title={siteTitle}>
         <SEO
           title={post.frontmatter.title}
-         
+
         />
         <article>
           <header>
-            <h1
-              style={{
-
-                marginBottom: 0,
-              }}
+            <h1 className="news-item-title"
             >
               {post.frontmatter.title}
-        
+
             </h1>
             <p
               style={{
                 display: `block`,
 
               }}
-              
+
             >
-        
+
               {post.frontmatter.date}
               {post.createdAt}
             </p>
-        <p>{post.frontmatter.intro}</p>
+            <p>{post.frontmatter.intro}</p>
           </header>
-          
+
           <section dangerouslySetInnerHTML={{ __html: post.html }} />
-          <hr/>
+          <hr />
           <footer>
-           
+
           </footer>
         </article>
 
