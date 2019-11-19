@@ -66,10 +66,11 @@ li {
 }
 
 .news-item-header {
-background-color: white;
+background-color: #e6e2e2;
 margin-bottom: 30px;
 padding: 10px;
 border-bottom: #c9c7c7 3px solid;
+    font-size:  smaller;
 }
 
 .news-item-link {
@@ -99,5 +100,14 @@ border-bottom: #c9c7c7 3px solid;
 
 .news-content-section {
   color: black;
+}
+
+.item-title {
+    color: black;
+}
+
+.content-section {
+    padding: 0 15px;
+    color: black;
 }
 
