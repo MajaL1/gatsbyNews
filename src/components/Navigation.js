@@ -44,7 +44,7 @@ const Navigation = class extends React.Component {
             <Nav className="mr-auto">
               <Link className="navigation-link" to="/">Domov</Link>
               <Link className="navigation-link" to="/about">O&nbsp;nas</Link>
-              <NavDropdown title="Operativa" id="basic-nav-dropdown" className="navigation-link">
+              <NavDropdown title="Operativa" id="basic-nav-dropdown" className="navigation-dropdown-link navigation-link">
                 {/*  <NavDropdown.Item href="voznipark" className="navigation-link">Vozni park</NavDropdown.Item>
               <NavDropdown.Item href="pozarninacrt" className="navigation-link">Pozarni nacrt</NavDropdown.Item>
  */}

@@ -3,6 +3,7 @@ import { Component } from 'react'
 import { Link, graphql, Image } from 'gatsby'
 import Layout from '../components/layout'
 import "../css/main.css"
+import { FaCalendarAlt } from 'react-icons/fa';
 
 
 function initNetlifyIdentity() {
@@ -56,7 +57,7 @@ const IndexPage = (props) => {
 
             <article className="news-item" key={node.fields.slug}>
               <header class="news-item-header">
-                <small className="news-item-date">{"Objavljeno: "}{node.frontmatter.date}</small>
+                <small className="news-item-date"><FaCalendarAlt/>{" Objavljeno: "}{node.frontmatter.date}</small>
                 <h5>
                   <Link className="news-item-title" style={{ boxShadow: `none` }} to={node.fields.slug}>
                     {title}

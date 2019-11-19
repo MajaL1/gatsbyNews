@@ -5,6 +5,21 @@
 .navigation-content {
 /*background-color: rgb(128, 124, 124);*/
 background-image: linear-gradient(#c1c1c1,#9b9b9b,#6d6b6b);
+height: 60px;
+
+}
+
+.dropdown-menu.show {
+  
+background-image: linear-gradient(#c1c1c1,#9b9b9b,#6d6b6b);
+}
+
+.navigation-dropdown-link.navigation-link.dropdown.nav-item{
+  color: #611e25;
+}
+
+a.dropdown-toggle.nav-link{
+  color: #611e25;
 }
 
 .navigation-link {

@@ -17,6 +17,7 @@
   margin-left: 20px;
   margin-bottom: 30px;
   margin-top: 30px;
+  min-height: 700px;
 }
 
 .news-link {
@@ -102,3 +103,4 @@ border-bottom: #c9c7c7 3px solid;
 .news-content-section {
   color: black;
 }
+
