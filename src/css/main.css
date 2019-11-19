@@ -12,12 +12,9 @@
 .content-title {
   color:#505050;
   font-family: 'Arial Black';
-  margin-top: 10px;
   font-size: 1.8em;
-  margin-left: 20px;
-  margin-bottom: 30px;
-  margin-top: 30px;
-  min-height: 700px;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .news-link {

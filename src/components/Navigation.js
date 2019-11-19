@@ -45,17 +45,9 @@ const Navigation = class extends React.Component {
               <Link className="navigation-link" to="/">Domov</Link>
               <Link className="navigation-link" to="/about">O&nbsp;nas</Link>
               <NavDropdown title="Operativa" id="basic-nav-dropdown" className="navigation-dropdown-link navigation-link">
-                {/*  <NavDropdown.Item href="voznipark" className="navigation-link">Vozni park</NavDropdown.Item>
-              <NavDropdown.Item href="pozarninacrt" className="navigation-link">Pozarni nacrt</NavDropdown.Item>
- */}
                 <Link className="navigation-link" to="/voznipark">Vozni park</Link>
                 <NavDropdown.Divider />
                 <Link className="navigation-link" to="/pozarninacrt">Požarni načrt</Link>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
               </NavDropdown>
 
               <Link className="navigation-link" to="/zgodovina">Zgodovina</Link>
