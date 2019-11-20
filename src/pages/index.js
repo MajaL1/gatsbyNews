@@ -124,10 +124,8 @@ query {
           title
           intro
           date(formatString: "DD.MM.YYYY")
-          
-          
+            }
         }
-      }
     }
   }
 }

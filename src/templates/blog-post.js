@@ -3,6 +3,8 @@ import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Img from "gatsby-image"
+
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -37,6 +39,8 @@ class BlogPostTemplate extends React.Component {
           </header>
 
           <section className="news-content-section" dangerouslySetInnerHTML={{ __html: post.html }} />
+        <p>{post.frontmatter.image}</p>
+        <Img fixed={post.frontmatter.image} alt="" />
           <hr />
           <footer>
 
@@ -91,6 +95,8 @@ export const pageQuery = graphql`
         title
         date(formatString: "DD.MM.YYYY")
         intro
+        image
+
         
       }
     }

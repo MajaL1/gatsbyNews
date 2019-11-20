@@ -24,9 +24,11 @@ exports.createPages = async ({ graphql, actions }) => {
                 title
                 intro
                 
-              }
+               image
+    
             }
           }
+        }
         }
       }
     `
