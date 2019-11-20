@@ -2,7 +2,9 @@ import React from 'react'
 import { Link } from '@reach/router'
 import { Nav, Navbar, NavDropdown } from 'react-bootstrap';
 //import '../css/navigation.css'
-import '../lib/bootstrap.min.css'
+import '../lib/bootstrap.min.css';
+
+
 
 
 
@@ -42,18 +44,18 @@ const Navigation = class extends React.Component {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
-              <Link className="navigation-link" to="/">Domov</Link>
-              <Link className="navigation-link" to="/about">O&nbsp;nas</Link>
+              <NavLink className="navigation-link" to="/" activeClassName="active">Domov</NavLink>
+              <NavLink className="navigation-link" to="/about" activeClassName="active">O&nbsp;nas</NavLink>
               <NavDropdown title="Operativa" id="basic-nav-dropdown" className="navigation-dropdown-link navigation-link">
-                <Link className="navigation-link" to="/voznipark">Vozni park</Link>
+                <NavLink className="navigation-link" to="/voznipark">Vozni park</NavLink>
                 <NavDropdown.Divider />
-                <Link className="navigation-link" to="/pozarninacrt">Požarni načrt</Link>
+                <NavLink className="navigation-link" to="/pozarninacrt">Požarni načrt</NavLink>
               </NavDropdown>
 
-              <Link className="navigation-link" to="/zgodovina">Zgodovina</Link>
-              <Link className="navigation-link" to="/povezave">Povezave</Link>
-              <Link className="navigation-link" to="/galerija">Galerija</Link>
-              <Link className="navigation-link" to="/kontakt">Kontakt</Link>
+              <NavLink className="navigation-link" to="/zgodovina">Zgodovina</NavLink>
+              <NavLink className="navigation-link" to="/povezave">Povezave</NavLink>
+              <NavLink className="navigation-link" to="/galerija">Galerija</NavLink>
+              <NavLink className="navigation-link" to="/kontakt">Kontakt</NavLink>
             </Nav>
           </Navbar.Collapse>
         </Navbar>
@@ -61,6 +63,22 @@ const Navigation = class extends React.Component {
     )
   }
 }
+const NavLink = props => (
+  <Link
+    {...props}
+    getProps={({ isCurrent }) => {
+      // the object returned here is passed to the
+      // anchor element's props
+      return {
+        style: {
+          color: isCurrent ? "lightgrey" : "a01818",
+          backgroundColor: isCurrent ? "#a01818" : ""
+            
+        }
+      };
+    }}
+  />
+);
 
 
 
