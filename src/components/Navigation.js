@@ -53,6 +53,7 @@ const Navigation = class extends React.Component {
               <Link className="navigation-link" to="/zgodovina">Zgodovina</Link>
               <Link className="navigation-link" to="/povezave">Povezave</Link>
               <Link className="navigation-link" to="/galerija">Galerija</Link>
+              <Link className="navigation-link" to="/kontakt">Kontakt</Link>
             </Nav>
           </Navbar.Collapse>
         </Navbar>

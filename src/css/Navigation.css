@@ -26,7 +26,7 @@ background-image: linear-gradient(#b5b3b3,#ccc7c7,#a5a4a4);
 
 .navigation-dropdown-link.navigation-link.dropdown.nav-item>a:hover {
     color: lightgrey;
-    padding: 5px;
+    padding: 0px;
 }
 
 .navigation-link {
@@ -57,4 +57,8 @@ background-image: linear-gradient(#b5b3b3,#ccc7c7,#a5a4a4);
 
 h3 {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+a.dropdown-toggle.nav-link :hover{
+  padding: 0px;
 }
