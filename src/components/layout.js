@@ -31,16 +31,7 @@ const Layout = ({ children, test="test" }) => (
         <Header siteTitle={data.site.siteMetadata.title} subtitle={data.site.siteMetadata.subtitle}   />
         <Navigation />
 
-        <div
-          style={{
-            margin: `0 auto`,
-            maxWidth: 960,
-            width:  `auto`,
-            padding: `0px 1.0875rem 1.45rem`,
-            paddingTop: 0,
-            // backgroundColor: `grey`
-          }}
-        >
+        <div className="content-main-div">
           <main className="main-content" test={"test"}>{children}</main>
 
           <footer>
