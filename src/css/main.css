@@ -124,3 +124,25 @@ li {
     padding: 5px 45px;
     color: black;
 }
+
+.footer{
+  height: auto;
+  background-image: linear-gradient(to bottom, #a21e0b, #ad1c1c, #670606);
+}
+
+.footer-text {
+  text-align: center;
+  display: block;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+.login-text {
+  float: right;
+  margin-right: 10px;
+}
+
+.main-footer-div {
+  text-align: center;
+  font-size: 2rem;
+}

@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
+import Footer from "./footer"
 import "./layout.css"
 import "../css/main.css"
 import Navigation from "./Navigation"
@@ -33,10 +34,8 @@ const Layout = ({ children, test="test" }) => (
 
         <div className="content-main-div">
           <main className="main-content" test={"test"}>{children}</main>
-
-          <footer>
-          </footer>
         </div>
+        <Footer />
       </div>
     )}
   />
