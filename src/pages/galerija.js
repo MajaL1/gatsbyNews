@@ -29,7 +29,7 @@ const DEFAULT_IMAGES = [
 const Galerija = () => (
   <Layout>
 
-    <p className="content-title">Galerija</p>
+    <p className="item-title">Galerija</p>
     <section id="two">
 <div className="gallery-content">
       <ImageGallery images={DEFAULT_IMAGES.map(({ id, source, thumbnail, caption, description }) => ({

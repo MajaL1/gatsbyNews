@@ -118,11 +118,20 @@ li {
 
 .item-title {
     color: black;
+    margin: 20px 0px 20px 20px;
+    border-bottom: 3px solid lightgrey;
+    
 }
 
 .content-section {
     padding: 5px 45px;
     color: black;
+}
+
+.content-section-contact {
+    padding: 5px 45px;
+    color: black;
+    line-height: 0.4rem;
 }
 
 .footer{
@@ -145,4 +154,8 @@ li {
 .main-footer-div {
   text-align: center;
   font-size: 2rem;
+}
+article {
+    text-align: justify;
+    font-size: smaller;
 }

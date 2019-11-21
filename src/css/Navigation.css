@@ -44,17 +44,14 @@ background-image: linear-gradient(#b5b3b3,#ccc7c7,#a5a4a4);
 
 .navigation-link:hover{
   background: rgb(94, 93, 93);
+  background-color: rgb(94, 93, 93);
   color: lightgrey;
   text-decoration: none;
   padding: 0px;
-  border: 10px solid rgb(94, 93, 93);
+  border: 10px solid a01818;
 }
-.navigation-link:active{
-  background: rgb(172, 19, 19);;
-}
-.navigation-link:active .navigation-link:hover{
-  background: rgb(94, 93, 93);
-}
+
+
 .mr-auto.navbar-nav {
   margin: 0 auto;
 }
