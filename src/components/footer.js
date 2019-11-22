@@ -6,7 +6,6 @@ const Footer = () => (
 
   <footer className="footer" >
     <div className="main-footer-div">
-    <FaTwitter /> {'  '}
     <FaFacebook/> {'  '}
     <FaYoutube/> {'  '}
     <FaMailBulk/>  {'  '}

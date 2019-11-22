@@ -164,7 +164,9 @@ article {
     text-align: justify;
     font-size: smaller;
 }
-
-.contact-article {
-    margin: 45px;
+.work-item{
+    margin-left: 15px;
+}
+.img-article {
+    margin-left: 15px;
 }
