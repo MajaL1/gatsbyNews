@@ -47,16 +47,17 @@ const Zgodovina = () => (
           <footer>
 
           </footer>
-        </article>
+      
     
-    <div className="gallery-content">
+    <div className="gallery-content content-section">
       <ImageGallery images={DEFAULT_IMAGES.map(({ id, source, thumbnail, caption, description }) => ({
         source,
         thumbnail,
         caption,
         description
       }))} />
-    </div>     
+    </div>   
+    </article>  
   </Layout>
 )
 
