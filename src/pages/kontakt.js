@@ -8,7 +8,9 @@ const Kontakt = () => (
     <article class="contact-article">
     <header>
           <h5 className="item-title">Podatki o društvu</h5>
+     </header>
     
+    <div className="content-section">
             <p className="content-section-contact">Prostovoljno gasilsko društvo Štangarske Poljane</p>
             <p className="content-section-contact">Štangarske Poljane 1</p>
             <p className="content-section-contact">1275 Šmartno pri Litiji  </p>
@@ -33,8 +35,8 @@ const Kontakt = () => (
             <p/>
             <span className="content-section-contact"><strong>Telefonska številka</strong></span>
             <span>040123456</span>
-
-          </header>
+    </div>
+         
 
          
           <footer>

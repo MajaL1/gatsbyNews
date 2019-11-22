@@ -14,17 +14,31 @@ const imgGridStyle = {
 const povezave = ({data}) => (
   <Layout>
     
-      <div style={imgGridStyle}>
-      {data.allFile.edges.map(edge => 
-        <Img fluid={edge.node.childImageSharp.fluid} />
-      )}
-    </div>
- 
-     <a href="https://spin3.sos112.si/javno/zemljevid">Spin</a>
-     <a href="http://wap.sos112.si/Dogodek">SOS</a>
-     <a href="https://www.gasilec.net">Gasilska zveza Slovenije</a>
-     <a href="https://meteo.arso.gov.si/met/sl/warning/fire/">Arso-Požarna ogroženost</a>
-     <a href="https://meteo.arso.gov.si/met/sl/warning/">Arso-Vremenska opozorila</a>
+     <article>
+          <header>
+            <h5 className="item-title">
+              Povezave
+            </h5>
+        </header>
+    <section className="content-section">
+            <div style={imgGridStyle}>
+              {data.allFile.edges.map(edge => 
+                <Img fluid={edge.node.childImageSharp.fluid} />
+              )}
+            </div>
+
+         <a href="https://spin3.sos112.si/javno/zemljevid">Spin</a>
+         <p/>
+         <a href="http://wap.sos112.si/Dogodek">SOS</a>
+         <p/>
+         <a href="https://www.gasilec.net">Gasilska zveza Slovenije</a>
+         <p/>
+         <a href="https://meteo.arso.gov.si/met/sl/warning/fire/">Arso-Požarna ogroženost</a>
+         <p/>
+         <a href="https://meteo.arso.gov.si/met/sl/warning/">Arso-Vremenska opozorila</a>
+    </section>
+     </article>
+
   </Layout>
 )
 

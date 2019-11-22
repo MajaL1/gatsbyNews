@@ -59,7 +59,8 @@ const IndexPage = (props) => {
           const title = node.frontmatter.title || node.fields.slug
           return (
 
-            <article className="news-item" key={node.fields.slug}>
+            <article className="news-item content-article" key={node.fields.slug}>
+              <section className="content-section">
               <header class="news-item-header">
                 <small className="news-item-date"><FaCalendarAlt/>{" Objavljeno: "}{node.frontmatter.date}</small>
                 <h5>
@@ -74,8 +75,6 @@ const IndexPage = (props) => {
                 </Link>
                 
               </header>
-              <section>
-
               </section>
             </article>
           )

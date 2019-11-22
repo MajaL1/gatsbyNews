@@ -6,11 +6,11 @@ const Footer = () => (
 
   <footer className="footer" >
     <div className="main-footer-div">
-    <FaFacebook/> {'  '}
+   {/* <FaFacebook/> {'  '}
     <FaYoutube/> {'  '}
-    <FaMailBulk/>  {'  '}
+    <FaMailBulk/>  {'  '}*/}
     </div>
-    <hr/>
+    
     <small className="footer-text">{" © Copyright 2019 Vse pravice pridržane"}</small>
     <small class="login-text">Prijava</small>
   </footer>
