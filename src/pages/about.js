@@ -34,12 +34,6 @@ const About = () => (
     
 
     <hr/>
-    <div>
-      <FaTwitter size="50px"color="darkgrey" />
-      <FaFacebook size="50px"color="darkgrey" />
-      <FaYoutube size="50px"color="darkgrey"/>
-      <FaMailBulk size="50px"color="darkgrey"/>
-    </div>
     </Layout>
 
 )

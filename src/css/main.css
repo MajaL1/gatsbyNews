@@ -1,5 +1,6 @@
 .top-div {
     min-height: 800px;
+    color: black;
 }
 
 .main-content {
@@ -74,9 +75,10 @@ li {
     width: auto;
     padding: 0px 1.0875rem 1.45rem;
     padding-top: 0;
-    background-image: linear-gradient(#b5b5b5, #dedcdc, #cacaca, #b9b7b7);
-
-
+    /*background-image: linear-gradient(#b5b5b5, #dedcdc, #cacaca, #b9b7b7);*/
+   /*  background-image: linear-gradient(#941818, #b93636, #ad4545, #772e2e); */
+    background-image: linear-gradient(#941818, #ad3636, #9c3e3e, #c72e2e);
+    
 }
 
 .news-item-header {
@@ -129,14 +131,15 @@ li {
 }
 
 .content-section-contact {
-    padding: 5px 45px;
+    padding: 10px;
     color: black;
     line-height: 0.4rem;
 }
 
 .footer{
   height: auto;
-  background-image: linear-gradient(to bottom, #a21e0b, #ad1c1c, #670606);
+  /*background-image: linear-gradient(to bottom, #a21e0b, #ad1c1c, #670606);*/
+    background-image: linear-gradient(#c5c1c1,#aba8a8,#8e8e8e);
 }
 
 .footer-text {
@@ -144,6 +147,7 @@ li {
   display: block;
   box-sizing: border-box;
   margin-bottom: 10px;
+  color: white;
 }
 
 .login-text {
@@ -154,8 +158,13 @@ li {
 .main-footer-div {
   text-align: center;
   font-size: 2rem;
+  color: white;
 }
 article {
     text-align: justify;
     font-size: smaller;
+}
+
+.contact-article {
+    margin: 45px;
 }

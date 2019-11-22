@@ -4,8 +4,8 @@
 
 .navigation-content {
 /*background-color: rgb(128, 124, 124);*/
-background-image: linear-gradient(#c5c1c1,#aba8a8,#8e8e8e);
-height: 60px;
+    background-image: linear-gradient(#c5c1c1,#aba8a8,#8e8e8e);
+    height: 47px;
 
 }
 
@@ -17,16 +17,22 @@ background-image: linear-gradient(#b5b3b3,#ccc7c7,#a5a4a4);
 
 .navigation-dropdown-link.navigation-link.dropdown.nav-item{
   color: #611e25;
+  border: none;
 }
 
 
 .navigation-dropdown-link.navigation-link.dropdown.nav-item>a {
     color: #611e25;
+    border: none;
 }
 
 .navigation-dropdown-link.navigation-link.dropdown.nav-item>a:hover {
     color: lightgrey;
-    padding: 0px;
+   
+}
+
+.dropdown-menu > a.navigation-link {
+    margin-left: 0px;
 }
 
 .navigation-link {
@@ -48,7 +54,6 @@ background-image: linear-gradient(#b5b3b3,#ccc7c7,#a5a4a4);
   color: lightgrey;
   text-decoration: none;
   padding: 0px;
-  border: 10px solid a01818;
 }
 
 
