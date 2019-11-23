@@ -75,9 +75,9 @@ li {
     width: auto;
     padding: 0px 1.0875rem 1.45rem;
     padding-top: 0;
-    /*background-image: linear-gradient(#b5b5b5, #dedcdc, #cacaca, #b9b7b7);*/
+    background-image: linear-gradient(#b5b5b5, #dedcdc, #cacaca, #b9b7b7);
    /*  background-image: linear-gradient(#941818, #b93636, #ad4545, #772e2e); */
-   background-image: linear-gradient(#310202, #4e0606, #4e0909, #250505);
+   /*background-image: linear-gradient(#310202, #4e0606, #4e0909, #250505); */
     
 }
 
