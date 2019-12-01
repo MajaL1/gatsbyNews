@@ -83,7 +83,7 @@ li {
 
 .news-item-header {
     background-color: whitesmoke;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     padding: 10px;
     border-bottom: #c9c7c7 3px solid;
     font-size: smaller;
@@ -172,4 +172,19 @@ article {
 }
 .img-article {
     margin-left: 15px;
+}
+
+.header-icons {
+  margin-top:4%;
+}
+
+.header-logo-img {
+ float: right;
+ right: 0%;
+ position: absolute;
+ margin-top: -20%;
+}
+
+.header-logo {
+  margin-top: 5%;
 }

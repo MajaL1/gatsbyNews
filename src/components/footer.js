@@ -12,7 +12,7 @@ const Footer = () => (
     </div>
     
     <small className="footer-text">{" © Copyright 2019 Vse pravice pridržane"}</small>
-    <small class="login-text">Prijava</small>
+    <small className="login-text">Prijava</small>
   </footer>
 
 )

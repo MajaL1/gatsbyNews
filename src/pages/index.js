@@ -47,40 +47,55 @@ const IndexPage = (props) => {
   return (
     <Layout>
       <NetlifyIdentity />
-      
-     {/* <h3 onClick={() => { openNetlifyModal() }}>Login</h3> */}
-      <h5 className="item-title">
-              Zadnje novice
-      </h5>
-      
+
+      {/* <h3 onClick={() => { openNetlifyModal() }}>Login</h3> */}
+
       <div style={{ marginBottom: `1.45rem` }}>
+
+        <article>
+          <header>
+            <h5 className="item-title">
+              Nagovor predsednika
+            </h5>
+
+            <p className="content-section">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p className="content-section">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur...</p>
+            <p className="content-section">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur...</p>
+          </header>
+        </article>
+
+        <hr />
+        <h5 className="item-title">
+            Zadnje novice
+        </h5>
 
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           return (
+            <div>
+              <article className="news-item content-article" key={node.fields.slug}>
+                <section className="content-section">
+                  <header class="news-item-header">
+                    <small className="news-item-date"><FaCalendarAlt />{" Objavljeno: "}{node.frontmatter.date}</small>
+                    <h5>
+                      <Link className="news-item-title" style={{ boxShadow: `none` }} to={node.fields.slug}>
+                        {title}
+                      </Link>
+                    </h5>
+                    <p className="news-item-intro">{node.frontmatter.intro}</p>
+                    <hr />
+                    <Link className="news-item-link" to={node.fields.slug}>
+                      {"Preberi celotni prispevek >> "}
+                    </Link>
 
-            <article className="news-item content-article" key={node.fields.slug}>
-              <section className="content-section">
-              <header class="news-item-header">
-                <small className="news-item-date"><FaCalendarAlt/>{" Objavljeno: "}{node.frontmatter.date}</small>
-                <h5>
-                  <Link className="news-item-title" style={{ boxShadow: `none` }} to={node.fields.slug}>
-                    {title}
-                  </Link>
-                </h5>
-                <p className="news-item-intro">{node.frontmatter.intro}</p>
-                <hr/>
-                <Link className="news-item-link" to={node.fields.slug}>
-                  {"Preberi celotni prispevek >> "}
-                </Link>
-                
-              </header>
-              </section>
-            </article>
+                  </header>
+                </section>
+              </article>
+            </div>
           )
         })}
       </div>
-    {/*  <Link to="/page-2/">Go to page 2</Link> */}
+      {/*  <Link to="/page-2/">Go to page 2</Link> */}
     </Layout>
   )
 }

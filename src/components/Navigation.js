@@ -44,18 +44,20 @@ const Navigation = class extends React.Component {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
-              <NavLink className="navigation-link" to="/" activeClassName="active">Domov</NavLink>
-              <NavLink className="navigation-link" to="/about" activeClassName="active">O&nbsp;nas</NavLink>
+              <NavLink className="navigation-link" to="/">Domov</NavLink>
+              <NavLink className="navigation-link" to="/about">O&nbsp;nas</NavLink>
               <NavDropdown title="Operativa" id="basic-nav-dropdown" className="navigation-dropdown-link navigation-link">
                 <NavLink className="navigation-link" to="/voznipark">Vozni park</NavLink>
-                <NavDropdown.Divider />
                 <NavLink className="navigation-link" to="/pozarninacrt">Požarni načrt</NavLink>
               </NavDropdown>
 
               <NavLink className="navigation-link" to="/zgodovina">Zgodovina</NavLink>
               <NavLink className="navigation-link" to="/povezave">Povezave</NavLink>
-              <NavLink className="navigation-link" to="/galerija">Galerija</NavLink>
-              <NavLink className="navigation-link" to="/kontakt">Kontakt</NavLink>
+              <NavDropdown title="Galerija" id="basic-nav-dropdown" className="navigation-dropdown-link navigation-link">
+                <NavLink className="navigation-link" to="/galerija-operativa">Operativa</NavLink>
+                <NavLink className="navigation-link" to="/galerija-mladina">Mladina</NavLink>
+                <NavLink className="navigation-link" to="/galerija-dogodki">Dogodki</NavLink>
+              </NavDropdown>
             </Nav>
           </Navbar.Collapse>
         </Navbar>
