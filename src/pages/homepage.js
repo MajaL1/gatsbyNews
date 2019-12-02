@@ -5,10 +5,7 @@ import Layout from "../components/layout"
 
 const HomePage = () => (
   <Layout>
-    
     <h1>Home page</h1>
-    
-   
   </Layout>
 )
 

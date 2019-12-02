@@ -1,18 +1,23 @@
-import React from 'react'
+import React from "react"
 //import { Link } from 'gatsby'
-import { Navbar, Button, Nav, NavDropdown, Form, FormControl } from 'react-bootstrap'
-import IndexPage from '../pages/index';
-import Contact from './Contact';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-
-
+import {
+  Navbar,
+  Button,
+  Nav,
+  NavDropdown,
+  Form,
+  FormControl,
+} from "react-bootstrap"
+import IndexPage from "../pages/index"
+import Contact from "./Contact"
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom"
 
 const MainBar = class extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
       active: false,
-      navBarActiveClass: '',
+      navBarActiveClass: "",
     }
   }
 
@@ -27,11 +32,11 @@ const MainBar = class extends React.Component {
         // set the class in state for the navbar accordingly
         this.state.active
           ? this.setState({
-            navBarActiveClass: 'is-active',
-          })
+              navBarActiveClass: "is-active",
+            })
           : this.setState({
-            navBarActiveClass: '',
-          })
+              navBarActiveClass: "",
+            })
       }
     )
   }
@@ -47,30 +52,55 @@ const MainBar = class extends React.Component {
               <Nav.Item>
                 <Nav.Link href="/contact">Active</Nav.Link>
               </Nav.Item>
-              <li><Link to={'/'} className="nav-link"> Home </Link></li>
-              <li><Link to={'/contact'} className="nav-link">Contact</Link></li>
+              <li>
+                <Link to={"/"} className="nav-link">
+                  {" "}
+                  Home{" "}
+                </Link>
+              </li>
+              <li>
+                <Link to={"/contact"} className="nav-link">
+                  Contact
+                </Link>
+              </li>
               <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                <NavDropdown.Item><li><Link to={'/contact'} className="nav-link">Contact</Link></li></NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+                <NavDropdown.Item>
+                  <li>
+                    <Link to={"/contact"} className="nav-link">
+                      Contact
+                    </Link>
+                  </li>
+                </NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.3">
+                  Something
+                </NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item><li><Link to={'/contact'} className="nav-link">Home</Link></li></NavDropdown.Item>
+                <NavDropdown.Item>
+                  <li>
+                    <Link to={"/contact"} className="nav-link">
+                      Home
+                    </Link>
+                  </li>
+                </NavDropdown.Item>
               </NavDropdown>
             </Nav>
             <Form inline>
-              <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+              <FormControl
+                type="text"
+                placeholder="Search"
+                className="mr-sm-2"
+              />
               <Button variant="outline-success">Search</Button>
             </Form>
           </Navbar.Collapse>
         </Navbar>
         <Switch>
-          <Route exact path='/' component={IndexPage} />
-          <Route path='/contact' component={Contact} />
-          </Switch>
+          <Route exact path="/" component={IndexPage} />
+          <Route path="/contact" component={Contact} />
+        </Switch>
       </Router>
     )
   }
 }
-
-
 
 export default MainBar

@@ -1,7 +1,6 @@
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
-
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
@@ -10,28 +9,26 @@ exports.createPages = async ({ graphql, actions }) => {
     `
       {
         allMarkdownRemark(
-            sort: { fields: [frontmatter___date], order: DESC }
+          sort: { fields: [frontmatter___date], order: DESC }
           limit: 1000
         ) {
           edges {
             node {
-
               fields {
                 slug
               }
               frontmatter {
-                  
                 title
                 intro
-                
-               image
-    
+
+                image
+              }
             }
           }
         }
-        }
-}
-`)
+      }
+    `
+  )
 
   if (result.errors) {
     throw result.errors
@@ -43,7 +40,7 @@ exports.createPages = async ({ graphql, actions }) => {
   posts.forEach((post, index) => {
     const previous = index === posts.length - 1 ? null : posts[index + 1].node
     const next = index === 0 ? null : posts[index - 1].node
-   // const created_at = moment().format('YYYY-MM-DD');
+    // const created_at = moment().format('YYYY-MM-DD');
 
     createPage({
       path: post.node.fields.slug,
@@ -62,7 +59,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 
   if (node.internal.type === `MarkdownRemark`) {
     const value = createFilePath({ node, getNode })
-    console.log("node, value: ",node, value)
+    console.log("node, value: ", node, value)
     createNodeField({
       name: `slug`,
       node,

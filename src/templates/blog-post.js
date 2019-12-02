@@ -5,7 +5,6 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Img from "gatsby-image"
 
-
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
@@ -14,37 +13,31 @@ class BlogPostTemplate extends React.Component {
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <SEO
-          title={post.frontmatter.title}
-
-        />
+        <SEO title={post.frontmatter.title} />
         <article>
           <header>
-            <h5 className="news-item-title"
-            >
-              {post.frontmatter.title}
-
-            </h5>
+            <h5 className="news-item-title">{post.frontmatter.title}</h5>
             <p
               style={{
                 display: `block`,
-
               }}
-
             >
-              <small className="news-item-date">{"Objavljeno: "}{post.frontmatter.date}</small>
-               
+              <small className="news-item-date">
+                {"Objavljeno: "}
+                {post.frontmatter.date}
+              </small>
             </p>
             <p className="news-content-section">{post.frontmatter.intro}</p>
           </header>
 
-          <section className="news-content-section" dangerouslySetInnerHTML={{ __html: post.html }} />
-        <p>{post.frontmatter.image}</p>
-        <Img fixed={post.frontmatter.image} alt="" />
+          <section
+            className="news-content-section"
+            dangerouslySetInnerHTML={{ __html: post.html }}
+          />
+          <p>{post.frontmatter.image}</p>
+          <Img fixed={post.frontmatter.image} alt="" />
           <hr />
-          <footer>
-
-          </footer>
+          <footer></footer>
         </article>
 
         <nav>
@@ -96,8 +89,6 @@ export const pageQuery = graphql`
         date(formatString: "DD.MM.YYYY")
         intro
         image
-
-        
       }
     }
   }
