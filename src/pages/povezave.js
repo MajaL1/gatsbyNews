@@ -38,6 +38,16 @@ const povezave = ({ data }) => (
         </a>
       </section>
     </article>
+
+    <div>
+    <div className="testFlex">
+      <div className="testItem">
+          {data.allFile.edges.map(edge => (
+            <Img  fluid={edge.node.childImageSharp.fluid} />
+          ))}
+        </div>  
+        </div>
+      </div>
   </Layout>
 )
 

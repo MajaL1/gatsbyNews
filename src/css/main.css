@@ -193,3 +193,17 @@ article {
 .header-logo {
   margin-top: 5%;
 }
+
+.testFlex {
+    width: 600px;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    background-color: green;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-grow: 2;
+}
+
+.testItem {
+    width: 100px;
+} 
