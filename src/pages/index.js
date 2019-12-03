@@ -134,7 +134,7 @@ const IndexPage = props => {
                       {" Objavljeno: "}
                       {node.frontmatter.date}
 
-                      {" v: "}
+                      {" v "}
                       {category}
                     </small>
                     <h5>
@@ -186,6 +186,8 @@ export const pageQuery = graphql`
             title
             intro
             date(formatString: "DD.MM.YYYY")
+            category
+            top
           }
         }
       }
