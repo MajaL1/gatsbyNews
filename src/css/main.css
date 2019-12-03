@@ -178,7 +178,7 @@ article {
   margin-top: 10px;
 }
 
-.header-icons > img {
+.header-icons > a > img {
   float: right;
     margin-left: 5px;
 }
@@ -194,15 +194,9 @@ article {
   margin-top: 5%;
 }
 
-.testFlex {
+.povezave-content {
     width: 600px;
     display: flex;
-    /* flex-wrap: wrap-reverse;
-    background-color: green;
-    justify-content: flex-start;
-    flex-direction: row;
-    flex-grow: 2;
-    flex-basis: 100%; */
     flex-direction: row;
     justify-content: space-between;
 }

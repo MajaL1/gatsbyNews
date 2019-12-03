@@ -6,7 +6,7 @@ import { FaFacebook, FaYoutube, FaInstagram } from "react-icons/fa"
 const Header = ({ siteTitle, subtitle, description }) => (
   <header className="header row">
     <div className="header-logo col-lg-2 col-md-2 col-sm-12">
-      <img className="header-logo-img" src="./icons/fb-sm_50x.png" />
+      <img className="header-logo-img" src="./icons/arso.png" />
     </div>
     <div className="header-main-div col-lg-8 col-md-8 col-sm-12">
       <span
@@ -46,8 +46,12 @@ const Header = ({ siteTitle, subtitle, description }) => (
       </span>
     </div>
     <div className="header-icons col-lg-2 col-md-1 col-sm-12">
-      <img src="./icons/fb.svg" width="25px" />
+    <a href="https://www.facebook.com" target="_blank">
+      <img src="./icons/fb.svg" width="25px"/>
+    </a>  
+    <a href="https://www.instagram.com"  target="_blank">
       <img src="./icons/instagram_25x.png" />
+    </a>
     </div>
   </header>
 )
