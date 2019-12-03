@@ -19,9 +19,9 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Vsebina", name: "body", widget: "markdown"}
       - {label: "Na vrhu", name: "top", widget: "boolean", default: false}
       - label: "Kategorija"
-        name: "category"
-        widget: "select"
-        options:
+          name: "category"
+          widget: "select"
+          options:
           - { label: "Dogodki", value: "Dogodki" }
           - { label: "Operativa", value: "Operativa" }
           - { label: "Mladina", value: "Mladina" }
