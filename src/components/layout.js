@@ -9,7 +9,7 @@ import "../css/main.css"
 import Navigation from "./Navigation"
 import Helmet from "react-helmet"
 
-const Layout = ({ children, test = "test" }) => (
+const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -21,7 +21,7 @@ const Layout = ({ children, test = "test" }) => (
         }
       }
     `}
-    render={(data, test) => (
+    render={data => (
       <div className="top-div">
         <Helmet>
           <title>Prostovoljno gasilsko društvo Štangarske Poljane</title>
@@ -41,10 +41,7 @@ const Layout = ({ children, test = "test" }) => (
         <Navigation />
 
         <div className="content-main-div">
-          <main
-            className="main-content col-lg-8 col-md-12 col-sm-12"
-            test={"test"}
-          >
+          <main className="main-content col-lg-8 col-md-12 col-sm-12">
             {children}
           </main>
         </div>
@@ -56,7 +53,6 @@ const Layout = ({ children, test = "test" }) => (
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-  test: "test",
 }
 
 export default Layout

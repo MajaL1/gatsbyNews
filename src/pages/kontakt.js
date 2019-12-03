@@ -5,7 +5,7 @@ import { FaTwitter, FaFacebook, FaYoutube, FaMailBulk } from "react-icons/fa"
 
 const Kontakt = () => (
   <Layout>
-    <article class="contact-article">
+    <article className="contact-article">
       <header>
         <h5 className="item-title">Podatki o društvu</h5>
       </header>

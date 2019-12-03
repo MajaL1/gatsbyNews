@@ -46,12 +46,12 @@ const Header = ({ siteTitle, subtitle, description }) => (
       </span>
     </div>
     <div className="header-icons col-lg-2 col-md-1 col-sm-12">
-    <a href="https://www.facebook.com" target="_blank">
-      <img src="./icons/fb.svg" width="25px"/>
-    </a>  
-    <a href="https://www.instagram.com"  target="_blank">
-      <img src="./icons/instagram_25x.png" />
-    </a>
+      <a href="https://www.facebook.com" target="_blank">
+        <img src="./icons/fb.svg" width="25px" />
+      </a>
+      <a href="https://www.instagram.com" target="_blank">
+        <img src="./icons/instagram_25x.png" />
+      </a>
     </div>
   </header>
 )

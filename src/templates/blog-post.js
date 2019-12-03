@@ -8,9 +8,10 @@ import Img from "gatsby-image"
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
+    const category = this.props.data.markdownRemark.category
     const siteTitle = this.props.data.site.siteMetadata.title
     const { previous, next } = this.props.pageContext
-
+    const image = post.image
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title={post.frontmatter.title} />
@@ -26,6 +27,8 @@ class BlogPostTemplate extends React.Component {
                 {"Objavljeno: "}
                 {post.frontmatter.date}
               </small>
+              {"v "}
+              {category}
             </p>
             <p className="news-content-section">{post.frontmatter.intro}</p>
           </header>
@@ -34,8 +37,8 @@ class BlogPostTemplate extends React.Component {
             className="news-content-section"
             dangerouslySetInnerHTML={{ __html: post.html }}
           />
-          <p>{post.frontmatter.image}</p>
-          <Img fixed={post.frontmatter.image} alt="" />
+          <p>{image}</p>
+          {image && <Img fixed={image} alt="" />}
           <hr />
           <footer></footer>
         </article>
@@ -89,6 +92,8 @@ export const pageQuery = graphql`
         date(formatString: "DD.MM.YYYY")
         intro
         image
+        category
+        top
       }
     }
   }

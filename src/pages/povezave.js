@@ -2,7 +2,6 @@ import React from "react"
 
 import Layout from "../components/layout"
 
-
 const povezave = ({ data }) => (
   <Layout>
     <article>
@@ -23,17 +22,20 @@ const povezave = ({ data }) => (
         <a className="flex-3" href="https://meteo.arso.gov.si/met/sl/warning/">
           {/* Arso-Vremenska opozorila */}
 
-           <img src="./icons/arso.png" />
+          <img src="./icons/arso.png" />
         </a>
-        <a className="flex-3" href="https://meteo.arso.gov.si/met/sl/warning/fire">
+        <a
+          className="flex-3"
+          href="https://meteo.arso.gov.si/met/sl/warning/fire"
+        >
           {/* Arso-Požarna ogroženost */}
-           <img src="./icons/arso.png" />
+          <img src="./icons/arso.png" />
         </a>
 
         <a className="flexItem" href="http://wap.sos112.si/Dogodek">
           {/* SOS */}
-      <img src="./icons/spin112.png" />
-      </a>
+          <img src="./icons/spin112.png" />
+        </a>
       </div>
     </div>
     <div className="povezave-content content-section">
@@ -42,16 +44,14 @@ const povezave = ({ data }) => (
           ))*/}
       <a className="flexItem" href="https://spin3.sos112.si/javno/zemljevid">
         {/* Spin */}
-      <img  src="./icons/spin.png" />
+        <img src="./icons/spin.png" />
       </a>
       <a className="flex-2" href="https://www.gasilec.net">
         {/* Gasilska zveza Slovenije */}
         <img src="./icons/gzs.gif" />
       </a>
-      
     </div>
-
-  </Layout >
+  </Layout>
 )
 
 export const queryImages = graphql`

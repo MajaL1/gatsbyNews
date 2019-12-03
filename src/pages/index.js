@@ -38,7 +38,7 @@ const IndexPage = props => {
   //const data = props.data;//.allFile.edges[0].node.childMarkdownRemark.frontmatter
   //const data = props.data.allFile.edges[0].node.childMarkdownRemark.frontmatter
 
-  const posts = props.data.allMarkdownRemark.edges
+  const posts = props.data.news.edges
 
   return (
     <Layout>
@@ -91,7 +91,7 @@ const IndexPage = props => {
         <div>
           <article className="news-item content-article">
             <section className="content-section">
-              <header class="news-item-header">
+              <header className="news-item-header">
                 <small className="news-item-date">
                   <FaCalendarAlt />
                   {" Objavljeno: "}
@@ -128,7 +128,7 @@ const IndexPage = props => {
                 key={node.fields.slug}
               >
                 <section className="content-section">
-                  <header class="news-item-header">
+                  <header className="news-item-header">
                     <small className="news-item-date">
                       <FaCalendarAlt />
                       {" Objavljeno: "}
@@ -160,7 +160,7 @@ const IndexPage = props => {
       </div>
       <div>
         <Dropdown />
-        <Link to="/page-2/">Starejse novice</Link>
+        {/* <Link to="/page-2/">Starejse novice</Link> */}
       </div>
     </Layout>
   )
@@ -175,7 +175,9 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    news: allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
       edges {
         node {
           excerpt
