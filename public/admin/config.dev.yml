@@ -1,19 +1,27 @@
 # In your static/admin/config.yml file
 
 backend: 
-   name: test-repo
+  name: git-gateway
 
 media_folder: static/assets
 public_folder: assets
 
 collections: # A list of collections the CMS should be able to edit
-  - name: "post" # Used in routes, ie.: /admin/collections/:slug/edit
-    label: "Post" # Used in the UI, ie.: "New Post"
+  - name: "blog" # Used in routes, ie.: /admin/collections/:slug/edit
+    label: "Novica" # Used in the UI, ie.: "New Post"
     folder: "content/blog" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Intro Blurb", name: "description", widget: "text"}
+      - {label: "Naslov", name: "title", widget: "string"}
+      - {label: "Datum objave", name: "date", widget: "datetime"}
+      - {label: "Intro", name: "intro", widget: "text"}
       - {label: "Image", name: "image", widget: "image", required: false}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Vsebina", name: "body", widget: "markdown"}
+      - {label: "Na vrhu", name: "top", widget: "boolean", default: false}
+      - label: "Kategorija"
+        name: "category"
+        widget: "select"
+        options:
+          - { label: "Dogodki", value: "Dogodki" }
+          - { label: "Operativa", value: "Operativa" }
+          - { label: "Mladina", value: "Mladina" }
