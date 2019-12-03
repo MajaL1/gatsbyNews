@@ -24,4 +24,4 @@ collections: # A list of collections the CMS should be able to edit
         options:
           - { label: "Dogodki", value: "Dogodki" }
           - { label: "Operativa", value: "Operativa" }
-          - { label: "Mladina", value: "Mladina" }}
+          - { label: "Mladina", value: "Mladina" }
