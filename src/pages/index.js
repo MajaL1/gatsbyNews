@@ -120,6 +120,7 @@ const IndexPage = props => {
 
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
+          const category = node.frontmatter.category
           return (
             <div>
               <article
@@ -132,6 +133,9 @@ const IndexPage = props => {
                       <FaCalendarAlt />
                       {" Objavljeno: "}
                       {node.frontmatter.date}
+
+                      {" v: "}
+                      {category}
                     </small>
                     <h5>
                       <Link
