@@ -40,14 +40,24 @@ const povezave = ({ data }) => (
     </article>
 
     <div>
-    <div className="testFlex">
-      <div className="testItem">
-          {data.allFile.edges.map(edge => (
-            <Img  fluid={edge.node.childImageSharp.fluid} />
-          ))}
-        </div>  
+    <div className="testFlex content-section">
+          {/*data.allFile.edges.map(edge => (
+            <Img imgStyle="testItem" fluid={edge.node.childImageSharp.fluid} />
+          ))*/}
+           <img className="flexItem" src="./icons/fb.svg" width="25px" />
+           <img className="flex-3" src="./icons/arso.png" />
+            <img className="flex-4" src="./icons/gzs.gif" />
         </div>
       </div>
+      <div className="testFlex content-section">
+          {/*data.allFile.edges.map(edge => (
+            <Img imgStyle="testItem" fluid={edge.node.childImageSharp.fluid} />
+          ))*/}
+            <img className="flexItem" src="./icons/spin.png" />
+            <img className="flexItem" src="./icons/instagram_25x.png" />
+            <img className="flex-4" src="./icons/gzs.gif" />
+        </div>
+      
   </Layout>
 )
 
