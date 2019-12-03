@@ -16,49 +16,46 @@ const povezave = ({ data }) => (
       <header>
         <h5 className="item-title">Povezave</h5>
       </header>
-      <section className="content-section">
+      {/* <section className="content-section">
         <div style={imgGridStyle}>
           {data.allFile.edges.map(edge => (
             <Img fluid={edge.node.childImageSharp.fluid} />
           ))}
         </div>
-
-        <a href="https://spin3.sos112.si/javno/zemljevid">Spin</a>
-        <p />
-        <a href="http://wap.sos112.si/Dogodek">SOS</a>
-        <p />
-        <a href="https://www.gasilec.net">Gasilska zveza Slovenije</a>
-        <p />
-        <a href="https://meteo.arso.gov.si/met/sl/warning/fire/">
-          Arso-Požarna ogroženost
-        </a>
-        <p />
-        <a href="https://meteo.arso.gov.si/met/sl/warning/">
-          Arso-Vremenska opozorila
-        </a>
-      </section>
+      </section> */}
     </article>
 
     <div>
-    <div className="testFlex content-section">
-          {/*data.allFile.edges.map(edge => (
-            <Img imgStyle="testItem" fluid={edge.node.childImageSharp.fluid} />
-          ))*/}
-           <img className="flexItem" src="./icons/fb.svg" width="25px" />
-           <img className="flex-3" src="./icons/arso.png" />
-            <img className="flex-4" src="./icons/gzs.gif" />
-        </div>
-      </div>
       <div className="testFlex content-section">
-          {/*data.allFile.edges.map(edge => (
+        <a className="flex-3" href="https://meteo.arso.gov.si/met/sl/warning/">
+          Arso-Vremenska opozorila
+
+           <img src="./icons/arso.png" />
+        </a>
+        <a className="flex-3" href="https://meteo.arso.gov.si/met/sl/warning/fire">
+          Arso-Požarna ogroženost
+           <img src="./icons/arso.png" />
+        </a>
+
+        <a className="flexItem" href="http://wap.sos112.si/Dogodek">SOS
+      <img src="./icons/spin.png" />
+      </a>
+      </div>
+    </div>
+    <div className="testFlex content-section">
+      {/*data.allFile.edges.map(edge => (
             <Img imgStyle="testItem" fluid={edge.node.childImageSharp.fluid} />
           ))*/}
-            <img className="flexItem" src="./icons/spin.png" />
-            <img className="flexItem" src="./icons/instagram_25x.png" />
-            <img className="flex-4" src="./icons/gzs.gif" />
-        </div>
+      <a className="flexItem" href="https://spin3.sos112.si/javno/zemljevid">Spin
+      <img  src="./icons/spin.png" />
+      </a>
+      <a className="flex-2" href="https://www.gasilec.net">Gasilska zveza Slovenije
+        <img src="./icons/gzs.gif" />
+      </a>
       
-  </Layout>
+    </div>
+
+  </Layout >
 )
 
 export const queryImages = graphql`
