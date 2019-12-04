@@ -39,6 +39,7 @@ const IndexPage = props => {
   //const data = props.data.allFile.edges[0].node.childMarkdownRemark.frontmatter
 
   const posts = props.data.news.edges
+  const stickyNews = props.data.stickyNews.edges
 
   return (
     <Layout>
@@ -87,33 +88,46 @@ const IndexPage = props => {
         <hr />
 
         <h5 className="item-title">Izpostavljeno</h5>
+        {stickyNews.map(({ node }) => {
+          const title = node.frontmatter.title || node.fields.slug
+          const category = node.frontmatter.category
+          return (
+            <div key={node.fields.slug}>
+              <article
+                className="news-item content-article"
+                key={node.fields.slug}
+              >
+                <section className="content-section">
+                  <header className="news-item-header">
+                    <small className="news-item-date">
+                      <FaCalendarAlt />
+                      {" Objavljeno: "}
+                      {node.frontmatter.date}
 
-        <div>
-          <article className="news-item content-article">
-            <section className="content-section">
-              <header className="news-item-header">
-                <small className="news-item-date">
-                  <FaCalendarAlt />
-                  {" Objavljeno: "}
-                </small>
-                <h5>
-                  <Link
-                    className="news-item-title"
-                    style={{ boxShadow: `none` }}
-                  ></Link>
-                </h5>
-                <p className="news-item-intro">
-                  {" "}
-                  tukaj bomo dali novice, ki bodo vedno na vrhu
-                </p>
-                <hr />
-                <Link className="news-item-link">
-                  {"Preberi celotni prispevek >> "}
-                </Link>
-              </header>
-            </section>
-          </article>
-        </div>
+                      {" v "}
+                      {category}
+                    </small>
+                    <h5>
+                      <Link
+                        className="news-item-title"
+                        style={{ boxShadow: `none` }}
+                        to={node.fields.slug}
+                      >
+                        {title}
+                      </Link>
+                    </h5>
+                    <p className="news-item-intro">{node.frontmatter.intro}</p>
+                    <hr />
+                    <Link className="news-item-link" to={node.fields.slug}>
+                      {"Preberi celotni prispevek >> "}
+                    </Link>
+                  </header>
+                </section>
+              </article>
+            </div>
+          )
+        })}
+       
         <hr />
 
         <h5 className="item-title">Zadnje novice</h5>
@@ -122,7 +136,7 @@ const IndexPage = props => {
           const title = node.frontmatter.title || node.fields.slug
           const category = node.frontmatter.category
           return (
-            <div>
+            <div key={node.fields.slug}>
               <article
                 className="news-item content-article"
                 key={node.fields.slug}
@@ -194,5 +208,26 @@ export const pageQuery = graphql`
         }
       }
     }
+    stickyNews: allMarkdownRemark( 
+      filter: {
+        frontmatter: {top: {eq: true}}
+      })
+      {
+        edges {
+          node {
+            excerpt
+            fields {
+              slug
+            }
+            frontmatter{
+              title
+              intro
+              date(formatString: "DD.MM.YYYY")
+              category
+              top
+            }
+          }
+        }
+      }
   }
 `
