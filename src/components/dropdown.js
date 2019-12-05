@@ -1,19 +1,35 @@
-import React from "react"
+import React, { Component } from 'react'
+import Dropdown from 'react-dropdown'
+import 'react-dropdown/style.css';
 
-const Dropdown = () => (
-  <div>
-    {/*<Dropdown.Toggle variant="success" id="dropdown-basic">
-    Dropdown Button
-  </Dropdown.Toggle>
+const options = [
+  'one', 'two', 'three'
+]
 
-  <Dropdown.Menu>
-    <Dropdown.Item href="#/action-1">2019</Dropdown.Item>
-    <Dropdown.Item href="#/action-2">2018</Dropdown.Item>
-    <Dropdown.Item href="#/action-3">2017</Dropdown.Item>
-    <Dropdown.Item href="#/action-2">2016</Dropdown.Item>
-    <Dropdown.Item href="#/action-3">2015</Dropdown.Item>
-  </Dropdown.Menu>    */}
-  </div>
-)
+class DropdownMenu extends Component {
+  constructor (props) {
+    super(props)
+    this.state = {
+      selected: ''
+    }
+    this._onSelect = this._onSelect.bind(this)
+  }
 
-export default Dropdown
+  _onSelect (option) {
+    console.log('You selected ', option.label)
+    this.setState({selected: option})
+  }
+
+  render () {
+    const defaultOption = this.state.selected
+    const placeHolderValue = typeof this.state.selected === 'string' ? this.state.selected : this.state.selected.label
+
+    return (
+      <article>
+       <Dropdown options={options} onChange={this._onSelect} value={defaultOption} placeholder="Select an option" />;
+      </article>
+    )
+  }
+}
+
+export default DropdownMenu
