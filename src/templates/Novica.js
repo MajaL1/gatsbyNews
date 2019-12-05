@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Img from "gatsby-image"
 
-class BlogPostTemplate extends React.Component {
+class Novica extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
     const category = this.props.data.markdownRemark.category
@@ -74,7 +74,7 @@ class BlogPostTemplate extends React.Component {
   }
 }
 
-export default BlogPostTemplate
+export default Novica
 
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {

@@ -127,7 +127,7 @@ const IndexPage = props => {
             </div>
           )
         })}
-       
+
         <hr />
 
         <h5 className="item-title">Zadnje novice</h5>
@@ -208,26 +208,24 @@ export const pageQuery = graphql`
         }
       }
     }
-    stickyNews: allMarkdownRemark( 
-      filter: {
-        frontmatter: {top: {eq: true}}
-      })
-      {
-        edges {
-          node {
-            excerpt
-            fields {
-              slug
-            }
-            frontmatter{
-              title
-              intro
-              date(formatString: "DD.MM.YYYY")
-              category
-              top
-            }
+    stickyNews: allMarkdownRemark(
+      filter: { frontmatter: { top: { eq: true } } }
+    ) {
+      edges {
+        node {
+          excerpt
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            intro
+            date(formatString: "DD.MM.YYYY")
+            category
+            top
           }
         }
       }
+    }
   }
 `

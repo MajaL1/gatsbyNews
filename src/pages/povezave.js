@@ -19,20 +19,29 @@ const povezave = ({ data }) => (
 
     <div>
       <div className="povezave-content content-section">
-        <a className="flex-3" href="https://meteo.arso.gov.si/met/sl/warning/">
+        <a
+          className="flex-3"
+          target="_blank"
+          href="https://meteo.arso.gov.si/met/sl/warning/"
+        >
           {/* Arso-Vremenska opozorila */}
 
           <img src="./icons/arso.png" />
         </a>
         <a
           className="flex-3"
+          target="_blank"
           href="https://meteo.arso.gov.si/met/sl/warning/fire"
         >
           {/* Arso-Požarna ogroženost */}
           <img src="./icons/arso.png" />
         </a>
 
-        <a className="flexItem" href="http://wap.sos112.si/Dogodek">
+        <a
+          className="flexItem"
+          target="_blank"
+          href="http://wap.sos112.si/Dogodek"
+        >
           {/* SOS */}
           <img src="./icons/spin112.png" />
         </a>
@@ -42,11 +51,15 @@ const povezave = ({ data }) => (
       {/*data.allFile.edges.map(edge => (
             <Img imgStyle="testItem" fluid={edge.node.childImageSharp.fluid} />
           ))*/}
-      <a className="flexItem" href="https://spin3.sos112.si/javno/zemljevid">
+      <a
+        className="flexItem"
+        target="_blank"
+        href="https://spin3.sos112.si/javno/zemljevid"
+      >
         {/* Spin */}
         <img src="./icons/spin.png" />
       </a>
-      <a className="flex-2" href="https://www.gasilec.net">
+      <a className="flex-2" target="_blank" href="https://www.gasilec.net">
         {/* Gasilska zveza Slovenije */}
         <img src="./icons/gzs.gif" />
       </a>

@@ -6,7 +6,7 @@ const preferDefault = m => m && m.default || m
 
 exports.components = {
   "component---src-pages-index-js": hot(preferDefault(require("E:\\maja\\projects\\gatsbyNews\\src\\pages\\index.js"))),
-  "component---src-templates-blog-post-js": hot(preferDefault(require("E:\\maja\\projects\\gatsbyNews\\src\\templates\\blog-post.js"))),
+  "component---src-templates-novica-js": hot(preferDefault(require("E:\\maja\\projects\\gatsbyNews\\src\\templates\\Novica.js"))),
   "component---cache-dev-404-page-js": hot(preferDefault(require("E:\\maja\\projects\\gatsbyNews\\.cache\\dev-404-page.js"))),
   "component---src-pages-404-js": hot(preferDefault(require("E:\\maja\\projects\\gatsbyNews\\src\\pages\\404.js"))),
   "component---src-pages-about-js": hot(preferDefault(require("E:\\maja\\projects\\gatsbyNews\\src\\pages\\about.js"))),
