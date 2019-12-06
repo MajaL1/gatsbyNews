@@ -12,6 +12,8 @@ intro: >
   pospremil celostranski oglas v The New York Timesu, za katero so denar zbrali
   zasebni donatorji.
 image: /assets/secondarytile.png
+top: false
+category: Operativa
 ---
 
 Pred petnajstimi leti je bila spletna krajina bistveno drugačna, skorajda enoumna. Žezlo je v rokah trdno držal Microsoft, katerega Internet Explorer so uporabljali praktično vsi. Njegov tržni delež je presegal 90 odstotkov, konkurenca je bila anemična, Netscapov Navigator je bil na smrt bolan. V teh razmerah je Mozilla prepoznala potrebo po alternativi, ki se je korakoma rojevala od leta 2002. Sprva pod imenom Phoenix in kasneje Firebird se je preimenovala v Firefox in leta 9. novembra 2004 je izšel Firefox 1.0. Izid je pospremil celostranski oglas v The New York Timesu, za katero so denar zbrali zasebni donatorji.
