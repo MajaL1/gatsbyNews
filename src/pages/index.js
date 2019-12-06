@@ -173,7 +173,7 @@ const IndexPage = props => {
         })}
       </div>
       <div>
-        <Dropdown />
+      <Dropdown />
         {/* <Link to="/page-2/">Starejse novice</Link> */}
       </div>
     </Layout>
