@@ -7,6 +7,8 @@ intro: >-
   telefon klasične zasnove z upogljivim zaslonom in Androidom ter z zasoljeno
   ceno poldrugega tisočaka dolarjev.
 image: /assets/secondarytile.png
+top: false
+category: Operativa
 ---
 
 The Verge - Po mnogih namigih in pobegih informacij so pri Motoroli naposled razgrnili vse podrobnosti oživitve legendarne serije telefonov Razr. Novinec bo poklopni telefon klasične zasnove z upogljivim zaslonom in Androidom ter z zasoljeno ceno poldrugega tisočaka dolarjev.
