@@ -16,6 +16,7 @@ exports.components = {
   "component---src-pages-galerija-js": hot(preferDefault(require("E:\\maja\\projects\\gatsbyNews\\src\\pages\\galerija.js"))),
   "component---src-pages-homepage-js": hot(preferDefault(require("E:\\maja\\projects\\gatsbyNews\\src\\pages\\homepage.js"))),
   "component---src-pages-kontakt-js": hot(preferDefault(require("E:\\maja\\projects\\gatsbyNews\\src\\pages\\kontakt.js"))),
+  "component---src-pages-news-js": hot(preferDefault(require("E:\\maja\\projects\\gatsbyNews\\src\\pages\\news.js"))),
   "component---src-pages-operativa-js": hot(preferDefault(require("E:\\maja\\projects\\gatsbyNews\\src\\pages\\operativa.js"))),
   "component---src-pages-page-2-js": hot(preferDefault(require("E:\\maja\\projects\\gatsbyNews\\src\\pages\\page-2.js"))),
   "component---src-pages-povezave-js": hot(preferDefault(require("E:\\maja\\projects\\gatsbyNews\\src\\pages\\povezave.js"))),

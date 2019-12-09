@@ -5,6 +5,8 @@ import Layout from "../components/layout"
 import Dropdown from "../components/dropdown"
 import "../css/main.css"
 import { FaCalendarAlt } from "react-icons/fa"
+import News from "./news";
+import { responsePathAsArray } from "graphql";
 
 function initNetlifyIdentity() {
   console.log("initNetlifyIdentity called")
@@ -37,16 +39,12 @@ class NetlifyIdentity extends Component {
 const IndexPage = props => {
   //const data = props.data;//.allFile.edges[0].node.childMarkdownRemark.frontmatter
   //const data = props.data.allFile.edges[0].node.childMarkdownRemark.frontmatter
-
-  const posts = props.data.news.edges
+  
   const stickyNews = props.data.stickyNews.edges
 
   return (
     <Layout>
-      <NetlifyIdentity />
-
-      {/* <h3 onClick={() => { openNetlifyModal() }}>Login</h3> */}
-
+     
       <div style={{ marginBottom: `1.45rem` }}>
         <article>
           <header>
@@ -130,49 +128,7 @@ const IndexPage = props => {
 
         <hr />
 
-        <h5 className="item-title">Zadnje novice</h5>
-
-        {posts.map(({ node }) => {
-          const title = node.frontmatter.title || node.fields.slug
-          const category = node.frontmatter.category
-          return (
-            <div key={node.fields.slug}>
-              <article
-                className="news-item content-article"
-                key={node.fields.slug}
-              >
-                <section className="content-section">
-                  <header className="news-item-header">
-                    <small className="news-item-date">
-                      <FaCalendarAlt />
-                      {" Objavljeno: "}
-                      {node.frontmatter.date}
-
-                      {" v "}
-                      {category}
-                    </small>
-                    <h5>
-                      <Link
-                        className="news-item-title"
-                        style={{ boxShadow: `none` }}
-                        to={node.fields.slug}
-                      >
-                        {title}
-                      </Link>
-                    </h5>
-                    <p className="news-item-intro">{node.frontmatter.intro}</p>
-                    <hr />
-                    <Link className="news-item-link" to={node.fields.slug}>
-                      {"Preberi celotni prispevek >> "}
-                    </Link>
-                  </header>
-                </section>
-              </article>
-            </div>
-          )
-        })}
-      </div>
-      <div>
+        <News myProp={props.data.news.edges}/>
       <Dropdown />
         {/* <Link to="/page-2/">Starejse novice</Link> */}
       </div>
@@ -182,7 +138,7 @@ const IndexPage = props => {
 
 export default IndexPage
 
-export const pageQuery = graphql`
+export const pageQuery1 = graphql`
   query {
     site {
       siteMetadata {

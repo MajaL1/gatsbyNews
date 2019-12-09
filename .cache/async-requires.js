@@ -13,6 +13,7 @@ exports.components = {
   "component---src-pages-galerija-js": () => import("../src/pages/galerija.js" /* webpackChunkName: "component---src-pages-galerija-js" */),
   "component---src-pages-homepage-js": () => import("../src/pages/homepage.js" /* webpackChunkName: "component---src-pages-homepage-js" */),
   "component---src-pages-kontakt-js": () => import("../src/pages/kontakt.js" /* webpackChunkName: "component---src-pages-kontakt-js" */),
+  "component---src-pages-news-js": () => import("../src/pages/news.js" /* webpackChunkName: "component---src-pages-news-js" */),
   "component---src-pages-operativa-js": () => import("../src/pages/operativa.js" /* webpackChunkName: "component---src-pages-operativa-js" */),
   "component---src-pages-page-2-js": () => import("../src/pages/page-2.js" /* webpackChunkName: "component---src-pages-page-2-js" */),
   "component---src-pages-povezave-js": () => import("../src/pages/povezave.js" /* webpackChunkName: "component---src-pages-povezave-js" */),
