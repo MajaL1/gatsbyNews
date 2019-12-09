@@ -19,7 +19,7 @@ class DropdownMenu extends Component {
   _onSelect (option) {
     console.log('You selected ', option.label)
     // reload zadnje novice
-    let currentNewsList = useStaticQuery(graphql`
+    /* let currentNewsList = useStaticQuery(graphql`
     query getNewsByYear($slug: String!) {
     
       markdownRemark(fields: { slug: { eq: $slug } }) {
@@ -36,7 +36,7 @@ class DropdownMenu extends Component {
         }
       }
     }
-  `)
+  `) */
     this.setState({selected: option})
   }
 
