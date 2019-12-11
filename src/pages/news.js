@@ -8,14 +8,24 @@ const options = [
 ]
 
 let posts;
+let currentNews;
+let news2019;
+let news2018;
+let news2017;
 
 class News extends Component {
   
   constructor (props) {
     super(props)
-    posts = props.myProp;
-   
-    console.log("\n\n\nposts:  ", props.myProp);
+    currentNews = props.newsCurrent;
+    news2019 = props.news2019;
+    news2018 = props.news2018;
+    news2017 = props.news2017;
+
+    console.log("\n\n 111 news2019:  ", news2019);
+    console.log("\n\n 111 news2018:  ", news2018);
+    console.log("\n\n 111 news2017:  ", news2017);
+    
     
     
     //this._onSelect = this._onSelect.bind(this)
@@ -26,38 +36,26 @@ class News extends Component {
   }
 
   onChange (option) {
-    console.log('333 You selected ', option.label)
+    console.log('55 You selected ', option.label)
     //this.setState({option})
+    console.log("\n\n ews2019:  ", news2019);
+    console.log("\n\n ews2018:  ", news2018);
 
-    console.log('new props... ', this.props);
-    //posts = this.props.myProp;
-     const query1 = useStaticQuery(graphql`
-    {
-      newsfor20100: allMarkdownRemark(
-        sort: { fields: [frontmatter___date], order: DESC }
-      ) {
-        edges {
-          node {
-            excerpt
-            fields {
-              slug
-            }
-            frontmatter {
-              title
-              intro
-              date(formatString: "DD.MM.YYYY")
-              category
-              top
-            }
-          }
-        }
-      }   
+    
+    /** todo : switch cselected option * */
+
+    switch(option.label) {
+      case '2019':
+        currentNews = news2019
+      case '2019':
+        currentNews = news2018
+      case '2017':
+        currentNews = news2017
     }
-    `);
 
-    console.log("query1.newsFor20100", query1.newsFor20100);
- 
+    this.setState(currentNews)
 
+    // update state for component
   
   }
 
@@ -69,7 +67,7 @@ class News extends Component {
         <DropdownMenu onChange={this.onChange}/>
         <h5 className="item-title">Zadnje novice</h5>
 
-        {posts.map(({ node }) => {
+        {currentNews.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           const category = node.frontmatter.category
           return (
@@ -115,64 +113,3 @@ class News extends Component {
 
 export default News
 
-/* export const pageQuery1 = graphql`
-  query {
-    newsfor2019: allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
-    ) {
-      edges {
-        node {
-          excerpt
-          fields {
-            slug
-          }
-          frontmatter {
-            title
-            intro
-            date(formatString: "DD.MM.YYYY")
-            category
-            top
-          }
-        }
-      }
-    }
-    newsfor2018: allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
-    ) {
-      edges {
-        node {
-          excerpt
-          fields {
-            slug
-          }
-          frontmatter {
-            title
-            intro
-            date(formatString: "DD.MM.YYYY")
-            category
-            top
-          }
-        }
-      }
-    }
-    newsfor2017: allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
-    ) {
-      edges {
-        node {
-          excerpt
-          fields {
-            slug
-          }
-          frontmatter {
-            title
-            intro
-            date(formatString: "DD.MM.YYYY")
-            category
-            top
-          }
-        }
-      }
-    }
-  }
-` */

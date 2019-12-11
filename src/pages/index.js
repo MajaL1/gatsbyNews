@@ -124,7 +124,7 @@ const IndexPage = props => {
 
         <hr />
 
-        <News myProp={props.data.news.edges}/>
+        <News newsCurrent={props.data.news.edges} news2019={props.data.news.edges} news2018={props.data.news.edges}/>
       
         {/* <Link to="/page-2/">Starejse novice</Link> */}
       </div>
@@ -142,6 +142,63 @@ export const pageQuery1 = graphql`
       }
     }
     news: allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
+      edges {
+        node {
+          excerpt
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            intro
+            date(formatString: "DD.MM.YYYY")
+            category
+            top
+          }
+        }
+      }
+    }
+    newsfor2019: allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
+      edges {
+        node {
+          excerpt
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            intro
+            date(formatString: "DD.MM.YYYY")
+            category
+            top
+          }
+        }
+      }
+    }
+    newsfor2018: allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
+      edges {
+        node {
+          excerpt
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            intro
+            date(formatString: "DD.MM.YYYY")
+            category
+            top
+          }
+        }
+      }
+    }
+    newsfor2017: allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
     ) {
       edges {
