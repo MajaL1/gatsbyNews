@@ -1,7 +1,7 @@
 import React from "react"
 
 import Layout from "../components/layout"
-import { FaTwitter, FaFacebook, FaYoutube, FaMailBulk } from "react-icons/fa"
+import { FaFacebook, FaYoutube, FaMailBulk } from "react-icons/fa"
 
 const Kontakt = () => (
   <Layout>

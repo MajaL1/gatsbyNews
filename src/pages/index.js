@@ -1,30 +1,26 @@
 import React from "react"
-import { Component } from "react"
-import { Link, graphql, Image } from "gatsby"
+import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
-import Dropdown from "../components/dropdown"
-import "../css/main.css"
 import { FaCalendarAlt } from "react-icons/fa"
 import News from "./news";
-import { responsePathAsArray } from "graphql";
 
-function initNetlifyIdentity() {
+/* function initNetlifyIdentity() {
   console.log("initNetlifyIdentity called")
   const script = document.createElement("script")
 
   script.src = "https://identity.netlify.com/v1/netlify-identity-widget.js"
   script.async = true
   document.body.appendChild(script)
-}
+} */
 
-function openNetlifyModal() {
+/* function openNetlifyModal() {
   const netlifyIdentity = window.netlifyIdentity
 
   if (netlifyIdentity) {
     netlifyIdentity.open()
   } else {
     console.log("netlify identity not defined")
-  }
+  }s
 }
 
 class NetlifyIdentity extends Component {
@@ -34,7 +30,7 @@ class NetlifyIdentity extends Component {
   render() {
     return <div></div>
   }
-}
+} */
 
 const IndexPage = props => {
   //const data = props.data;//.allFile.edges[0].node.childMarkdownRemark.frontmatter
@@ -129,7 +125,7 @@ const IndexPage = props => {
         <hr />
 
         <News myProp={props.data.news.edges}/>
-      <Dropdown />
+      
         {/* <Link to="/page-2/">Starejse novice</Link> */}
       </div>
     </Layout>

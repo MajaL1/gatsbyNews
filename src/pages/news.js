@@ -1,19 +1,72 @@
-import React from "react"
-import { Link, graphql, Image } from "gatsby"
+import React, { Component } from 'react'
+import { Link, graphql, Image, StaticQuery, useStaticQuery } from "gatsby"
 import "../css/main.css"
 import { FaCalendarAlt } from "react-icons/fa"
+import DropdownMenu from "../components/dropdown"
+const options = [
+  '2019','2018', '2017', '2016'
+]
 
+let posts;
 
-const News = props => {
-
-    console.log("\n\n\nposts:  ", props.myProp);
-    //console.log("1 posts:  ", props.myProp.data.news.edges);
-  const posts = props.myProp
+class News extends Component {
   
+  constructor (props) {
+    super(props)
+    posts = props.myProp;
+   
+    console.log("\n\n\nposts:  ", props.myProp);
+    
+    
+    //this._onSelect = this._onSelect.bind(this)
+  }
 
-  return (
+  myCallback = (selectedYear) => {
+    console.log("selected:: ", selectedYear);
+  }
+
+  onChange (option) {
+    console.log('333 You selected ', option.label)
+    //this.setState({option})
+
+    console.log('new props... ', this.props);
+    //posts = this.props.myProp;
+     const query1 = useStaticQuery(graphql`
+    {
+      newsfor20100: allMarkdownRemark(
+        sort: { fields: [frontmatter___date], order: DESC }
+      ) {
+        edges {
+          node {
+            excerpt
+            fields {
+              slug
+            }
+            frontmatter {
+              title
+              intro
+              date(formatString: "DD.MM.YYYY")
+              category
+              top
+            }
+          }
+        }
+      }   
+    }
+    `);
+
+    console.log("query1.newsFor20100", query1.newsFor20100);
+ 
+
+  
+  }
+
+  render() { 
+    
+    return(
     
       <div style={{ marginBottom: `1.45rem` }}>
+        <DropdownMenu onChange={this.onChange}/>
         <h5 className="item-title">Zadnje novice</h5>
 
         {posts.map(({ node }) => {
@@ -58,12 +111,51 @@ const News = props => {
       </div>
   )
 }
+}
 
 export default News
 
-export const pageQuery1 = graphql`
+/* export const pageQuery1 = graphql`
   query {
-    news: allMarkdownRemark(
+    newsfor2019: allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
+      edges {
+        node {
+          excerpt
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            intro
+            date(formatString: "DD.MM.YYYY")
+            category
+            top
+          }
+        }
+      }
+    }
+    newsfor2018: allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
+      edges {
+        node {
+          excerpt
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            intro
+            date(formatString: "DD.MM.YYYY")
+            category
+            top
+          }
+        }
+      }
+    }
+    newsfor2017: allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
     ) {
       edges {
@@ -83,4 +175,4 @@ export const pageQuery1 = graphql`
       }
     }
   }
-`
+` */

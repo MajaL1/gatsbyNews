@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Dropdown from 'react-dropdown'
 import 'react-dropdown/style.css';
-import { useStaticQuery } from 'gatsby';
+// import { useStaticQuery } from 'gatsby';
 
 const options = [
   '2018', '2017', '2016'
@@ -17,27 +17,9 @@ class DropdownMenu extends Component {
   }
 
   _onSelect (option) {
-    console.log('You selected ', option.label)
-    // reload zadnje novice
-    /* let currentNewsList = useStaticQuery(graphql`
-    query getNewsByYear($slug: String!) {
-    
-      markdownRemark(fields: { slug: { eq: $slug } }) {
-        id
-        excerpt(pruneLength: 160)
-        html
-        frontmatter {
-          title
-          date(formatString: "DD.MM.YYYY")
-          intro
-          image
-          category
-          top
-        }
-      }
-    }
-  `) */
+   // console.log('You selected ', option.label)
     this.setState({selected: option})
+    this.props.onChange(option);
   }
 
   render () {
@@ -48,7 +30,7 @@ class DropdownMenu extends Component {
     return (
       <article>
         <p className="content-section">Starejše novice</p>
-       <Dropdown options={options} onChange={this._onSelect} value={defaultOption} placeholder="Izberi leto" />
+       <Dropdown options={options} callbackFromParent={this.myCallback} onChange={this._onSelect} value={defaultOption} placeholder="Izberi leto" />
       </article>
     )
   }

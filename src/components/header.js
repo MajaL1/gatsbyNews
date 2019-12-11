@@ -1,12 +1,11 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import { FaFacebook, FaYoutube, FaInstagram } from "react-icons/fa"
 
 const Header = ({ siteTitle, subtitle, description }) => (
   <header className="header row">
     <div className="header-logo col-lg-2 col-md-2 col-sm-12">
-      <img className="header-logo-img" src="./icons/arso.png" />
+      <img className="header-logo-img" src="./icons/arso.png" alt="" />
     </div>
     <div className="header-main-div col-lg-8 col-md-8 col-sm-12">
       <span
@@ -46,11 +45,11 @@ const Header = ({ siteTitle, subtitle, description }) => (
       </span>
     </div>
     <div className="header-icons col-lg-2 col-md-1 col-sm-12">
-      <a href="https://www.facebook.com" target="_blank">
-        <img src="./icons/fb.svg" width="25px" />
+      <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+        <img src="./icons/fb.svg" width="25px" alt="" />
       </a>
-      <a href="https://www.instagram.com" target="_blank">
-        <img src="./icons/instagram_25x.png" />
+      <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+        <img src="./icons/instagram_25x.png" alt="" />
       </a>
     </div>
   </header>

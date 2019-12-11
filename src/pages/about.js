@@ -1,13 +1,5 @@
 import React from "react"
-
 import Layout from "../components/layout"
-import {
-  FaTwitter,
-  FaFacebook,
-  FaYoutube,
-  FaMailBulk,
-  FaInstagram,
-} from "react-icons/fa"
 import Image from "../components/image"
 
 const About = () => (

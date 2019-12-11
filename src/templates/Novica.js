@@ -38,7 +38,7 @@ class Novica extends React.Component {
             dangerouslySetInnerHTML={{ __html: post.html }}
           />
           <p>{image}</p>
-          {image && <Img fixed={image} alt="" />}
+          {image && <Img fixed={image} alt="Logo" />}
           <hr />
           <footer></footer>
         </article>
