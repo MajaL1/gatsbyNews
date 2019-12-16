@@ -76,7 +76,7 @@ class Novica extends React.Component {
 
 export default Novica
 
-export const pageQuery = graphql`
+export const pageQuery1 = graphql`
   query BlogPostBySlug($slug: String!) {
     site {
       siteMetadata {

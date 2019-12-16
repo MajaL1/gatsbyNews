@@ -12,15 +12,21 @@ let currentNews;
 let news2019;
 let news2018;
 let news2017;
+//let stickyNews;
 
 class News extends Component {
   
   constructor (props) {
+    
+
     super(props)
     currentNews = props.newsCurrent;
     news2019 = props.news2019;
     news2018 = props.news2018;
     news2017 = props.news2017;
+    //stickyNews = props.stickyNews;
+
+    this.setState(currentNews)
 
     console.log("\n\n 111 news2019:  ", news2019);
     console.log("\n\n 111 news2018:  ", news2018);
@@ -38,8 +44,9 @@ class News extends Component {
   onChange (option) {
     console.log('55 You selected ', option.label)
     //this.setState({option})
-    console.log("\n\n ews2019:  ", news2019);
-    console.log("\n\n ews2018:  ", news2018);
+    console.log("\n\n 222 news2019:  ", news2019);
+    console.log("\n\n 222 news2018:  ", news2018);
+    console.log("\n\n 222 news2017:  ", news2017);
 
     
     /** todo : switch cselected option * */
@@ -53,8 +60,7 @@ class News extends Component {
         currentNews = news2017
     }
 
-    this.setState(currentNews)
-
+    
     // update state for component
   
   }

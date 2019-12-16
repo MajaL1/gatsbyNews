@@ -1,4 +1,4 @@
-import React from "react"
+import React, { Component } from 'react'
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import { FaCalendarAlt } from "react-icons/fa"
@@ -32,12 +32,28 @@ class NetlifyIdentity extends Component {
   }
 } */
 
-const IndexPage = props => {
+class IndexPage extends Component {
+  constructor (props) {
+    
+
+    super(props)
+    //currentNews = props.newsCurrent;
+    console.log("1------ ", this.props.data.stickyNews)
+    console.log("2------ ", this.props.data.newsFor2019)
+  
+    //console.log("3------ ", this.props.data.newsFor2018.edges)
+    //console.log("4------ ", this.props.data.newsFor2017.edges)
+  
+    //news2019 = props.news2019;
+    //news2018 = props.news2018;
+    //news2017 = props.news2017;
+    //stickyNews = props.stickyNews;
+    
+    //this._onSelect = this._onSelect.bind(this)
+  }
   //const data = props.data;//.allFile.edges[0].node.childMarkdownRemark.frontmatter
   //const data = props.data.allFile.edges[0].node.childMarkdownRemark.frontmatter
-  
-  const stickyNews = props.data.stickyNews.edges
-
+ render(){
   return (
     <Layout>
      
@@ -82,7 +98,10 @@ const IndexPage = props => {
         <hr />
 
         <h5 className="item-title">Izpostavljeno</h5>
-        {stickyNews.map(({ node }) => {
+        
+        {
+        
+        this.props.data.stickyNews.edges.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           const category = node.frontmatter.category
           return (
@@ -124,21 +143,40 @@ const IndexPage = props => {
 
         <hr />
 
-        <News newsCurrent={props.data.news.edges} news2019={props.data.news.edges} news2018={props.data.news.edges}/>
-      
+        
         {/* <Link to="/page-2/">Starejse novice</Link> */}
       </div>
     </Layout>
   )
 }
+}
 
 export default IndexPage
 
-export const pageQuery1 = graphql`
+export const pageQuery = graphql`
   query {
     site {
       siteMetadata {
         title
+      }
+    }
+    stickyNews: allMarkdownRemark(
+      filter: { frontmatter: { top: { eq: true } } }
+    ) {
+      edges {
+        node {
+          excerpt
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            intro
+            date(formatString: "DD.MM.YYYY")
+            category
+            top
+          }
+        }
       }
     }
     news: allMarkdownRemark(
@@ -200,25 +238,6 @@ export const pageQuery1 = graphql`
     }
     newsfor2017: allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
-    ) {
-      edges {
-        node {
-          excerpt
-          fields {
-            slug
-          }
-          frontmatter {
-            title
-            intro
-            date(formatString: "DD.MM.YYYY")
-            category
-            top
-          }
-        }
-      }
-    }
-    stickyNews: allMarkdownRemark(
-      filter: { frontmatter: { top: { eq: true } } }
     ) {
       edges {
         node {

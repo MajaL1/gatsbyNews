@@ -20,7 +20,7 @@ exports.createPages = async ({ graphql, actions }) => {
               frontmatter {
                 title
                 intro
-
+                top
                 image
               }
             }
