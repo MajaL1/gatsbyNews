@@ -4,7 +4,7 @@ import 'react-dropdown/style.css';
 // import { useStaticQuery } from 'gatsby';
 
 const options = [
-  '2018', '2017', '2016'
+  '2019', '2018', '2017'
 ]
 
 class DropdownMenu extends Component {

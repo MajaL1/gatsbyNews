@@ -32,6 +32,10 @@ class NetlifyIdentity extends Component {
   }
 } */
 
+let news2019;
+let news2018;
+let news2017;
+let stickyNews;
 class IndexPage extends Component {
   constructor (props) {
     
@@ -39,15 +43,20 @@ class IndexPage extends Component {
     super(props)
     //currentNews = props.newsCurrent;
     console.log("1------ ", this.props.data.stickyNews)
-    console.log("2------ ", this.props.data.newsFor2019)
+    console.log("2019 ------ ", this.props.data.newsfor2019) 
+    console.log("2018------ ", this.props.data.newsfor2018)
+    console.log("2017------ ", this.props.data.newsfor2017)
   
     //console.log("3------ ", this.props.data.newsFor2018.edges)
     //console.log("4------ ", this.props.data.newsFor2017.edges)
+
+    this.news2017=this.props.data.newsfor2017
+    this.news2018=this.props.data.newsfor2018
+    this.news2019=this.props.data.newsfor2019
   
-    //news2019 = props.news2019;
-    //news2018 = props.news2018;
-    //news2017 = props.news2017;
-    //stickyNews = props.stickyNews;
+    //this.setState({news2019 : this.props.data.newsfor2019});
+
+    this.stickyNews = this.props.data.stickyNews;
     
     //this._onSelect = this._onSelect.bind(this)
   }
@@ -142,8 +151,9 @@ class IndexPage extends Component {
         })}
 
         <hr />
+{console.log("this.props.data.newsfor2019: ", this.props.data.newsfor2019.edges)}
+        <News  news2019={this.props.data.newsfor2019.edges} news2018={this.props.data.newsfor2018.edges} news2017={this.props.data.newsfor2017.edges}/>
 
-        
         {/* <Link to="/page-2/">Starejse novice</Link> */}
       </div>
     </Layout>
@@ -179,27 +189,8 @@ export const pageQuery = graphql`
         }
       }
     }
-    news: allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
-    ) {
-      edges {
-        node {
-          excerpt
-          fields {
-            slug
-          }
-          frontmatter {
-            title
-            intro
-            date(formatString: "DD.MM.YYYY")
-            category
-            top
-          }
-        }
-      }
-    }
     newsfor2019: allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
+      filter:  { frontmatter: { date: { lt: "2019-11-22", gt: "2019-11-01"}, top: {eq: false}}}
     ) {
       edges {
         node {
@@ -218,7 +209,7 @@ export const pageQuery = graphql`
       }
     }
     newsfor2018: allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
+      filter:  { frontmatter: { date: { lt: "2019-11-23", gt: "2019-11-21"}, top: {eq: false}}}
     ) {
       edges {
         node {
@@ -237,7 +228,7 @@ export const pageQuery = graphql`
       }
     }
     newsfor2017: allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
+      filter:  { frontmatter: { date: { lt: "2019-12-04", gt: "2019-12-02"}, top: {eq: false}}}
     ) {
       edges {
         node {

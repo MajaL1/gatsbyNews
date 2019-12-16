@@ -3,11 +3,7 @@ import { Link, graphql, Image, StaticQuery, useStaticQuery } from "gatsby"
 import "../css/main.css"
 import { FaCalendarAlt } from "react-icons/fa"
 import DropdownMenu from "../components/dropdown"
-const options = [
-  '2019','2018', '2017', '2016'
-]
 
-let posts;
 let currentNews;
 let news2019;
 let news2018;
@@ -20,7 +16,7 @@ class News extends Component {
     
 
     super(props)
-    currentNews = props.newsCurrent;
+    currentNews = props.news2019;
     news2019 = props.news2019;
     news2018 = props.news2018;
     news2017 = props.news2017;
@@ -34,7 +30,7 @@ class News extends Component {
     
     
     
-    //this._onSelect = this._onSelect.bind(this)
+    this.onChange = this.onChange.bind(this)
   }
 
   myCallback = (selectedYear) => {
@@ -48,19 +44,31 @@ class News extends Component {
     console.log("\n\n 222 news2018:  ", news2018);
     console.log("\n\n 222 news2017:  ", news2017);
 
+    this.setState({
+      [currentNews]: currentNews
+    });
+
     
     /** todo : switch cselected option * */
 
     switch(option.label) {
       case '2019':
         currentNews = news2019
-      case '2019':
+        console.log("selected :2019");
+        break
+      case '2018':
         currentNews = news2018
+        console.log("selected :2018");
+        break
       case '2017':
         currentNews = news2017
+        console.log("selected :2017");
+        break
     }
-
-    
+    console.log("currentNews: ", currentNews);
+    this.setState({
+      [currentNews]: currentNews
+    });
     // update state for component
   
   }
