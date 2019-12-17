@@ -5,7 +5,7 @@ import React from "react"
 const Header = ({ siteTitle, subtitle, description }) => (
   <header className="header row">
     <div className="header-logo col-lg-2 col-md-2 col-sm-12">
-      <img className="header-logo-img" src="./icons/arso.png" alt="" />
+      <img className="header-logo-img" src="../icons/arso.png" alt="" />
     </div>
     <div className="header-main-div col-lg-8 col-md-8 col-sm-12">
       <span
@@ -46,10 +46,10 @@ const Header = ({ siteTitle, subtitle, description }) => (
     </div>
     <div className="header-icons col-lg-2 col-md-1 col-sm-12">
       <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-        <img src="./icons/fb.svg" width="25px" alt="" />
+        <img src="../icons/fb.svg" width="25px" alt="" />
       </a>
       <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-        <img src="./icons/instagram_25x.png" alt="" />
+        <img src="../icons/instagram_25x.png" alt="" />
       </a>
     </div>
   </header>
