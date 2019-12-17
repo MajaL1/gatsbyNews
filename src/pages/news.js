@@ -16,10 +16,14 @@ class News extends Component {
     
 
     super(props)
-    currentNews = props.news2019;
-    news2019 = props.news2019;
-    news2018 = props.news2018;
-    news2017 = props.news2017;
+    console.log("\n\n 000 news2019:  ", this.props);
+    console.log("\n\n 000 news2018:  ", this.props);
+    console.log("\n\n 000 news2017:  ", this.props);
+    
+    currentNews = this.props.news2019;
+    news2019 = this.props.news2019;
+    news2018 = this.props.news2018;
+    news2017 = this.props.news2017;
     //stickyNews = props.stickyNews;
 
     this.setState(currentNews)
