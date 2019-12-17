@@ -7,6 +7,7 @@ intro: >
   odstranjujejo niti prijavljenih lažnih računov, za katera jim je nekdo jasno
   sporočil, da kršijo pravila uporabe. To ugotavlja raziskava, ki jo je izvedel
   StratCom (NATO Strategic Communication Centre of Excellence).
+image: /assets/fb-md.jpg
 top: true
 category: Dogodki
 ---
