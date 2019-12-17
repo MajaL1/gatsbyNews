@@ -20,17 +20,20 @@ class News extends Component {
     console.log("\n\n 000 news2018:  ", this.props);
     console.log("\n\n 000 news2017:  ", this.props);
     
-    currentNews = this.props.news2019;
-    news2019 = this.props.news2019;
-    news2018 = this.props.news2018;
-    news2017 = this.props.news2017;
+    currentNews = this.props.newsfor2019;
+    news2019 = this.props.newsfor2019;
+    news2018 = this.props.newsfor2018;
+    news2017 = this.props.newsfor2017;
     //stickyNews = props.stickyNews;
 
-    this.setState(currentNews)
+    this.setState({
+      [currentNews]: this.props.news2019
+    });
 
-    console.log("\n\n 111 news2019:  ", news2019);
-    console.log("\n\n 111 news2018:  ", news2018);
-    console.log("\n\n 111 news2017:  ", news2017);
+
+    console.log("\n\n 111 news2019:  ", newsfor2019);
+    console.log("\n\n 111 news2018:  ", newsfor2018);
+    console.log("\n\n 111 news2017:  ", newsfor2017);
     
     
     
@@ -48,10 +51,7 @@ class News extends Component {
     console.log("\n\n 222 news2018:  ", news2018);
     console.log("\n\n 222 news2017:  ", news2017);
 
-    this.setState({
-      [currentNews]: currentNews
-    });
-
+   
     
     /** todo : switch cselected option * */
 
