@@ -21,7 +21,8 @@ exports.createPages = async ({ graphql, actions }) => {
                 title
                 intro
                 top
-                image
+                 
+               
               }
             }
           }
@@ -41,7 +42,7 @@ exports.createPages = async ({ graphql, actions }) => {
     const previous = index === posts.length - 1 ? null : posts[index + 1].node
     const next = index === 0 ? null : posts[index - 1].node
     // const created_at = moment().format('YYYY-MM-DD');
-
+    console.log('creating page... ',post.node.fields.slug);
     createPage({
       path: post.node.fields.slug,
       component: blogPost,
@@ -59,7 +60,8 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 
   if (node.internal.type === `MarkdownRemark`) {
     const value = createFilePath({ node, getNode })
-
+    console.log('on create node... ',value, '\n', node);
+    
     createNodeField({
       name: `slug`,
       node,
