@@ -56,7 +56,8 @@ class News extends Component {
     console.log("\n\n 222 news2018:  ", news2018);
     console.log("\n\n 222 news2017:  ", news2017);
 
-   
+    console.log("\n\n 000 currentNews:  ", this.state.currentNews);
+
     
     /** todo : switch cselected option * */
 
@@ -81,7 +82,10 @@ class News extends Component {
   }
 
   render() { 
-    
+    {
+      console.log("\n\n\n\n 3333 currentNews:  ", this.state);
+      console.log("\n\n\n\n 4444 currentNews:  ", this.state.currentNews);
+      }
     return(
     
       <div style={{ marginBottom: `1.45rem` }}>
