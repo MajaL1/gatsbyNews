@@ -63,7 +63,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "80e19d2eaef7ca83f5e7";
+/******/ 	var hotCurrentHash = "7aa03a600bca3bc11fd0";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -821,7 +821,7 @@ module.exports = _interopRequireDefault;
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(module) {(function(){var enterModule=typeof reactHotLoaderGlobal!=='undefined'?reactHotLoaderGlobal.enterModule:undefined;enterModule&&enterModule(module);})();var __signature__=typeof reactHotLoaderGlobal!=='undefined'?reactHotLoaderGlobal.default.signature:function(a){return a;};var _interopRequireDefault=__webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");var _netlifyIdentityWidget=_interopRequireDefault(__webpack_require__(/*! netlify-identity-widget */ "./node_modules/netlify-identity-widget/build/netlify-identity.js"));/* global __PATH_PREFIX__ CMS_PUBLIC_PATH */window.netlifyIdentity=_netlifyIdentityWidget["default"];var addLoginListener=function addLoginListener(){return _netlifyIdentityWidget["default"].on("login",function(){document.location.href=""+"/"+"admin"+"/";});};_netlifyIdentityWidget["default"].on("init",function(user){if(!user){addLoginListener();}else{_netlifyIdentityWidget["default"].on("logout",function(){addLoginListener();});}});_netlifyIdentityWidget["default"].init();;(function(){var reactHotLoader=typeof reactHotLoaderGlobal!=='undefined'?reactHotLoaderGlobal.default:undefined;if(!reactHotLoader){return;}reactHotLoader.register(_netlifyIdentityWidget,"_netlifyIdentityWidget","e:\\maja\\projects\\gatsbyNews\\node_modules\\gatsby-plugin-netlify-cms\\cms-identity.js");reactHotLoader.register(addLoginListener,"addLoginListener","e:\\maja\\projects\\gatsbyNews\\node_modules\\gatsby-plugin-netlify-cms\\cms-identity.js");})();;(function(){var leaveModule=typeof reactHotLoaderGlobal!=='undefined'?reactHotLoaderGlobal.leaveModule:undefined;leaveModule&&leaveModule(module);})();
+/* WEBPACK VAR INJECTION */(function(module) {(function(){var enterModule=typeof reactHotLoaderGlobal!=='undefined'?reactHotLoaderGlobal.enterModule:undefined;enterModule&&enterModule(module);})();var __signature__=typeof reactHotLoaderGlobal!=='undefined'?reactHotLoaderGlobal.default.signature:function(a){return a;};var _interopRequireDefault=__webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");var _netlifyIdentityWidget=_interopRequireDefault(__webpack_require__(/*! netlify-identity-widget */ "./node_modules/netlify-identity-widget/build/netlify-identity.js"));/* global __PATH_PREFIX__ CMS_PUBLIC_PATH */window.netlifyIdentity=_netlifyIdentityWidget["default"];var addLoginListener=function addLoginListener(){return _netlifyIdentityWidget["default"].on("login",function(){document.location.href=""+"/"+"admin"+"/";});};_netlifyIdentityWidget["default"].on("init",function(user){if(!user){addLoginListener();}else{_netlifyIdentityWidget["default"].on("logout",function(){addLoginListener();});}});_netlifyIdentityWidget["default"].init();;(function(){var reactHotLoader=typeof reactHotLoaderGlobal!=='undefined'?reactHotLoaderGlobal.default:undefined;if(!reactHotLoader){return;}reactHotLoader.register(_netlifyIdentityWidget,"_netlifyIdentityWidget","E:\\maja\\projects\\gatsbyNews\\node_modules\\gatsby-plugin-netlify-cms\\cms-identity.js");reactHotLoader.register(addLoginListener,"addLoginListener","E:\\maja\\projects\\gatsbyNews\\node_modules\\gatsby-plugin-netlify-cms\\cms-identity.js");})();;(function(){var leaveModule=typeof reactHotLoaderGlobal!=='undefined'?reactHotLoaderGlobal.leaveModule:undefined;leaveModule&&leaveModule(module);})();
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../webpack/buildin/module.js */ "./node_modules/webpack/buildin/module.js")(module)))
 
 /***/ }),
@@ -838,7 +838,7 @@ module.exports = _interopRequireDefault;
  * Load Netlify CMS automatically if `window.CMS_MANUAL_INIT` is set.
  */if(!window.CMS_MANUAL_INIT){_netlifyCmsApp["default"].init();}else{console.log("`window.CMS_MANUAL_INIT` flag set, skipping automatic initialization.'");}/**
  * The stylesheet output from the modules at `modulePath` will be at `cms.css`.
- */_netlifyCmsApp["default"].registerPreviewStyle("cms.css");;(function(){var reactHotLoader=typeof reactHotLoaderGlobal!=='undefined'?reactHotLoaderGlobal.default:undefined;if(!reactHotLoader){return;}reactHotLoader.register(_netlifyCmsApp,"_netlifyCmsApp","e:\\maja\\projects\\gatsbyNews\\node_modules\\gatsby-plugin-netlify-cms\\cms.js");})();;(function(){var leaveModule=typeof reactHotLoaderGlobal!=='undefined'?reactHotLoaderGlobal.leaveModule:undefined;leaveModule&&leaveModule(module);})();
+ */_netlifyCmsApp["default"].registerPreviewStyle("cms.css");;(function(){var reactHotLoader=typeof reactHotLoaderGlobal!=='undefined'?reactHotLoaderGlobal.default:undefined;if(!reactHotLoader){return;}reactHotLoader.register(_netlifyCmsApp,"_netlifyCmsApp","E:\\maja\\projects\\gatsbyNews\\node_modules\\gatsby-plugin-netlify-cms\\cms.js");})();;(function(){var leaveModule=typeof reactHotLoaderGlobal!=='undefined'?reactHotLoaderGlobal.leaveModule:undefined;leaveModule&&leaveModule(module);})();
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../webpack/buildin/module.js */ "./node_modules/webpack/buildin/module.js")(module)))
 
 /***/ }),
@@ -33507,8 +33507,8 @@ module.exports = function(module) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! e:\maja\projects\gatsbyNews\node_modules\gatsby-plugin-netlify-cms/cms.js */"./node_modules/gatsby-plugin-netlify-cms/cms.js");
-module.exports = __webpack_require__(/*! e:\maja\projects\gatsbyNews\node_modules\gatsby-plugin-netlify-cms/cms-identity.js */"./node_modules/gatsby-plugin-netlify-cms/cms-identity.js");
+__webpack_require__(/*! E:\maja\projects\gatsbyNews\node_modules\gatsby-plugin-netlify-cms/cms.js */"./node_modules/gatsby-plugin-netlify-cms/cms.js");
+module.exports = __webpack_require__(/*! E:\maja\projects\gatsbyNews\node_modules\gatsby-plugin-netlify-cms/cms-identity.js */"./node_modules/gatsby-plugin-netlify-cms/cms-identity.js");
 
 
 /***/ })

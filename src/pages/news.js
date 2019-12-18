@@ -20,18 +20,20 @@ class News extends Component {
     console.log("\n\n 000 news2018:  ", this.props.news2018);
     console.log("\n\n 000 news2017:  ", this.props.news2017);
     
-    currentNews = this.props.news2019;
-    news2019 = this.props.news2019;
-    news2018 = this.props.news2018;
-    news2017 = this.props.news2017;
+    
     //stickyNews = props.stickyNews;
 
-   
-    this.setState({
+    this.state = {
+      currentNews : this.props.news2019,
+      news2019 : this.props.news2019,
+      news2018 : this.props.news2018,
+      news2017 : this.props.news2017
+    };
+    /* this.setState({
       currentNews: this.props.news2019
     });
-
-    console.log("\n\n 000 currentNews:  ", this.currentNews);
+ */
+    console.log("\n\n 000 currentNews:  ", this.state.currentNews);
 
 
     console.log("\n\n 111 news2019:  ", news2019);
@@ -73,9 +75,7 @@ class News extends Component {
         break
     }
     console.log("currentNews: ", currentNews);
-    this.setState({
-      [currentNews]: currentNews
-    });
+   
     // update state for component
   
   }
@@ -88,7 +88,7 @@ class News extends Component {
         <DropdownMenu onChange={this.onChange}/>
         <h5 className="item-title">Zadnje novice</h5>
 
-        {currentNews.map(({ node }) => {
+        {this.state.currentNews.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           const category = node.frontmatter.category
           return (
