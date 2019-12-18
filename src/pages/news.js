@@ -4,10 +4,10 @@ import "../css/main.css"
 import { FaCalendarAlt } from "react-icons/fa"
 import DropdownMenu from "../components/dropdown"
 
-let currentNews;
-let news2019;
-let news2018;
-let news2017;
+var currentNews;
+var news2019;
+var news2018;
+var news2017;
 //let stickyNews;
 
 class News extends Component {
@@ -26,9 +26,12 @@ class News extends Component {
     news2017 = this.props.news2017;
     //stickyNews = props.stickyNews;
 
+   
     this.setState({
-      [currentNews]: this.props.news2019
+      currentNews: this.props.news2019
     });
+
+    console.log("\n\n 000 currentNews:  ", this.currentNews);
 
 
     console.log("\n\n 111 news2019:  ", news2019);
