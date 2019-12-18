@@ -3,17 +3,17 @@
     "develop": {
       "plugins": [
         {
-          "name": "E:\\maja\\projects\\gatsbyNews\\node_modules\\@babel\\plugin-proposal-optional-chaining\\lib\\index.js",
+          "name": "e:\\maja\\projects\\gatsbyNews\\node_modules\\@babel\\plugin-proposal-optional-chaining\\lib\\index.js",
           "options": {}
         },
         {
-          "name": "E:\\maja\\projects\\gatsbyNews\\node_modules\\@babel\\plugin-proposal-nullish-coalescing-operator\\lib\\index.js",
+          "name": "e:\\maja\\projects\\gatsbyNews\\node_modules\\@babel\\plugin-proposal-nullish-coalescing-operator\\lib\\index.js",
           "options": {}
         }
       ],
       "presets": [
         {
-          "name": "E:\\maja\\projects\\gatsbyNews\\node_modules\\@babel\\preset-typescript\\lib\\index.js",
+          "name": "e:\\maja\\projects\\gatsbyNews\\node_modules\\@babel\\preset-typescript\\lib\\index.js",
           "options": {
             "plugins": []
           }
@@ -27,17 +27,17 @@
     "develop-html": {
       "plugins": [
         {
-          "name": "E:\\maja\\projects\\gatsbyNews\\node_modules\\@babel\\plugin-proposal-optional-chaining\\lib\\index.js",
+          "name": "e:\\maja\\projects\\gatsbyNews\\node_modules\\@babel\\plugin-proposal-optional-chaining\\lib\\index.js",
           "options": {}
         },
         {
-          "name": "E:\\maja\\projects\\gatsbyNews\\node_modules\\@babel\\plugin-proposal-nullish-coalescing-operator\\lib\\index.js",
+          "name": "e:\\maja\\projects\\gatsbyNews\\node_modules\\@babel\\plugin-proposal-nullish-coalescing-operator\\lib\\index.js",
           "options": {}
         }
       ],
       "presets": [
         {
-          "name": "E:\\maja\\projects\\gatsbyNews\\node_modules\\@babel\\preset-typescript\\lib\\index.js",
+          "name": "e:\\maja\\projects\\gatsbyNews\\node_modules\\@babel\\preset-typescript\\lib\\index.js",
           "options": {
             "plugins": []
           }
@@ -51,17 +51,17 @@
     "build-html": {
       "plugins": [
         {
-          "name": "E:\\maja\\projects\\gatsbyNews\\node_modules\\@babel\\plugin-proposal-optional-chaining\\lib\\index.js",
+          "name": "e:\\maja\\projects\\gatsbyNews\\node_modules\\@babel\\plugin-proposal-optional-chaining\\lib\\index.js",
           "options": {}
         },
         {
-          "name": "E:\\maja\\projects\\gatsbyNews\\node_modules\\@babel\\plugin-proposal-nullish-coalescing-operator\\lib\\index.js",
+          "name": "e:\\maja\\projects\\gatsbyNews\\node_modules\\@babel\\plugin-proposal-nullish-coalescing-operator\\lib\\index.js",
           "options": {}
         }
       ],
       "presets": [
         {
-          "name": "E:\\maja\\projects\\gatsbyNews\\node_modules\\@babel\\preset-typescript\\lib\\index.js",
+          "name": "e:\\maja\\projects\\gatsbyNews\\node_modules\\@babel\\preset-typescript\\lib\\index.js",
           "options": {
             "plugins": []
           }
@@ -75,17 +75,17 @@
     "build-javascript": {
       "plugins": [
         {
-          "name": "E:\\maja\\projects\\gatsbyNews\\node_modules\\@babel\\plugin-proposal-optional-chaining\\lib\\index.js",
+          "name": "e:\\maja\\projects\\gatsbyNews\\node_modules\\@babel\\plugin-proposal-optional-chaining\\lib\\index.js",
           "options": {}
         },
         {
-          "name": "E:\\maja\\projects\\gatsbyNews\\node_modules\\@babel\\plugin-proposal-nullish-coalescing-operator\\lib\\index.js",
+          "name": "e:\\maja\\projects\\gatsbyNews\\node_modules\\@babel\\plugin-proposal-nullish-coalescing-operator\\lib\\index.js",
           "options": {}
         }
       ],
       "presets": [
         {
-          "name": "E:\\maja\\projects\\gatsbyNews\\node_modules\\@babel\\preset-typescript\\lib\\index.js",
+          "name": "e:\\maja\\projects\\gatsbyNews\\node_modules\\@babel\\preset-typescript\\lib\\index.js",
           "options": {
             "plugins": []
           }
