@@ -36,9 +36,9 @@ class News extends Component {
     console.log("\n\n 000 currentNews:  ", this.state.currentNews);
 
 
-    console.log("\n\n 111 news2019:  ", news2019);
-    console.log("\n\n 111 news2018:  ", news2018);
-    console.log("\n\n 111 news2017:  ", news2017);
+    console.log("\n\n 111 news2019:  ", this.state.news2019);
+    console.log("\n\n 111 news2018:  ", this.state.news2018);
+    console.log("\n\n 111 news2017:  ", this.state.news2017);
     
     
     
