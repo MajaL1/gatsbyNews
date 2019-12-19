@@ -52,9 +52,9 @@ class News extends Component {
   onChange (option) {
     console.log('55 You selected ', option.label)
     //this.setState({option})
-    console.log("\n\n 222 news2019:  ", news2019);
-    console.log("\n\n 222 news2018:  ", news2018);
-    console.log("\n\n 222 news2017:  ", news2017);
+    console.log("\n\n 222 news2019:  ", this.state.news2019);
+    console.log("\n\n 222 news2018:  ", this.state.news2018);
+    console.log("\n\n 222 news2017:  ", this.state.news2017);
 
     console.log("\n\n 000 currentNews:  ", this.state.currentNews);
 
@@ -63,19 +63,25 @@ class News extends Component {
 
     switch(option.label) {
       case '2019':
-        currentNews = news2019
+        this.state = {
+          currentNews : this.props.news2019,
+        };
         console.log("selected :2019");
         break
       case '2018':
-        currentNews = news2018
+        this.state = {
+          currentNews : this.props.news2018,
+        };
         console.log("selected :2018");
         break
       case '2017':
-        currentNews = news2017
+        this.state = {
+          currentNews : this.props.news2017,
+        };
         console.log("selected :2017");
         break
     }
-    console.log("currentNews: ", currentNews);
+    console.log("currentNews: ", this.state.currentNews);
    
     // update state for component
   
