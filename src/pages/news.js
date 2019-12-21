@@ -17,16 +17,16 @@ class News extends Component {
     
 
     super(props)
-    console.log("\n\n 000 news2019:  ", this.props.news2019);
-    console.log("\n\n 000 news2018:  ", this.props.news2018);
-    console.log("\n\n 000 news2017:  ", this.props.news2017);
+   /// console.log("\n\n 000 news2019:  ", this.props.news2019);
+    //console.log("\n\n 000 news2018:  ", this.props.news2018);
+    //console.log("\n\n 000 news2017:  ", this.props.news2017);
     
     this.test="Maja1"
     //stickyNews = props.stickyNews;
 
     this.currentNews = this.props.news2019
     this.setState({
-      //currentNews : this.props.news2019,
+      currentNews : this.props.news2019,
       test: "Maja"
       /* news2019 : this.props.news2019,
       news2018 : this.props.news2018,
@@ -89,7 +89,8 @@ class News extends Component {
 
   render() { 
     {
-     // console.log("\n\n\n\n 3333 currentNews:  ", this.state);
+      console.log("\n\n\n\n 3333 currentNews:  ", this.currentNews);
+      console.log("\n\n\n\n 3333 test:  ", this.test);
      // console.log("\n\n\n\n 4444 currentNews:  ", this.state.currentNews);
       }
     return(
