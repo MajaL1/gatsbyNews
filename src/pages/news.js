@@ -23,14 +23,14 @@ class News extends Component {
     
     this.test="Maja1"
     //stickyNews = props.stickyNews;
-    //this.onChange = this.onChange.bind(this)
+    this.onChange = this.onChange.bind(this)
     //this.currentNews = this.props.news2019
     this.setState({
       currentNews : this.props.news2019,
       test: "Maja",
-      news2019: '',
-      news2018: '',
-      news2017: ''
+      news2019: this.props.news2019,
+      news2018: this.props.news2018,
+      news2017: this.props.news2017
       /* news2019 : this.props.news2019,
       news2018 : this.props.news2018,
       news2017 : this.props.news2017 */
@@ -60,7 +60,7 @@ class News extends Component {
     console.log("selected:: ", selectedYear);
   }
 
-  /* onChange (option) {
+   onChange (option) {
     console.log('55 You selected ', option.label)
     //this.setState({option})
     console.log("\n\n 222 news2019:  ", this.state.news2019);
@@ -89,7 +89,7 @@ class News extends Component {
    
     // update state for component
   
-  } */
+  } 
 
   getInitialState () {
     return {
