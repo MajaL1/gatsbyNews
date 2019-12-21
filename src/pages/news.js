@@ -4,11 +4,11 @@ import "../css/main.css"
 import { FaCalendarAlt } from "react-icons/fa"
 import DropdownMenu from "../components/dropdown"
 
-var currentNews;
+/* var currentNews;
 var news2019;
 var news2018;
 var news2017;
-var test;
+var test; */
 //let stickyNews;
 
 class News extends Component {
@@ -24,7 +24,7 @@ class News extends Component {
     this.test="Maja1"
     //stickyNews = props.stickyNews;
 
-    this.currentNews = this.props.news2019
+    //this.currentNews = this.props.news2019
     this.setState({
       currentNews : this.props.news2019,
       test: "Maja"
@@ -49,6 +49,9 @@ class News extends Component {
     this.onChange = this.onChange.bind(this)
   }
 
+  componentDidMount() {
+    this.setState({ test: "Maja2" });
+  }
   myCallback = (selectedYear) => {
     console.log("selected:: ", selectedYear);
   }
@@ -67,16 +70,16 @@ class News extends Component {
 
     switch(option.label) {
       case '2019':
-        currentNews = this.props.news2019;
+        //currentNews = this.props.news2019;
         console.log("selected :2019");
         break
       case '2018':
-        currentNews = this.props.news2018;
+        //currentNews = this.props.news2018;
         console.log("selected :2018");
         break
       case '2017':
         
-        currentNews = this.props.news2017;
+        //currentNews = this.props.news2017;
     
         console.log("selected :2017");
         break
