@@ -51,6 +51,10 @@ class News extends Component {
   componentWillMount() {
     this.setState({ test: "Maja2",
     currentNews: this.props.news2019 });
+
+    console.log("componentWillMount this.props.news2019:: ", this.props.news2019);
+
+    console.log("componentWillMount currentNews:: ", this.currentNews);
   }
   myCallback = (selectedYear) => {
     console.log("selected:: ", selectedYear);
@@ -93,12 +97,14 @@ class News extends Component {
       console.log("\n\n\n\n 3333 test:  ", this.state.test);
      // console.log("\n\n\n\n 4444 currentNews:  ", this.state.currentNews);
       }
+      {
+    if(this.state.currentNews === '')
+          return <div>No data</div>;
+      }
     return(
-    
       <div style={{ marginBottom: `1.45rem` }}>
         <DropdownMenu onChange={this.onChange}/>
         <h5 className="item-title">Zadnje novice</h5>
-
         {this.state.currentNews.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           const category = node.frontmatter.category
