@@ -106,7 +106,7 @@ class News extends Component {
      // console.log("\n\n\n\n 4444 currentNews:  ", this.state.currentNews);
       }
       {
-    if(this.state === '' || this.state.currentNews === '') 
+    if(this.state.currentNews == '') 
           return <div>No data</div>;
       }
     return(
