@@ -91,14 +91,22 @@ class News extends Component {
   
   } */
 
+  getInitialState () {
+    return {
+      currentNews: this.props.news2019
+    };
+  }
+  
   render() { 
     {
+      console.log("\n\n\n\n 3333 currentNews0:  ", this.state.currentNews === '');
+      
       console.log("\n\n\n\n 3333 currentNews:  ", this.state.currentNews, this.state.currentNews === '');
       console.log("\n\n\n\n 3333 test:  ", this.state.test);
      // console.log("\n\n\n\n 4444 currentNews:  ", this.state.currentNews);
       }
       {
-    if(this.state.currentNews === '') 
+    if(this.state === '' || this.state.currentNews === '') 
           return <div>No data</div>;
       }
     return(
