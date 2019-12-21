@@ -4,19 +4,19 @@ import "../css/main.css"
 import { FaCalendarAlt } from "react-icons/fa"
 import DropdownMenu from "../components/dropdown"
 
-/* var currentNews;
 var news2019;
 var news2018;
 var news2017;
-var test; */
-//let stickyNews;
 
 class News extends Component {
   
   constructor (props) {
-    
-
     super(props)
+
+    news2019 = this.props.news2019
+    news2018 = this.props.news2018
+    news2017 = this.props.news2017
+   
    /// console.log("\n\n 000 news2019:  ", this.props.news2019);
     //console.log("\n\n 000 news2018:  ", this.props.news2018);
     //console.log("\n\n 000 news2017:  ", this.props.news2017);
@@ -63,28 +63,33 @@ class News extends Component {
    onChange (option) {
     console.log('55 You selected ', option.label)
     //this.setState({option})
-    console.log("\n\n 222 news2019:  ", this.news2019);
-    console.log("\n\n 222 news2018:  ", this.news2018);
-    console.log("\n\n 222 news2017:  ", this.news2017);
+   /* console.log("\n\n 222 news2019:  ", this.news2019);
+    console.log("\n\n 222 news2018:  ", this.props.news2018);
+    console.log("\n\n 222 news2017:  ", this.props.news2017);*/
 
    // console.log("\n\n 000 currentNews:  ", this.state.currentNews);
-
+   let tmp;
     switch(option.label) {
+      
       case '2019':
-        //currentNews = this.props.news2019;
+        tmp = this.props.news2019;
         console.log("selected :2019");
         break
       case '2018':
-        //currentNews = this.props.news2018;
+        tmp = this.props.news2018;
         console.log("selected :2018");
         break
       case '2017':
         
-        //currentNews = this.props.news2017;
+        tmp = this.props.news2017;
     
         console.log("selected :2017");
         break
     }
+
+    this.setState({ test: "Maja3",
+    currentNews: tmp });
+
     //console.log("currentNews: ", this.state.currentNews);
    
     // update state for component
