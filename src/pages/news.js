@@ -101,9 +101,9 @@ class News extends Component {
     {
      // console.log("\n\n\n\n 3333 currentNews0:  ", this.state.currentNews === '');
       
-      //console.log("\n\n\n\n 3333 currentNews:  ", this.state.currentNews, this.state.currentNews === '');
+      console.log("\n\n\n\n 3333 state:  ", this.state);
       console.log("\n\n\n\n 3333 test:  ", this.state.test);
-     // console.log("\n\n\n\n 4444 currentNews:  ", this.state.currentNews);
+      console.log("\n\n\n\n 4444 currentNews:  ", this.state.currentNews);
       }
       {
     if(this.state.currentNews == '') 
