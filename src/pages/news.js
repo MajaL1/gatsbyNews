@@ -8,6 +8,7 @@ var currentNews;
 var news2019;
 var news2018;
 var news2017;
+var test;
 //let stickyNews;
 
 class News extends Component {
@@ -20,25 +21,28 @@ class News extends Component {
     console.log("\n\n 000 news2018:  ", this.props.news2018);
     console.log("\n\n 000 news2017:  ", this.props.news2017);
     
-    
+    this.test="Maja1"
     //stickyNews = props.stickyNews;
 
-    this.state = {
-      currentNews : this.props.news2019,
-      news2019 : this.props.news2019,
+    this.currentNews = this.props.news2019
+    this.setState({
+      //currentNews : this.props.news2019,
+      test: "Maja"
+      /* news2019 : this.props.news2019,
       news2018 : this.props.news2018,
-      news2017 : this.props.news2017
-    };
+      news2017 : this.props.news2017 */
+    });
     /* this.setState({
       currentNews: this.props.news2019
     });
  */
-    console.log("\n\n 000 currentNews:  ", this.state.currentNews);
+    console.log("\n\n 000 currentNews:  ", this.currentNews);
+    console.log("\n\n 000 Maja:  ", this.test);
 
 
-    console.log("\n\n 111 news2019:  ", this.state.news2019);
-    console.log("\n\n 111 news2018:  ", this.state.news2018);
-    console.log("\n\n 111 news2017:  ", this.state.news2017);
+    console.log("\n\n 111 news2019:  ", this.news2019);
+    console.log("\n\n 111 news2018:  ", this.news2018);
+    console.log("\n\n 111 news2017:  ", this.news2017);
     
     
     
@@ -56,28 +60,24 @@ class News extends Component {
     console.log("\n\n 222 news2018:  ", this.state.news2018);
     console.log("\n\n 222 news2017:  ", this.state.news2017);
 
-    console.log("\n\n 000 currentNews:  ", this.state.currentNews);
+   // console.log("\n\n 000 currentNews:  ", this.state.currentNews);
 
     
     /** todo : switch cselected option * */
 
     switch(option.label) {
       case '2019':
-        this.state = {
-          currentNews : this.props.news2019,
-        };
+        currentNews = this.props.news2019;
         console.log("selected :2019");
         break
       case '2018':
-        this.state = {
-          currentNews : this.props.news2018,
-        };
+        currentNews = this.props.news2018;
         console.log("selected :2018");
         break
       case '2017':
-        this.state = {
-          currentNews : this.props.news2017,
-        };
+        
+        currentNews = this.props.news2017;
+    
         console.log("selected :2017");
         break
     }
@@ -89,8 +89,8 @@ class News extends Component {
 
   render() { 
     {
-      console.log("\n\n\n\n 3333 currentNews:  ", this.state);
-      console.log("\n\n\n\n 4444 currentNews:  ", this.state.currentNews);
+     // console.log("\n\n\n\n 3333 currentNews:  ", this.state);
+     // console.log("\n\n\n\n 4444 currentNews:  ", this.state.currentNews);
       }
     return(
     
@@ -98,7 +98,7 @@ class News extends Component {
         <DropdownMenu onChange={this.onChange}/>
         <h5 className="item-title">Zadnje novice</h5>
 
-        {this.state.currentNews.map(({ node }) => {
+        {this.currentNews.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           const category = node.frontmatter.category
           return (
