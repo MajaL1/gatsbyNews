@@ -23,11 +23,14 @@ class News extends Component {
     
     this.test="Maja1"
     //stickyNews = props.stickyNews;
-
+    //this.onChange = this.onChange.bind(this)
     //this.currentNews = this.props.news2019
     this.setState({
       currentNews : this.props.news2019,
-      test: "Maja"
+      test: "Maja",
+      news2019: '',
+      news2018: '',
+      news2017: ''
       /* news2019 : this.props.news2019,
       news2018 : this.props.news2018,
       news2017 : this.props.news2017 */
@@ -40,23 +43,20 @@ class News extends Component {
     console.log("\n\n 000 Maja:  ", this.test);
 
 
-    console.log("\n\n 111 news2019:  ", this.news2019);
+   /*  console.log("\n\n 111 news2019:  ", this.news2019);
     console.log("\n\n 111 news2018:  ", this.news2018);
-    console.log("\n\n 111 news2017:  ", this.news2017);
-    
-    
-    
-    this.onChange = this.onChange.bind(this)
+    console.log("\n\n 111 news2017:  ", this.news2017); */
   }
 
-  componentDidMount() {
-    this.setState({ test: "Maja2" });
+  componentWillMount() {
+    this.setState({ test: "Maja2",
+    currentNews: this.props.news2019 });
   }
   myCallback = (selectedYear) => {
     console.log("selected:: ", selectedYear);
   }
 
-  onChange (option) {
+  /* onChange (option) {
     console.log('55 You selected ', option.label)
     //this.setState({option})
     console.log("\n\n 222 news2019:  ", this.state.news2019);
@@ -64,9 +64,6 @@ class News extends Component {
     console.log("\n\n 222 news2017:  ", this.state.news2017);
 
    // console.log("\n\n 000 currentNews:  ", this.state.currentNews);
-
-    
-    /** todo : switch cselected option * */
 
     switch(option.label) {
       case '2019':
@@ -84,16 +81,16 @@ class News extends Component {
         console.log("selected :2017");
         break
     }
-    console.log("currentNews: ", this.state.currentNews);
+    //console.log("currentNews: ", this.state.currentNews);
    
     // update state for component
   
-  }
+  } */
 
   render() { 
     {
-      console.log("\n\n\n\n 3333 currentNews:  ", this.currentNews);
-      console.log("\n\n\n\n 3333 test:  ", this.test);
+      console.log("\n\n\n\n 3333 currentNews:  ", this.state.currentNews);
+      console.log("\n\n\n\n 3333 test:  ", this.state.test);
      // console.log("\n\n\n\n 4444 currentNews:  ", this.state.currentNews);
       }
     return(
@@ -102,7 +99,7 @@ class News extends Component {
         <DropdownMenu onChange={this.onChange}/>
         <h5 className="item-title">Zadnje novice</h5>
 
-        {this.currentNews.map(({ node }) => {
+        {this.state.currentNews.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           const category = node.frontmatter.category
           return (
