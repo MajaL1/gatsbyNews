@@ -11,6 +11,14 @@ media_library:
   config:
     cloud_name: dptzchqir
     api_key: 688799522664746
+    config:
+    default_transformations:
+      -   - fetch_format: auto
+            width: 160
+            quality: auto
+            crop: scale  
+    output_filename_only: false
+    
 
 collections: # A list of collections the CMS should be able to edit
   - name: "blog" # Used in routes, ie.: /admin/collections/:slug/edit
@@ -26,12 +34,14 @@ collections: # A list of collections the CMS should be able to edit
         widget: "image"
         required: false
         media_library:
-            config:
-              default_transformations:
+          config:
+            multiple: true
+            default_transformations:
               -   - fetch_format: auto
                     width: 300    
                     quality: auto
                     crop: fill
+                    effect: grayscale
       - {label: "Vsebina", name: "body", widget: "markdown"}
       - {label: "Na vrhu", name: "top", widget: "boolean", default: false}
       - name: "category"
