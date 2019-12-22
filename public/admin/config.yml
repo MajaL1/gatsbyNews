@@ -6,6 +6,12 @@ backend:
 media_folder: static/assets
 public_folder: assets
 
+media_library:
+  name: cloudinary
+  config:
+    cloud_name: dptzchqir
+    api_key: 688799522664746
+
 collections: # A list of collections the CMS should be able to edit
   - name: "blog" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Novica" # Used in the UI, ie.: "New Post"
@@ -20,8 +26,12 @@ collections: # A list of collections the CMS should be able to edit
         widget: "image"
         required: false
         media_library:
-          config:
-            multiple: true
+            config:
+              default_transformations:
+              -   - fetch_format: auto
+                    width: 300    
+                    quality: auto
+                    crop: fill
       - {label: "Vsebina", name: "body", widget: "markdown"}
       - {label: "Na vrhu", name: "top", widget: "boolean", default: false}
       - name: "category"
