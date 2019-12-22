@@ -62,8 +62,8 @@ class News extends Component {
 
    onChange (option) {
     console.log('55 You selected ', option.label)
-    console.log('55 props ', this.props)
-    console.log('55 state ', this.state)
+    //console.log('55 props ', this.props)
+    //console.log('55 state ', this.state)
     
     
     //this.setState({option})

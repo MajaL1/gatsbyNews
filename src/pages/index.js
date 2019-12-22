@@ -190,7 +190,7 @@ export const pageQuery =  graphql`
       }
     }
     newsfor2019: allMarkdownRemark(
-      filter:  { frontmatter: { date: { lt: "2019-11-22", gt: "2019-11-01"}, top: {eq: false}}}
+      filter:  { frontmatter: { date: { lt: "2020-01-01", gt: "2019-01-01 "}, top: {eq: false}}}
     ) {
       edges {
         node {
@@ -209,7 +209,7 @@ export const pageQuery =  graphql`
       }
     }
     newsfor2018: allMarkdownRemark(
-      filter:  { frontmatter: { date: { lt: "2019-11-23", gt: "2019-11-21"}, top: {eq: false}}}
+      filter:  { frontmatter: { date: { lt: "2019-01-01", gt: "2018-01-01"}, top: {eq: false}}}
     ) {
       edges {
         node {
@@ -228,7 +228,7 @@ export const pageQuery =  graphql`
       }
     }
     newsfor2017: allMarkdownRemark(
-      filter:  { frontmatter: { date: { lt: "2019-12-04", gt: "2019-12-02"}, top: {eq: false}}}
+      filter:  { frontmatter: { date: { lt: "2018-01-01", gt: "2017-01-01"}, top: {eq: false}}}
     ) {
       edges {
         node {
