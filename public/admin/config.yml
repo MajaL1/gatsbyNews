@@ -20,8 +20,8 @@ collections: # A list of collections the CMS should be able to edit
         widget: "image"
         required: false
         media_library:
-            config:
-                multiple: true
+          config:
+            multiple: true
       - {label: "Vsebina", name: "body", widget: "markdown"}
       - {label: "Na vrhu", name: "top", widget: "boolean", default: false}
       - name: "category"
@@ -31,3 +31,5 @@ collections: # A list of collections the CMS should be able to edit
           - { label: "Dogodki", value: "Dogodki" }
           - { label: "Operativa", value: "Operativa" }
           - { label: "Mladina", value: "Mladina" }
+
+          - label: "Featured Image"
