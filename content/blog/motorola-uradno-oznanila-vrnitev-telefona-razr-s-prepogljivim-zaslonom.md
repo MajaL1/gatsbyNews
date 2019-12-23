@@ -6,7 +6,7 @@ intro: >-
   podrobnosti oživitve legendarne serije telefonov Razr. Novinec bo poklopni
   telefon klasične zasnove z upogljivim zaslonom in Androidom ter z zasoljeno
   ceno poldrugega tisočaka dolarjev.
-image: /assets/secondarytile.png
+image1: /assets/secondarytile.png
 top: false
 category: Operativa
 ---

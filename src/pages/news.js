@@ -10,7 +10,7 @@ var news2018;
 var news2017;
 //let stickyNews;
 
-class News extends Component {
+class News extends React.Component {
   
   constructor (props) {
     
@@ -23,7 +23,7 @@ class News extends Component {
     
     //stickyNews = props.stickyNews;
 
-    this.state = {
+    this.setState = {
       currentNews : this.props.news2019,
       news2019 : this.props.news2019,
       news2018 : this.props.news2018,
@@ -33,12 +33,12 @@ class News extends Component {
       currentNews: this.props.news2019
     });
  */
-    console.log("\n\n 000 currentNews:  ", this.state.currentNews);
+    console.log("\n\n 000 currentNews:  ", this.currentNews);
 
 
-    console.log("\n\n 111 news2019:  ", this.state.news2019);
-    console.log("\n\n 111 news2018:  ", this.state.news2018);
-    console.log("\n\n 111 news2017:  ", this.state.news2017);
+    console.log("\n\n 111 news2019:  ", this.news2019);
+    console.log("\n\n 111 news2018:  ", this.news2018);
+    console.log("\n\n 111 news2017:  ", this.news2017);
     
     
     
@@ -63,19 +63,19 @@ class News extends Component {
 
     switch(option.label) {
       case '2019':
-        this.state = {
+        this.setState = {
           currentNews : this.props.news2019,
         };
         console.log("selected :2019");
         break
       case '2018':
-        this.state = {
+        this.setState = {
           currentNews : this.props.news2018,
         };
         console.log("selected :2018");
         break
       case '2017':
-        this.state = {
+        this.setState = {
           currentNews : this.props.news2017,
         };
         console.log("selected :2017");
@@ -86,12 +86,12 @@ class News extends Component {
     // update state for component
   
   }
+  componentWillMount() {
+    //this.props.onMount();
+}
 
   render() { 
-    {
-      console.log("\n\n\n\n 3333 currentNews:  ", this.state);
-      console.log("\n\n\n\n 4444 currentNews:  ", this.state.currentNews);
-      }
+  
     return(
     
       <div style={{ marginBottom: `1.45rem` }}>

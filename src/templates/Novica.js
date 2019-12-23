@@ -11,7 +11,7 @@ class Novica extends React.Component {
     const category = this.props.data.markdownRemark.category
     const siteTitle = this.props.data.site.siteMetadata.title
     const { previous, next } = this.props.pageContext
-    const image = post.frontmatter.image
+    const image = post.frontmatter.image1
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title={post.frontmatter.title} />
@@ -37,8 +37,8 @@ class Novica extends React.Component {
             className="news-content-section"
             dangerouslySetInnerHTML={{ __html: post.html }}
           />
-          <p>{image}</p>
-          <img src={image}/>
+          <p>{image1}</p>
+          <img src={image1}/>
           {/*image && <Img fluid={post.frontmatter.image.childImageSharp.fluid} alt="Logo" />*/}
           <hr />
           <footer></footer>
@@ -94,7 +94,7 @@ export const pageQuery1 = graphql`
         intro
         category
         top
-        image 
+        image1 
        
       }
     }

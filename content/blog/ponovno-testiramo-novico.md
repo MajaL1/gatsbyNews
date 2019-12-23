@@ -4,7 +4,7 @@ date: 2019-11-22T10:06:34.140Z
 intro: >-
   Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
   sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
-image: /assets/fb-md.jpg
+image1: /assets/fb-md.jpg
 top: false
 category: Operativa
 ---

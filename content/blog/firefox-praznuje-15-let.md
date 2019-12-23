@@ -11,7 +11,7 @@ intro: >
   preimenovala v Firefox in leta 9. novembra 2004 je izšel Firefox 1.0. Izid je
   pospremil celostranski oglas v The New York Timesu, za katero so denar zbrali
   zasebni donatorji.
-image: /assets/secondarytile.png
+image1: /assets/secondarytile.png
 top: false
 category: Operativa
 ---
