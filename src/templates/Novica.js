@@ -11,7 +11,7 @@ class Novica extends React.Component {
     const category = this.props.data.markdownRemark.category
     const siteTitle = this.props.data.site.siteMetadata.title
     const { previous, next } = this.props.pageContext
-    const image = post.frontmatter.image1
+    const image1 = post.frontmatter.image1
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title={post.frontmatter.title} />
