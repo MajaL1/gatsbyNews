@@ -92,8 +92,10 @@ class News extends React.Component {
 
   render() { 
   
+    if(typeof this.state.currentNews=="undefined")
+      return <div>No data</div>
+
     return(
-    
       <div style={{ marginBottom: `1.45rem` }}>
         <DropdownMenu onChange={this.onChange}/>
         <h5 className="item-title">Zadnje novice</h5>
