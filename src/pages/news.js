@@ -33,12 +33,12 @@ class News extends React.Component {
       currentNews: this.props.news2019
     });
  */
-    console.log("\n\n 000 currentNews:  ", this.currentNews);
+    console.log("\n\n 000 currentNews:  ", this.state.currentNews);
 
 
-    console.log("\n\n 111 news2019:  ", this.news2019);
-    console.log("\n\n 111 news2018:  ", this.news2018);
-    console.log("\n\n 111 news2017:  ", this.news2017);
+    console.log("\n\n 111 news2019:  ", this.state.news2019);
+    console.log("\n\n 111 news2018:  ", this.state.news2018);
+    console.log("\n\n 111 news2017:  ", this.state.news2017);
     
     
     
