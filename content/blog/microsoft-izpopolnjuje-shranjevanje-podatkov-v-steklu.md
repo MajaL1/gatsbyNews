@@ -7,6 +7,10 @@ intro: >-
   ideje o tovrstnem shranjevanju posnetkov, ki jo razvijajo v okviru projekta
   Project Silica.
 image1: /assets/secondarytile.png
+image2:
+image3:
+image4:
+image5:
 ---
 
 Microsoft - V Microsoftovem raziskovalnem oddelku so v obstojno stekleno ploščico uspešno "zapekli" in nato prebrali dolgometražni film ter s tem dokazali smiselnost ideje o tovrstnem shranjevanju posnetkov, ki jo razvijajo v okviru projekta Project Silica.

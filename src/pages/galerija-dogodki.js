@@ -1,4 +1,4 @@
-import React from "react"
+import React, {Component} from "react"
 
 import Layout from "../components/layout"
 
@@ -29,15 +29,7 @@ class GalerijaDogodki extends Component {
       <Layout>
         <div style={{ marginBottom: `1.45rem` }}>
         
-          {console.log(
-            "this.props.data.newsfor2019: ",
-            this.props.data.newsfor2019.edges
-          )}
-          <News
-            news2019={this.props.data.newsfor2019.edges}
-            news2018={this.props.data.newsfor2018.edges}
-            news2017={this.props.data.newsfor2017.edges}
-          />
+         
         </div>
       </Layout>
     )
