@@ -21,12 +21,6 @@ exports.createPages = async ({ graphql, actions }) => {
                 title
                 intro
                 top
-                image1
-                image2
-                image3
-                image4
-                image5
-
               }
             }
           }
