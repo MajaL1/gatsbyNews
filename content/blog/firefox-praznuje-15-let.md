@@ -12,6 +12,10 @@ intro: >
   pospremil celostranski oglas v The New York Timesu, za katero so denar zbrali
   zasebni donatorji.
 image1: /assets/secondarytile.png
+image2:
+image3:
+image4:
+image5:
 top: false
 category: Operativa
 ---

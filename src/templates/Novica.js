@@ -95,6 +95,10 @@ export const pageQuery1 = graphql`
         category
         top
         image1
+        image2
+        image3
+        image4
+        image5
       }
     }
   }

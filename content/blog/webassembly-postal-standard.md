@@ -8,6 +8,10 @@ intro: >
   sporočil, da kršijo pravila uporabe. To ugotavlja raziskava, ki jo je izvedel
   StratCom (NATO Strategic Communication Centre of Excellence).
 image1: /assets/fb-md.jpg
+image2:
+image3:
+image4:
+image5:
 top: true
 category: Dogodki
 ---
