@@ -38,7 +38,7 @@ class Novica extends React.Component {
             dangerouslySetInnerHTML={{ __html: post.html }}
           />
           <p>{image1}</p>
-          <img src={image1}/>
+          <img src={image1} />
           {/*image && <Img fluid={post.frontmatter.image.childImageSharp.fluid} alt="Logo" />*/}
           <hr />
           <footer></footer>
@@ -94,8 +94,7 @@ export const pageQuery1 = graphql`
         intro
         category
         top
-        image1 
-       
+        image1
       }
     }
   }

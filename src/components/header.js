@@ -45,10 +45,18 @@ const Header = ({ siteTitle, subtitle, description }) => (
       </span>
     </div>
     <div className="header-icons col-lg-2 col-md-1 col-sm-12">
-      <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+      <a
+        href="https://www.facebook.com"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <img src="../icons/fb.svg" width="25px" alt="" />
       </a>
-      <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+      <a
+        href="https://www.instagram.com"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <img src="../icons/instagram_25x.png" alt="" />
       </a>
     </div>
