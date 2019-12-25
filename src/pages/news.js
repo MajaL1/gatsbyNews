@@ -25,6 +25,8 @@ class News extends React.Component {
       test: "Maja"
      });
  */
+this.onChange = this.onChange.bind(this)
+
     this.state = ({
       test: "Maja",
       currentNews: this.props.news2019,
@@ -39,8 +41,7 @@ class News extends React.Component {
     console.log("\n\n 000 state:  ", this.state);
     console.log("\n\n 000 state:  ", this.state.test);
 
-    this.onChange = this.onChange.bind(this)
-
+   
 
     /*console.log("\n\n 111 news2019:  ", this.state.news2019);
      console.log("\n\n 111 news2018:  ", this.state.news2018);
@@ -70,19 +71,19 @@ class News extends React.Component {
 
     switch (option.label) {
       case '2019':
-        this.state = ({
+        this.setState({
           currentNews: this.props.news2019,
         })
         console.log("selected :2019");
         break
       case '2018':
-        this.state = ({
+        this.setState ({
           currentNews: this.props.news2018,
         })
         console.log("selected :2018");
         break
       case '2017':
-        this.state = ({
+        this.setState({
           currentNews: this.props.news2017,
         })
         console.log("selected :2017");
