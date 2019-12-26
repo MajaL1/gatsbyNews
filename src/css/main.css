@@ -206,3 +206,18 @@ article {
     width: 13%;
     height: 100%;
 } 
+
+@media (min-width: 200px) and (max-width: 500em) and (orientation: portrait) {
+
+    .header-row{
+        height: 110px;
+    }
+    .header-logo-img{
+        height: auto;
+        margin-top: 0px;
+        float: unset; 
+        right: unset;
+        position: relative;
+        margin-left: 40%;
+    }
+ }

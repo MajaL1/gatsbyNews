@@ -95,7 +95,7 @@ const Zgodovina = () => (
       <footer></footer>
 
       <div className="gallery-content content-section">
-        <ImageGallery
+        {/* <ImageGallery
           images={DEFAULT_IMAGES.map(
             ({ id, source, thumbnail, caption, description }) => ({
               source,
@@ -104,7 +104,7 @@ const Zgodovina = () => (
               description,
             })
           )}
-        />
+        /> */}
       </div>
     </article>
   </Layout>

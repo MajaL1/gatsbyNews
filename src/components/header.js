@@ -24,8 +24,8 @@ const Header = ({ siteTitle, subtitle, description }) => (
               color: `lightGray`,
               textDecoration: `none`,
               textAlign: `center`,
-              fontFamily: `Arial Black`,
-              textShadow: `5px 0 #444242, 0 1px black, 1px 0 black, 0 -1px black`,
+              fontFamily: `sans-serif`,
+              textShadow: `4px 0 #444242, 0 1px black, 1px 0 black, 0 -1px black`,
             }}
           >
             {siteTitle}
@@ -38,13 +38,14 @@ const Header = ({ siteTitle, subtitle, description }) => (
             textAlign: `center`,
             fontFamily: `Candara`,
             textShadow: `black 1px 0px, black 0px 1px, black 1px 0px, black 0px 1px`,
+            padding: `10px`
           }}
         >
           <i>{subtitle}</i>
         </p>
       </span>
     </div>
-    <div className="header-icons col-lg-2 col-md-1 col-sm-12">
+    <div className="header-icons col-lg-2 col-md-2 col-sm-12">
       <a
         href="https://www.facebook.com"
         target="_blank"

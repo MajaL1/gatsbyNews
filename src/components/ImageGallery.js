@@ -22,23 +22,35 @@ class ImageGallery extends Component {
   renderGallery(images) {
     if (!images) return
 
-    const gallery = images.map((obj, i) => {
+    const gallery = images.map((node, i) => {
+      i++
+      console.log("obj:: ", node.node)
+      const image1 = node.node.frontmatter.image1
+      const image2 = node.node.frontmatter.image2
+      const image3 = node.node.frontmatter.image3
+      const image4 = node.node.frontmatter.image4
+      const image5 = node.node.frontmatter.image5
+
+      console.log("node.frontmatter.image1: ", node.node.frontmatter.image1)
+      console.log("node.frontmatter.image1: ", image1)
+
       return (
-        <article className="6u 12u$(xsmall) img-article" key={i}>
+        <span key={i}>
           <a
             className="image fit thumb"
-            href={obj.source}
+            href={image1}
             onClick={e => {
               e.preventDefault()
               this.toggleLightbox(i)
             }}
           >
-            <img src={obj.thumbnail} alt="" />
+            <img className="gallery-image" src={image1} alt="" />
+            <img className="gallery-image" src={image2} alt="" />
+            <img className="gallery-image" src={image3} alt="" />
+            <img className="gallery-image" src={image4} alt="" />
+            <img className="gallery-image" src={image5} alt="" />
           </a>
-
-          <h5>{obj.caption}</h5>
-          <small>{obj.description}</small>
-        </article>
+        </span>
       )
     })
 

@@ -1,12 +1,12 @@
 import React, { Component } from "react"
-import { Link, graphql, Image, StaticQuery, useStaticQuery } from "gatsby"
+import { Link } from "gatsby"
 import "../css/main.css"
 import { FaCalendarAlt } from "react-icons/fa"
 import DropdownMenu from "../components/dropdown"
 
 //let stickyNews;
 
-class News extends React.Component {
+class News extends Component {
   constructor(props) {
     super(props)
     // console.log("\n\n 000 news2019:  ", this.props.news2019);
