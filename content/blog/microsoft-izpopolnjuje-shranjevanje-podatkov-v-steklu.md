@@ -9,7 +9,6 @@ intro: >-
 image1: /assets/secondarytile.png
 image2: /assets/fb-md.jpg
 image3: /assets/fb-md.jpg
-image4: /assets/secondarytile.png
 image5: /assets/secondarytile.png
 ---
 

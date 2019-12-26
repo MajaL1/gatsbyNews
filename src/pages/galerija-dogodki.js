@@ -1,35 +1,39 @@
-import React, {Component} from "react"
+import React, { Component } from "react"
 
 import Layout from "../components/layout"
 
 class GalerijaDogodki extends Component {
   constructor(props) {
     super(props)
-    //currentNews = props.newsCurrent;
-    console.log("1------ ", this.props.data.stickyNews)
-    console.log("2019 ------ ", this.props.data.newsfor2019)
-    console.log("2018------ ", this.props.data.newsfor2018)
-    console.log("2017------ ", this.props.data.newsfor2017)
-
-    //console.log("3------ ", this.props.data.newsFor2018.edges)
-    //console.log("4------ ", this.props.data.newsFor2017.edges)
-
-    this.news2017 = this.props.data.newsfor2017
-    this.news2018 = this.props.data.newsfor2018
-    this.news2019 = this.props.data.newsfor2019
-
-    //this.setState({news2019 : this.props.data.newsfor2019});
-
-    this.stickyNews = this.props.data.stickyNews
-
-    //this._onSelect = this._onSelect.bind(this)
+    this.state = { galerijaDogodki: this.props.data.galerijaDogodki.edges }
   }
   render() {
+    if (typeof this.state.galerijaDogodki == "undefined")
+      return <div>Ni slik</div>
+
     return (
       <Layout>
         <div style={{ marginBottom: `1.45rem` }}>
-        
-         
+          <h5 className="item-title">Galerija dogodki</h5>
+
+          {this.state.galerijaDogodki.map(({ node }) => {
+            const image1 = node.frontmatter.image1 || ""
+            const image2 = node.frontmatter.image2 || ""
+            const image3 = node.frontmatter.image3 || ""
+            const image4 = node.frontmatter.image4 || ""
+            const image5 = node.frontmatter.image5 || ""
+            return (
+              <div key={node.frontmatter.title}>
+                <article className="news-item content-article">
+                  <img src={image1} />
+                  <img src={image2} />
+                  <img src={image3} />
+                  <img src={image4} />
+                  <img src={image5} />
+                </article>
+              </div>
+            )
+          })}
         </div>
       </Layout>
     )
@@ -42,15 +46,13 @@ export const pageQuery = graphql`
   query {
     galerijaDogodki: allMarkdownRemark(
       filter: {
-        frontmatter: {
-          category: { eq: "Dogodki" }
-          top: { eq: false }
-        }
+        frontmatter: { category: { eq: "Dogodki" }, top: { eq: false } }
       }
     ) {
       edges {
         node {
           frontmatter {
+            title
             image1
             image2
             image3
