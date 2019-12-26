@@ -12,7 +12,7 @@ class GalerijaMladina extends Component {
     if (typeof this.state.galerijaMladina == "undefined")
       return (
         <Layout>
-          <h5 className="item-title">Galerija dogodki</h5>
+          <h5 className="item-title">Galerija mladina</h5>
           {" "}
           <div>Ni slik</div>
         </Layout>

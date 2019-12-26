@@ -25,11 +25,15 @@ class ImageGallery extends Component {
     const gallery = images.map((node, i) => {
       i++
       console.log("obj:: ", node.node)
+      if (typeof node.node == "undefined") return <div>Ni slik</div>
+
+      
       const image1 = node.node.frontmatter.image1
       const image2 = node.node.frontmatter.image2
       const image3 = node.node.frontmatter.image3
       const image4 = node.node.frontmatter.image4
       const image5 = node.node.frontmatter.image5
+      
 
       console.log("node.frontmatter.image1: ", node.node.frontmatter.image1)
       console.log("node.frontmatter.image1: ", image1)
