@@ -4,11 +4,11 @@ date: 2019-11-22T10:06:34.140Z
 intro: >-
   Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
   sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
-image1: /assets/fb-md.jpg
-image2: /assets/fb-md.jpg
-image3: /assets/fb-md.jpg
-image4: /assets/secondarytile.png
-image5: /assets/secondarytile.png
+image1: /assets/1200px-aiguille_du_midde_from_grands_mulets.jpg
+image2:
+image3:
+image4:
+image5:
 top: false
 category: Operativa
 ---
