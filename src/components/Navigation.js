@@ -14,6 +14,7 @@ const Navigation = class extends React.Component {
   }
 
   toggleHamburger = () => {
+    console.log("TOGGLED");
     // toggle the active boolean in the state
     this.setState(
       {

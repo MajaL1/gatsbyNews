@@ -13,7 +13,7 @@
 
 .content-title {
     color: #505050;
-    font-family: 'Arial Black';
+     font-family: 'Arial Black'; 
     font-size: 1.8em;
     margin-bottom: 20px;
     margin-top: 20px;
@@ -206,6 +206,9 @@ article {
     width: 13%;
     height: 100%;
 } 
+.navbar-nav .dropdown-menu {
+    position: absolute;
+  }
 
 @media (min-width: 200px) and (max-width: 500em) and (orientation: portrait) {
 
@@ -218,6 +221,6 @@ article {
         float: unset; 
         right: unset;
         position: relative;
-        margin-left: 40%;
+        margin-left: 32%;
     }
  }
