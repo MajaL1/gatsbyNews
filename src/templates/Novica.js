@@ -8,14 +8,18 @@ import Img from "gatsby-image"
 class Novica extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
-    const category = this.props.data.markdownRemark.category
+    const category = post.frontmatter.category
     const siteTitle = this.props.data.site.siteMetadata.title
     const { previous, next } = this.props.pageContext
     const image1 = post.frontmatter.image1
+    const image2 = post.frontmatter.image2
+    const image3 = post.frontmatter.image3
+    const image4 = post.frontmatter.image4
+    const image5 = post.frontmatter.image5
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title={post.frontmatter.title} />
-        <article>
+        <article className="content-section">
           <header>
             <h5 className="news-item-title">{post.frontmatter.title}</h5>
             <p
@@ -26,9 +30,9 @@ class Novica extends React.Component {
               <small className="news-item-date">
                 {"Objavljeno: "}
                 {post.frontmatter.date}
+                {" v "}
+                {category}
               </small>
-              {"v "}
-              {category}
             </p>
             <p className="news-content-section">{post.frontmatter.intro}</p>
           </header>
@@ -37,8 +41,11 @@ class Novica extends React.Component {
             className="news-content-section"
             dangerouslySetInnerHTML={{ __html: post.html }}
           />
-          <p>{image1}</p>
-          <img src={image1} />
+          <img className="gallery-image" src={image1} />
+          <img className="gallery-image" src={image2} />
+          <img className="gallery-image" src={image3} />
+          <img className="gallery-image" src={image4} />
+          <img className="gallery-image" src={image5} />
           {/*image && <Img fluid={post.frontmatter.image.childImageSharp.fluid} alt="Logo" />*/}
           <hr />
           <footer></footer>
