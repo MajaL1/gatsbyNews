@@ -20,7 +20,7 @@ class GalerijaMladina extends Component {
 
     return (
       <Layout>
-        <h5 className="item-title">Galerija dogodki</h5>
+        <h5 className="item-title">Galerija mladina</h5>
         <section id="two">
           <div className="gallery-content">
             <ImageGallery

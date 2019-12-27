@@ -5,7 +5,7 @@ intro: >-
   Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
   sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
 image1: /assets/1200px-aiguille_du_midde_from_grands_mulets.jpg
-image2:
+image2: /assets/72.jpg
 image3:
 image4:
 image5:

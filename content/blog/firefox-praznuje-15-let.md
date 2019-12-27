@@ -14,8 +14,8 @@ intro: >
 image1: /assets/dolomiti-3-.jpg
 image2: /assets/72.jpg
 image3: /assets/1200px-aiguille_du_midde_from_grands_mulets.jpg
-image4: /assets/secondarytile.png
-image5: /assets/secondarytile.png
+image4:
+image5:
 top: false
 category: Operativa
 ---
