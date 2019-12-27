@@ -6,10 +6,11 @@ intro: >-
   "zapekli" in nato prebrali dolgometražni film ter s tem dokazali smiselnost
   ideje o tovrstnem shranjevanju posnetkov, ki jo razvijajo v okviru projekta
   Project Silica.
-image1: /assets/secondarytile.png
-image2: /assets/fb-md.jpg
-image3: /assets/fb-md.jpg
-image5: /assets/secondarytile.png
+image1: /assets/dolomiti-3-.jpg
+image2: /assets/72.jpg
+image3: /assets/1200px-aiguille_du_midde_from_grands_mulets.jpg
+image4: 
+image5:
 ---
 
 Microsoft - V Microsoftovem raziskovalnem oddelku so v obstojno stekleno ploščico uspešno "zapekli" in nato prebrali dolgometražni film ter s tem dokazali smiselnost ideje o tovrstnem shranjevanju posnetkov, ki jo razvijajo v okviru projekta Project Silica.

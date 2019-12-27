@@ -9,10 +9,10 @@ intro: >-
 image1: /assets/secondarytile.png
 top: false
 category: Operativa
-image2: /assets/fb-md.jpg
-image3: /assets/fb-md.jpg
-image4: /assets/secondarytile.png
-image5: /assets/secondarytile.png
+image2: /assets/dolomiti-3-.jpg
+image3: /assets/72.jpg
+image4: /assets/1200px-aiguille_du_midde_from_grands_mulets.jpg
+image5:
 ---
 
 The Verge - Po mnogih namigih in pobegih informacij so pri Motoroli naposled razgrnili vse podrobnosti oživitve legendarne serije telefonov Razr. Novinec bo poklopni telefon klasične zasnove z upogljivim zaslonom in Androidom ter z zasoljeno ceno poldrugega tisočaka dolarjev.
