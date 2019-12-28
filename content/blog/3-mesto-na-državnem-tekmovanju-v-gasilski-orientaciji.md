@@ -6,7 +6,7 @@ image1: /assets/69976537_2997837756953938_5340342325593767936_n.jpg
 image2: /assets/70183135_2997837900287257_8323878199989633024_n.jpg
 image3: /assets/70395908_2997837966953917_304549654148677632_n.jpg
 image4: /assets/69933508_2997838080287239_6754991689745563648_n.jpg
-top: false
+top: true
 category: Mladina
 ---
 Na to stopničko smo se povzpeli prvič v zgodovini društva, zato smo člani PGD zaslužnim pripravnicam skrivoma pripravili slovesni sprejem s curkometom. Voščit sta poleg članov in družin prišla tudi župan občine Šmartno pri Litiji Rajko Meserko in podžupan Janez Tomažič.
