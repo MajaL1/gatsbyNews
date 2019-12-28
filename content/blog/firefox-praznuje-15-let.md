@@ -1,6 +1,6 @@
 ---
 title: Firefox praznuje 15 let
-date: 2019-11-18T10:33:53.902Z
+date: 2018-09-12T09:33:53.902Z
 intro: >
   Pred petnajstimi leti je bila spletna krajina bistveno drugačna, skorajda
   enoumna. Žezlo je v rokah trdno držal Microsoft, katerega Internet Explorer so
@@ -14,8 +14,6 @@ intro: >
 image1: /assets/dolomiti-3-.jpg
 image2: /assets/72.jpg
 image3: /assets/1200px-aiguille_du_midde_from_grands_mulets.jpg
-image4:
-image5:
 top: false
 category: Operativa
 ---
