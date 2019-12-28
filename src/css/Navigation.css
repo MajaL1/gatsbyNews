@@ -65,4 +65,29 @@ h3 {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+@media (min-width: 200px) and (max-width: 500px) and (orientation: portrait) {
+
+  .navigation-link {
+    margin: unset;
+    border-bottom: 1px #ddd4d4 solid;
+    padding: 5px;
+  }
+  .navigation-dropdown-link.navigation-link.dropdown.nav-item {
+    border-bottom: 1px #ddd4d4  solid;
+    margin-left: 10px;
+  }
+  .dropdown-menu > a.navigation-link {
+    border-bottom: 1px #ddd4d4 solid;
+    padding: 5px;
+  }
+  .dropdown-menu.show {
+    background: transparent;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    border-top: 1px #ddd4d4 solid;
+    
+  }
+}
+
 
