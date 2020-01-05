@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import "../css/main.css"
 import { FaCalendarAlt } from "react-icons/fa"
 import DropdownMenu from "../components/dropdown"
+import Image from 'gatsby-image';
 
 //let stickyNews;
 
@@ -55,7 +56,7 @@ class News extends Component {
     if (typeof this.state.currentNews == "undefined") return <div>No data</div>
 
     return (
-      <div style={{ marginBottom: `1.45rem` }}>
+      <div>
         <DropdownMenu onChange={this.onChange} />
         <h5 className="item-title">Zadnje novice</h5>
 
@@ -81,7 +82,6 @@ class News extends Component {
                     <h5>
                       <Link
                         className="news-item-title"
-                        style={{ boxShadow: `none` }}
                         to={node.fields.slug}
                       >
                         {title}

@@ -1,5 +1,5 @@
 ---
-title: 'Ko se nesreča zgodi, naj bodo proste poti!'
+title: "Ko se nesreča zgodi, naj bodo proste poti!"
 date: 2017-10-04T20:13:18.064Z
 intro: >+
   Velikokrat se zgodi, da ob požaru, nesreči ali ko nekdo potrebuje medicinsko
@@ -15,4 +15,5 @@ image1: /assets/22137296_1679981908739536_3854528268679778462_o.jpg
 top: false
 category: Dogodki
 ---
+
 Zavedati se je treba, da je preventivno delovanje zelo pomembno. Z ustreznim in pravočasnim ravnanjem se lahko prepreči marsikatero nesrečo ali vsaj zmanjša njene posledice.

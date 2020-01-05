@@ -3,7 +3,7 @@ import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Img from "gatsby-image"
+import Image from 'gatsby-image'
 
 class Novica extends React.Component {
   render() {
@@ -11,22 +11,32 @@ class Novica extends React.Component {
     const category = post.frontmatter.category
     const siteTitle = this.props.data.site.siteMetadata.title
     const { previous, next } = this.props.pageContext
-    const image1 = post.frontmatter.image1
-    const image2 = post.frontmatter.image2
-    const image3 = post.frontmatter.image3
-    const image4 = post.frontmatter.image4
-    const image5 = post.frontmatter.image5
+
+    let image1, image2, image3, image4, image5
+
+    if(! post.frontmatter.image1.childImageSharp.fluid.sizes.startsWith("(max-width: 1px)")){
+      image1 = post.frontmatter.image1
+    }
+    if(! post.frontmatter.image2.childImageSharp.fluid.sizes.startsWith("(max-width: 1px)")){
+      image2 = post.frontmatter.image2
+    }
+    if(! post.frontmatter.image3.childImageSharp.fluid.sizes.startsWith("(max-width: 1px)")){
+      image3 = post.frontmatter.image3
+    }
+    if(! post.frontmatter.image4.childImageSharp.fluid.sizes.startsWith("(max-width: 1px)")){
+      image4 = post.frontmatter.image4
+    }
+    if(! post.frontmatter.image5.childImageSharp.fluid.sizes.startsWith("(max-width: 1px)")){
+      image5 = post.frontmatter.image5
+    }
+
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title={post.frontmatter.title} />
         <article className="content-section">
           <header>
             <h5 className="news-item-title">{post.frontmatter.title}</h5>
-            <p
-              style={{
-                display: `block`,
-              }}
-            >
+            <p>
               <small className="news-item-date">
                 {"Objavljeno: "}
                 {post.frontmatter.date}
@@ -36,31 +46,23 @@ class Novica extends React.Component {
             </p>
             <p className="news-content-section">{post.frontmatter.intro}</p>
           </header>
-
+          
+          { image1 && <Image fluid={post.frontmatter.image1.childImageSharp.fluid} /> }
+          { image2 && <Image fluid={post.frontmatter.image2.childImageSharp.fluid} /> }
+          { image3 && <Image fluid={post.frontmatter.image3.childImageSharp.fluid} /> }
+          { image4 && <Image fluid={post.frontmatter.image4.childImageSharp.fluid} /> }
+          { image5 && <Image fluid={post.frontmatter.image5.childImageSharp.fluid} /> }
+         
           <section
             className="news-content-section"
             dangerouslySetInnerHTML={{ __html: post.html }}
           />
-          <img className="gallery-image" src={image1} />
-          <img className="gallery-image" src={image2} />
-          <img className="gallery-image" src={image3} />
-          <img className="gallery-image" src={image4} />
-          <img className="gallery-image" src={image5} />
-          {/*image && <Img fluid={post.frontmatter.image.childImageSharp.fluid} alt="Logo" />*/}
           <hr />
           <footer></footer>
         </article>
 
         <nav>
-          <ul
-            style={{
-              display: `flex`,
-              flexWrap: `wrap`,
-              justifyContent: `space-between`,
-              listStyle: `none`,
-              padding: 0,
-            }}
-          >
+          <ul className="ul-news-link">
             <li>
               {previous && (
                 <Link to={previous.fields.slug} rel="prev">
@@ -101,11 +103,41 @@ export const pageQuery1 = graphql`
         intro
         category
         top
-        image1
-        image2
-        image3
-        image4
-        image5
+        image1 {
+          childImageSharp {
+            fluid(maxWidth: 800) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        image2 {
+          childImageSharp {
+            fluid(maxWidth: 800) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        image3 {
+          childImageSharp {
+            fluid(maxWidth: 800) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        image4 {
+          childImageSharp {
+            fluid(maxWidth: 800) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+          image5 {
+            childImageSharp {
+              fluid(maxWidth: 800) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
       }
     }
   }

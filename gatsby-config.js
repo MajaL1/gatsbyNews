@@ -6,23 +6,37 @@ module.exports = {
     author: "Maja L",
   },
   plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/static/assets`,
+        name: `images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `content`,
+        path: `${__dirname}/content/blog`,
+      },
+    },
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
 
     {
-      resolve: "gatsby-transformer-remark",
+      resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
+          "gatsby-remark-relative-images",
           {
-            resolve: "gatsby-remark-images",
+            resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 970,
+              maxWidth: 590,
             },
           },
         ],
       },
     },
-    `gatsby-transformer-remark`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -43,20 +57,6 @@ module.exports = {
       },
     },
     "gatsby-plugin-offline",
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/src/images`,
-        name: "images",
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `content`,
-        path: `${__dirname}/content/blog`,
-      },
-    },
     "gatsby-theme-gallery",
     "gatsby-plugin-react-helmet",
     {

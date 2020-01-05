@@ -58,7 +58,7 @@ class IndexPage extends Component {
   render() {
     return (
       <Layout>
-        <div style={{ marginBottom: `1.45rem` }}>
+        <div>
           <article>
             <header>
               <h5 className="item-title">Nagovor predsednika</h5>
@@ -124,7 +124,6 @@ class IndexPage extends Component {
                       <h5>
                         <Link
                           className="news-item-title"
-                          style={{ boxShadow: `none` }}
                           to={node.fields.slug}
                         >
                           {title}

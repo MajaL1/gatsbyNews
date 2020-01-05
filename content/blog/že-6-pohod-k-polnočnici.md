@@ -6,8 +6,7 @@ image1: /assets/81589289_3304734586264252_8576966453645803520_o.jpg
 top: false
 category: Dogodki
 ---
+
 Družba, super ste bili! Se vidimo drugo leto.😉🚒
 
-
-
-Vsem prijateljem, gasilcem, družinskim članom in vam,  želimo vesel božič. 😊
+Vsem prijateljem, gasilcem, družinskim članom in vam, želimo vesel božič. 😊

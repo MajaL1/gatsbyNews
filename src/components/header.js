@@ -10,37 +10,13 @@ const Header = ({ siteTitle, subtitle, description }) => (
     <div className="header-main-div col-lg-8 col-md-8 col-sm-12">
       <span
         className="header-title"
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `1.45rem 1.0875rem`,
-          textAlign: `center`,
-        }}
       >
-        <h1 style={{ margin: 0 }}>
-          <Link
-            to="/"
-            style={{
-              color: `lightGray`,
-              textDecoration: `none`,
-              textAlign: `center`,
-              fontFamily: `Arial Black`,
-              textShadow: `5px 0 #444242, 0 1px black, 1px 0 black, 0 -1px black`,
-            }}
-          >
+        <h1>
+          <Link to="/" className="header-title-link">
             {siteTitle}
           </Link>
         </h1>
-        <p
-          style={{
-            color: `#d6d673`,
-            textDecoration: `none`,
-            textAlign: `center`,
-            fontFamily: `Candara`,
-            textShadow: `black 1px 0px, black 0px 1px, black 1px 0px, black 0px 1px`,
-            padding: `10px`
-          }}
-        >
+        <p className="header-title-p">
           <i>{subtitle}</i>
         </p>
       </span>

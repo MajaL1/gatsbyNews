@@ -9,6 +9,7 @@ image1: /assets/71094313_3035229229881457_6580982885044453376_o.jpg
 top: false
 category: Operativa
 ---
+
 Z drugim in tretjim mestom na občinskem tekmovanju se tako članice kot člani odpravljamo na regijsko tekmovanje. 🥈🥉
 
 Čestitke obema ekipama in pa seveda veliko sreče še naprej! 😁💪

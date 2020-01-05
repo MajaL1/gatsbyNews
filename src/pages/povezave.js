@@ -8,13 +8,6 @@ const povezave = ({ data }) => (
       <header>
         <h5 className="item-title">Povezave</h5>
       </header>
-      {/* <section className="content-section">
-        <div style={imgGridStyle}>
-          {data.allFile.edges.map(edge => (
-            <Img fluid={edge.node.childImageSharp.fluid} />
-          ))}
-        </div>
-      </section> */}
     </article>
 
     <div>
@@ -51,9 +44,6 @@ const povezave = ({ data }) => (
       </div>
     </div>
     <div className="povezave-content content-section">
-      {/*data.allFile.edges.map(edge => (
-            <Img imgStyle="testItem" fluid={edge.node.childImageSharp.fluid} />
-          ))*/}
       <a
         className="flexItem"
         target="_blank"

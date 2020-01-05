@@ -1,6 +1,7 @@
 import PropTypes from "prop-types"
 import React, { Component } from "react"
 import Carousel, { Modal, ModalGateway } from "react-images"
+import Image from 'gatsby-image'
 
 class ImageGallery extends Component {
   constructor() {
@@ -24,37 +25,65 @@ class ImageGallery extends Component {
 
     const gallery = images.map((node, i) => {
       i++
-      console.log("obj:: ", node.node)
       if (typeof node.node == "undefined") return <div>Ni slik</div>
 
-      
-      const image1 = node.node.frontmatter.image1
-      const image2 = node.node.frontmatter.image2
-      const image3 = node.node.frontmatter.image3
-      const image4 = node.node.frontmatter.image4
-      const image5 = node.node.frontmatter.image5
-      
+      let image1, image2, image3, image4, image5, nodeFrontmatter
+      nodeFrontmatter = node.node.frontmatter
+      if (!nodeFrontmatter.image1.childImageSharp.fluid.sizes.startsWith("(max-width: 1px)")) {
+        image1 = nodeFrontmatter.image1
 
-      console.log("node.frontmatter.image1: ", node.node.frontmatter.image1)
-      console.log("node.frontmatter.image1: ", image1)
+      }
+      if (!nodeFrontmatter.image2.childImageSharp.fluid.sizes.startsWith("(max-width: 1px)")) {
+        image2 = nodeFrontmatter.image2
 
+      }
+      if (!nodeFrontmatter.image3.childImageSharp.fluid.sizes.startsWith("(max-width: 1px)")) {
+        image3 = nodeFrontmatter.image3
+      }
+      if (!nodeFrontmatter.image4.childImageSharp.fluid.sizes.startsWith("(max-width: 1px)")) {
+        image4 = nodeFrontmatter.image4
+      }
+      if (!nodeFrontmatter.image5.childImageSharp.fluid.sizes.startsWith("(max-width: 1px)")) {
+        image5 = nodeFrontmatter.image5
+      }
       return (
-        <span key={i}>
-          <a
+        <article className="6u 12u$(xsmall) work-item" key={i}>
+          {image1 && <a
             className="image fit thumb"
-            href={image1}
+            href={image1.childImageSharp.fluid.src}
             onClick={e => {
               e.preventDefault()
               this.toggleLightbox(i)
             }}
           >
-            <img className="gallery-image" src={image1} alt="" />
-            <img className="gallery-image" src={image2} alt="" />
-            <img className="gallery-image" src={image3} alt="" />
-            <img className="gallery-image" src={image4} alt="" />
-            <img className="gallery-image" src={image5} alt="" />
+            <Image key={image1.childImageSharp.fluid.src} fluid={image1.childImageSharp.fluid} className="gallery-image" /> }
           </a>
-        </span>
+          }
+
+          {image2 && <a
+            className="image fit thumb"
+            href={image2.childImageSharp.fluid.src}
+            onClick={e => {
+              e.preventDefault()
+              this.toggleLightbox(i)
+            }}
+          >
+            <Image key={image2.childImageSharp.fluid.src} fluid={image2.childImageSharp.fluid} className="gallery-image" /> }
+          </a>
+          }
+
+          {image3 && <a
+            className="image fit thumb"
+            href={image3.childImageSharp.fluid.src}
+            onClick={e => {
+              e.preventDefault()
+              this.toggleLightbox(i)
+            }}
+          >
+            <Image key={image3.childImageSharp.fluid.src} fluid={image3.childImageSharp.fluid} className="gallery-image" /> 
+          </a>
+          }
+        </article>
       )
     })
 

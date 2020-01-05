@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
-import ImageGallery from "../components/ImageGallery"
+import ImageContainer from "../components/ImageContainer"
 
 class GalerijaOperativa extends Component {
   constructor(props) {
@@ -13,8 +13,6 @@ class GalerijaOperativa extends Component {
       return (
         <Layout>
           <h5 className="item-title">Galerija operativa</h5>
-
-          {" "}
           <div>Ni slik</div>
         </Layout>
       )
@@ -22,12 +20,11 @@ class GalerijaOperativa extends Component {
     return (
       <Layout>
         <h5 className="item-title">Galerija operativa</h5>
-
         <section id="two">
           <div className="gallery-content">
-            <ImageGallery
-              images={this.state.galerijaOperativa.map(({ node }) => ({
-                node,
+            <ImageContainer
+              images={this.state.galerijaOperativa.map(({ node, index }) => ({
+                node, index
               }))}
             />
           </div>
@@ -49,12 +46,42 @@ export const pageQuery = graphql`
       edges {
         node {
           frontmatter {
-            title
-            image1
-            image2
-            image3
-            image4
-            image5
+            image1 {
+              childImageSharp {
+                fluid(maxWidth: 1200) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            image2 {
+              childImageSharp {
+                fluid(maxWidth: 1200) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            image3 {
+              childImageSharp {
+                fluid(maxWidth: 1200) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            image4 {
+              childImageSharp {
+                fluid(maxWidth: 1200) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            image5 {
+              childImageSharp {
+                fluid(maxWidth: 1200) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+           
           }
         }
       }

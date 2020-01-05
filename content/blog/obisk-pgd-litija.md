@@ -12,6 +12,7 @@ image5: /assets/72569849_3155371227867256_4065490092477644800_o.jpg
 top: false
 category: Mladina
 ---
+
 Med obiskom nas je presenetila tudi namišljena intervencija.
 
 Hvala članom PGD Litija za lepo izvedeno predstavitev
