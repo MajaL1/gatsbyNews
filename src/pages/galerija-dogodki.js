@@ -106,7 +106,7 @@ export const pageQuery = graphql`
             }
             image2 {
               childImageSharp {
-                fixed(width: 300, height: 240) {
+                fixed(width: 300, height: 250) {
                   ...GatsbyImageSharpFixed
                 }
               }
@@ -127,7 +127,7 @@ export const pageQuery = graphql`
             }
             image5 {
               childImageSharp {
-                fixed(width: 400, height: 300) {
+                fixed(width: 300, height: 250) {
                   ...GatsbyImageSharpFixed
                 }
               }

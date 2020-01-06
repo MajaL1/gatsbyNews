@@ -256,17 +256,22 @@ a.header-title-link:hover {
 .gallery-image {
     transition: 0.9s;
 }
-.gallery-image:hover {
-   padding: 50px;
-  }
+.gallery-image-content:hover {
+    filter: brightness(100%);
+    transform: scale(1.05);
+}
 
 .gallery-content {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: stretch;
 }
 .gallery-image-content {
     align-self: center;
+    transform-origin: 50% 65%;
+    transition: transform 1s, filter 2s ease-in-out;
+    filter: brightness(150%);
+    margin: 3px;
 }
 .gallery-image {
     border: 1px transparent solid;
