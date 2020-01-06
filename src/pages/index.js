@@ -34,27 +34,12 @@ class NetlifyIdentity extends Component {
 class IndexPage extends Component {
   constructor(props) {
     super(props)
-    //currentNews = props.newsCurrent;
-    //console.log("1------ ", this.props.data.stickyNews)
-    //console.log("2019 ------ ", this.props.data.newsfor2019)
-    //console.log("2018------ ", this.props.data.newsfor2018)
-    //console.log("2017------ ", this.props.data.newsfor2017)
-
-    //console.log("3------ ", this.props.data.newsFor2018.edges)
-    //console.log("4------ ", this.props.data.newsFor2017.edges)
-
+    
     this.news2017 = this.props.data.newsfor2017
     this.news2018 = this.props.data.newsfor2018
     this.news2019 = this.props.data.newsfor2019
-
-    //this.setState({news2019 : this.props.data.newsfor2019});
-
     this.stickyNews = this.props.data.stickyNews
-
-    //this._onSelect = this._onSelect.bind(this)
   }
-  //const data = props.data;//.allFile.edges[0].node.childMarkdownRemark.frontmatter
-  //const data = props.data.allFile.edges[0].node.childMarkdownRemark.frontmatter
   render() {
     return (
       <Layout>

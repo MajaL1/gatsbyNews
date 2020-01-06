@@ -6,10 +6,11 @@ import ImageContainer from "../components/ImageContainer"
 class GalerijaDogodki extends Component {
   constructor(props) {
     super(props)
-    this.state = { galerijaDogodki: this.props.data.galerijaDogodki.edges }
+    this.state = { galerijaDogodkiFulls: this.props.data.galerijaDogodkiFulls.edges, galerijaDogodkiThumbs: this.props.data.galerijaDogodkiThumbs.edges }
+ 
   }
   render() {
-    if (typeof this.state.galerijaDogodki == "undefined")
+    if (typeof this.state.galerijaDogodkiFulls== "undefined")
       return (
         <Layout>
           <h5 className="item-title">Galerija dogodki</h5>
@@ -22,8 +23,10 @@ class GalerijaDogodki extends Component {
         <h5 className="item-title">Galerija dogodki</h5>
         <section id="two">
           <div className="gallery-content">
-            <ImageContainer
-              images={this.state.galerijaDogodki.map(({ node, index }) => ({
+          <ImageContainer
+              images={this.state.galerijaDogodkiFulls.map(({ node, index }) => ({
+                node, index
+              }))} thumbs={this.state.galerijaDogodkiThumbs.map(({ node, index }) => ({
                 node, index
               }))}
             />
@@ -38,7 +41,7 @@ export default GalerijaDogodki
 
 export const pageQuery = graphql`
   query {
-    galerijaDogodki: allMarkdownRemark(
+    galerijaDogodkiFulls: allMarkdownRemark(
       filter: {
         frontmatter: { category: { eq: "Dogodki" }, top: { eq: false } }
       }
@@ -78,6 +81,54 @@ export const pageQuery = graphql`
               childImageSharp {
                 fluid(maxWidth: 1200) {
                   ...GatsbyImageSharpFluid
+                }
+              }
+            }
+           
+          }
+        }
+      }
+    }
+    galerijaDogodkiThumbs: allMarkdownRemark(
+      filter: {
+        frontmatter: { category: { eq: "Dogodki" }, top: { eq: false } }
+      }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            image1 {
+              childImageSharp {
+                fixed(width: 300, height: 250) {
+                  ...GatsbyImageSharpFixed
+                }
+              }
+            }
+            image2 {
+              childImageSharp {
+                fixed(width: 300, height: 240) {
+                  ...GatsbyImageSharpFixed
+                }
+              }
+            }
+            image3 {
+              childImageSharp {
+                fixed(width: 300, height: 250) {
+                  ...GatsbyImageSharpFixed
+                }
+              }
+            }
+            image4 {
+              childImageSharp {
+                fixed(width: 300, height: 250) {
+                  ...GatsbyImageSharpFixed
+                }
+              }
+            }
+            image5 {
+              childImageSharp {
+                fixed(width: 400, height: 300) {
+                  ...GatsbyImageSharpFixed
                 }
               }
             }

@@ -7,8 +7,6 @@ import '@reach/dialog/styles.css';
 import Lightbox from 'react-image-lightbox'
 import 'react-image-lightbox/style.css'
 import ImgWrapper from './img-wrapper'
-import Row from './row'
-import Col from './column'
 
 let prevIndex = state => (state.index - 1) % state.images.length
 let nextIndex = state =>
@@ -20,40 +18,58 @@ export default class ImageContainer extends Component {
     super(props);
 
     const { images } = this.props
+    const { thumbs } = this.props
 
-    let imageGallery = new Array()
-    
+    let fulls =  new Array()
+    let thumbnails =  new Array()
+
     images.map(function (node) {
       let nodeImage
       nodeImage = node.node.frontmatter
-      console.log("nodeImage", nodeImage);
       if (!nodeImage.image1.childImageSharp.fluid.sizes.startsWith("(max-width: 1px)")) {
-        imageGallery.push(nodeImage.image1)
+        fulls.push(nodeImage.image1)
       }
       if (!nodeImage.image2.childImageSharp.fluid.sizes.startsWith("(max-width: 1px)")) {
-        imageGallery.push(nodeImage.image2)
+        fulls.push(nodeImage.image2)
       }
       if (!nodeImage.image3.childImageSharp.fluid.sizes.startsWith("(max-width: 1px)")) {
-        imageGallery.push(nodeImage.image3)
+        fulls.push(nodeImage.image3)
       }
       if (!nodeImage.image4.childImageSharp.fluid.sizes.startsWith("(max-width: 1px)")) {
-        imageGallery.push(nodeImage.image4)
+        fulls.push(nodeImage.image4)
       }
       if (!nodeImage.image5.childImageSharp.fluid.sizes.startsWith("(max-width: 1px)")) {
-        imageGallery.push(nodeImage.image5)
+        fulls.push(nodeImage.image5)
       }
     })
 
-    imageGallery.map(function (node) {
-      console.log("NODE:: ", node)
-    })
+    //thumbnails = thumbs
+     thumbs.map(function (node) {
+      let nodeImage
+      nodeImage = node.node.frontmatter
     
+      if (nodeImage.image1.childImageSharp.fixed.height > 1 && nodeImage.image1.childImageSharp.fixed.width > 1) {
+        thumbnails.push(nodeImage.image1)
+      }
+      if (nodeImage.image2.childImageSharp.fixed.height > 1 && nodeImage.image2.childImageSharp.fixed.width > 1) {
+        thumbnails.push(nodeImage.image2)
+      }
+      if (nodeImage.image3.childImageSharp.fixed.height > 1 && nodeImage.image3.childImageSharp.fixed.width > 1) {
+        thumbnails.push(nodeImage.image3)
+      }
+      if (nodeImage.image4.childImageSharp.fixed.height > 1 && nodeImage.image4.childImageSharp.fixed.width > 1) {
+        thumbnails.push(nodeImage.image4)
+      }
+      if (nodeImage.image5.childImageSharp.fixed.height > 1 && nodeImage.image5.childImageSharp.fixed.width > 1) {
+        thumbnails.push(nodeImage.image5)
+      }
+    }) 
 
     this.state = {
       index: 0,
       isOpen: false,
-      images: imageGallery,
-      thumbs: imageGallery,
+      images: fulls,
+      thumbs: thumbnails,
     };
 
     this.renderLightBox = this.renderLightBox.bind(this)
@@ -71,20 +87,9 @@ export default class ImageContainer extends Component {
   }
 
   renderLightBox() {
-    const { images, thumbs, index } = this.state
-    //const { imageGallery } = this.state
-    
-    console.log("0..images, ",images)
-    console.log("1..thumbs, ",thumbs)
-    console.log("2..index, ",this.state.index)
-    console.log("2..index - no state, ",index)
-    console.log("3..previndex, ",this.state.prevIndex)
-    console.log("4..nextindex, ",this.state.nextIndex)
-    
-    console.log("MAIN SRC", images[this.state.index].childImageSharp.fluid.src)
-    //console.log("PREV SRC", images[prevIndex(this.state)].childImageSharp.fluid.src)
-    console.log("NEXT SRC", images[nextIndex(this.state)].childImageSharp.fluid.src)
-   
+    const images = this.state.images
+    const thumbs = this.state.thumbs
+
     return (
       <Lightbox
         mainSrc={images[this.state.index].childImageSharp.fluid.src}
@@ -96,12 +101,12 @@ export default class ImageContainer extends Component {
         onCloseRequest={this.closeLightbox}
         onMovePrevRequest={this.movePrev}
         onMoveNextRequest={this.moveNext}
-        imageLoadErrorMessage="Impossible de charger cette image"
-        nextLabel="Image suivante"
-        prevLabel="Image précédente"
-        zoomInLabel="Zoomer"
-        zoomOutLabel="Dézoomer"
-        closeLabel="Fermer"
+        imageLoadErrorMessage="Napaka pri pridobivanju slike"
+        nextLabel="Naprej"
+        prevLabel="Nazaj"
+        zoomInLabel="Zoom +"
+        zoomOutLabel="Zoom -"
+        closeLabel="Zapri"
       />
     )
   }
@@ -109,16 +114,12 @@ export default class ImageContainer extends Component {
     this.setState(prevState => ({
       index: prevIndex(prevState),
     }))
-    console.log("prevState, ",this.state.index)
-    
   }
 
   moveNext() {
     this.setState(prevState => ({
       index: nextIndex(prevState),
     }))
-    console.log("nextState, ",this.state.index)
-    
   }
 
   closeLightbox() {
@@ -126,97 +127,22 @@ export default class ImageContainer extends Component {
   }
 
   render() {
-    const {
-      colWidth = 100 / 3,
-      mdColWidth = 100 / 4,
-      gutter = '0.25rem',
-      imgClass = '',
-    } = this.props
-
     return (
       <React.Fragment>
-        <Row>
           {this.state.thumbs.map((thumbnail, index) => {
-            console.log("index", index)
             return (
-              <Col
-                width={colWidth}
-                md={mdColWidth}
-                key={index}
-                onClick={() => this.openLightBox(index)}
-              >
-                <ImgWrapper margin={gutter}>
-                  <Img fluid={thumbnail.childImageSharp.fluid} className={imgClass} />
-                </ImgWrapper>
-              </Col>
+              
+                <div className="gallery-image-content" onClick={() => this.openLightBox(index)}>
+                  <Img fixed={thumbnail.childImageSharp.fixed} className={"gallery-image"} />
+                </div>
             )
           })}
-        </Row>
         {this.state.isOpen && this.renderLightBox()}
       </React.Fragment>
     )
   }
 }
 
-
-  /* render() {
-    const { images } = this.props
-    const { selectedImage, showLightbox } = this.state;
-    let imageGallery = new Array()
-
-    images.map(function (node) {
-
-      let nodeImage
-      nodeImage = node.node.frontmatter
-      console.log("nodeImage", nodeImage);
-      if (!nodeImage.image1.childImageSharp.fluid.sizes.startsWith("(max-width: 1px)")) {
-        imageGallery.push(nodeImage.image1)
-      }
-      if (!nodeImage.image2.childImageSharp.fluid.sizes.startsWith("(max-width: 1px)")) {
-        imageGallery.push(nodeImage.image2)
-      }
-      if (!nodeImage.image3.childImageSharp.fluid.sizes.startsWith("(max-width: 1px)")) {
-        imageGallery.push(nodeImage.image3)
-      }
-      if (!nodeImage.image4.childImageSharp.fluid.sizes.startsWith("(max-width: 1px)")) {
-        imageGallery.push(nodeImage.image4)
-      }
-      if (!nodeImage.image5.childImageSharp.fluid.sizes.startsWith("(max-width: 1px)")) {
-        imageGallery.push(nodeImage.image5)
-      }
-    })
-
-    return (
-      <Fragment>
-        <ImageContainer>
-          {imageGallery.map((node, index) => (
-            <PreviewButton
-              key={node.childImageSharp.fluid.src}
-              type="button"
-              onClick={() => this.setState({ showLightbox: true, selectedImage: node, index: index  })}
-            >
-              <Img fluid={node.childImageSharp.fluid} />
-            </PreviewButton>
-          ))}
-        </ImageContainer>
-        {showLightbox && (
-          <Dialog>
-            <button type="button" className="image-backward" onClick={() => this.openLightBox(index)}>
-              Nazaj
-            </button>
-            <Img fluid={selectedImage.childImageSharp.fluid} />
-            <button type="button" className="image-forward" onClick={() => this.openLightBox(index)}>
-              Naprej
-            </button>
-            <button type="button" onClick={() => this.setState({ showLightbox: false })}>
-              Close
-            </button>
-          </Dialog>
-        )}
-      </Fragment>
-    );
-  } 
-}*/
 ImageContainer.propTypes = {
   images: PropTypes.array.isRequired,
   thumbs: PropTypes.array.isRequired,

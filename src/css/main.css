@@ -250,14 +250,26 @@ article {
 a.header-title-link:hover {
     text-decoration: none;
     color: lightgray;
+    padding: 10px;
 }
 
 .gallery-image {
-    width: 150px;
+    transition: 0.9s;
 }
+.gallery-image:hover {
+   padding: 50px;
+  }
 
-.image-gallery-container {
+.gallery-content {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.gallery-image-content {
+    align-self: center;
+}
+.gallery-image {
+    border: 1px transparent solid;
 }
 
 @media (min-width: 200px) and (max-width: 500px) and (orientation: portrait) {
@@ -275,5 +287,8 @@ a.header-title-link:hover {
     }
     .povezave-content {
         width: 100%;
+    }
+    .gallery-content {
+        margin: 0;
     }
  }

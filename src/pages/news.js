@@ -10,27 +10,14 @@ import Image from 'gatsby-image';
 class News extends Component {
   constructor(props) {
     super(props)
-    // console.log("\n\n 000 news2019:  ", this.props.news2019);
-    // console.log("\n\n 000 news2018:  ", this.props.news2018);
-    // console.log("\n\n 000 news2017:  ", this.props.news2017);
-
-    /*  this.setState({
-      test: "Maja"
-     });
- */
     this.onChange = this.onChange.bind(this)
 
     this.state = {
-      test: "Maja",
       currentNews: this.props.news2019,
       news2019: this.props.news2019,
       news2018: this.props.news2018,
       news2017: this.props.news2017,
     }
-    /* this.setState({
-      currentNews: this.props.news2019
-    });
- */
   }
   onChange(option) {
     switch (option.label) {

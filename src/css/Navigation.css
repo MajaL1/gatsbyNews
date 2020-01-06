@@ -46,6 +46,7 @@ background-image: linear-gradient(#b5b3b3,#ccc7c7,#a5a4a4);
   font-weight: bold;
   border: 10px solid transparent;
  /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif*/
+ transition: 0.9s;
 }
 
 .navigation-link:hover{
