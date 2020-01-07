@@ -90,6 +90,7 @@ li {
     border-bottom: #c9c7c7 3px solid;
     font-size: smaller;
     display: flex;
+    flex-wrap: nowrap;
 }
 
 .news-front-image {
@@ -305,6 +306,22 @@ a.header-title-link:hover {
         width: 100%;
     }
     .gallery-content {
+        margin: 0;
+    }
+    .news-front-image {
+        flex-basis: auto;
+        width: 200px;
+    }
+    .gallery-image.gatsby-image-wrapper {
+        width: 255px !important;
+        max-width: 300px !important;
+    }
+    .news-item-header {
+        flex-wrap: wrap;
+    }
+
+    .news-item-title, .news-item-intro, .news-item-date, .content-section {
+        padding: 0;
         margin: 0;
     }
  }
