@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Gudea|Hind+Guntur|Michroma|Sulphur+Point|Mallanna');
+
 .top-div {
     min-height: 800px;
     color: black;
@@ -13,7 +17,7 @@
 
 .content-title {
     color: #505050;
-     font-family: 'Arial Black'; 
+    font-family: "Hind Guntur";
     font-size: 1.8em;
     margin-bottom: 20px;
     margin-top: 20px;
@@ -66,10 +70,9 @@ li {
     width: 100%;
     padding-left: 15px;
     display: block;
-    font-weight: bold;
-    border-bottom: 5px #c6c6c6 solid;
+    border-bottom: 1px #c6c6c6 solid;
     text-align: start;
-
+    font-family: "Montserrat";
 }
 
 .content-main-div {
@@ -136,6 +139,7 @@ li {
     color: black;
     margin: 20px 0px 20px 20px;
     border-bottom: 3px solid lightgrey;
+    font-family: "Montserrat";
     
 }
 
@@ -247,15 +251,17 @@ article {
         color: lightGray;
         text-decoration: none;
         text-align: center;
-        font-family: "Arial Black";
-        text-shadow: 5px 0 #444242, 0 1px black, 1px 0 black, 0 -1px black;
+       /* font-family: "Montserrat"; */
+        /*font-family: "Hind Guntur";*/
+
+        text-shadow: 1px 0 #444242, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 .header-title-p {
         color: #d6d673;
         text-decoration: none;
         text-align: center;
-        font-family: Candara;
+        font-family: "Sulphur Point";
         text-shadow: black 1px 0px, black 0px 1px, black 1px 0px, black 0px 1px;
         padding: 10px;
 }
@@ -289,6 +295,12 @@ a.header-title-link:hover {
     border: 1px transparent solid;
 }
 
+
+
+.news-item-header.sticky-news {
+    background-image: linear-gradient(#dddcdc,#ececec, #d7d4d4);
+}
+
 @media (min-width: 200px) and (max-width: 500px) and (orientation: portrait) {
 
     .header-row{
@@ -310,12 +322,8 @@ a.header-title-link:hover {
     }
     .news-front-image {
         flex-basis: auto;
-        width: 200px;
     }
-    .gallery-image.gatsby-image-wrapper {
-        width: 255px !important;
-        max-width: 300px !important;
-    }
+    
     .news-item-header {
         flex-wrap: wrap;
     }

@@ -96,7 +96,7 @@ class IndexPage extends Component {
               <div key={node.fields.slug}>
                 <article className="news-item content-article" key={node.fields.slug}>
                   <section className="content-section">
-                    <header className="news-item-header">
+                    <header className="news-item-header sticky-news">
                     <Link className="news-front-image" to={node.fields.slug}>
                         <Img fixed={node.frontmatter.image1.childImageSharp.fixed} className={"gallery-image"} />
                       </Link>
