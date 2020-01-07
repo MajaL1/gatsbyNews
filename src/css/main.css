@@ -89,12 +89,23 @@ li {
     padding: 10px;
     border-bottom: #c9c7c7 3px solid;
     font-size: smaller;
+    display: flex;
+}
+
+.news-front-image {
+    flex-basis: auto;
+}
+
+.news-front-content {
+    flex-basis: auto;
+    padding: 2%;
 }
 
 .news-item-link {
     font-size: smaller;
     line-height: 1.0;
     display: block;
+    margin-left: 5%;
 }
 
 .news-item-date {

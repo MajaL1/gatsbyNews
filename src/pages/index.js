@@ -3,7 +3,7 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import { FaCalendarAlt } from "react-icons/fa"
 import News from "./news"
-
+import Img from "gatsby-image"
 /* function initNetlifyIdentity() {
   console.log("initNetlifyIdentity called")
   const script = document.createElement("script")
@@ -34,7 +34,7 @@ class NetlifyIdentity extends Component {
 class IndexPage extends Component {
   constructor(props) {
     super(props)
-    
+
     this.news2017 = this.props.data.newsfor2017
     this.news2018 = this.props.data.newsfor2018
     this.news2019 = this.props.data.newsfor2019
@@ -90,37 +90,34 @@ class IndexPage extends Component {
           {this.props.data.stickyNews.edges.map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug
             const category = node.frontmatter.category
+            console.log("node.frontmatter.image1, ", node.frontmatter.image1);
+
             return (
               <div key={node.fields.slug}>
-                <article
-                  className="news-item content-article"
-                  key={node.fields.slug}
-                >
+                <article className="news-item content-article" key={node.fields.slug}>
                   <section className="content-section">
                     <header className="news-item-header">
-                      <small className="news-item-date">
-                        <FaCalendarAlt />
-                        {" Objavljeno: "}
-                        {node.frontmatter.date}
-
-                        {" v "}
-                        {category}
-                      </small>
-                      <h5>
-                        <Link
-                          className="news-item-title"
-                          to={node.fields.slug}
-                        >
-                          {title}
-                        </Link>
-                      </h5>
-                      <p className="news-item-intro">
-                        {node.frontmatter.intro}
-                      </p>
-                      <hr />
-                      <Link className="news-item-link" to={node.fields.slug}>
-                        {"Preberi celotni prispevek >> "}
+                    <Link className="news-front-image" to={node.fields.slug}>
+                        <Img fixed={node.frontmatter.image1.childImageSharp.fixed} className={"gallery-image"} />
                       </Link>
+                      <div className="news-front-content">
+                        <small className="news-item-date">
+                          <FaCalendarAlt />
+                          {" Objavljeno: "} {node.frontmatter.date}{" v "}{category}
+                        </small>
+                        <h5>
+                          <Link className="news-item-title" to={node.fields.slug}>
+                            {title}
+                          </Link>
+                        </h5>
+                        <p className="news-item-intro">
+                          {node.frontmatter.intro}
+                        </p>
+                        <hr />
+                        <Link className="news-item-link" to={node.fields.slug}>
+                          {"Preberi celotni prispevek >> "}
+                        </Link>
+                      </div>
                     </header>
                   </section>
                 </article>
@@ -161,6 +158,13 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
+            image1 {
+              childImageSharp {
+                fixed(width: 400, height: 250) {
+                  ...GatsbyImageSharpFixed
+                }
+              }
+            }
             title
             intro
             date(formatString: "DD.MM.YYYY")
@@ -185,6 +189,13 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
+            image1 {
+              childImageSharp {
+                fixed(width: 400, height: 250) {
+                  ...GatsbyImageSharpFixed
+                }
+              }
+            }
             title
             intro
             date(formatString: "DD.MM.YYYY")
@@ -209,6 +220,13 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
+            image1 {
+              childImageSharp {
+                fixed(width: 400, height: 250) {
+                  ...GatsbyImageSharpFixed
+                }
+              }
+            }
             title
             intro
             date(formatString: "DD.MM.YYYY")
@@ -233,6 +251,13 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
+            image1 {
+              childImageSharp {
+                fixed(width: 400, height: 250) {
+                  ...GatsbyImageSharpFixed
+                }
+              }
+            }
             title
             intro
             date(formatString: "DD.MM.YYYY")

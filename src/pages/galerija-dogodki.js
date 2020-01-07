@@ -21,7 +21,6 @@ class GalerijaDogodki extends Component {
     return (
       <Layout>
         <h5 className="item-title">Galerija dogodki</h5>
-        <section id="two">
           <div className="gallery-content">
           <ImageContainer
               images={this.state.galerijaDogodkiFulls.map(({ node, index }) => ({
@@ -31,7 +30,6 @@ class GalerijaDogodki extends Component {
               }))}
             />
           </div>
-        </section>
       </Layout>
     )
   }

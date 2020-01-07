@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import "../css/main.css"
 import { FaCalendarAlt } from "react-icons/fa"
 import DropdownMenu from "../components/dropdown"
-import Image from 'gatsby-image';
+import Img from "gatsby-image"
 
 //let stickyNews;
 
@@ -52,33 +52,28 @@ class News extends Component {
           const category = node.frontmatter.category
           return (
             <div key={node.fields.slug}>
-              <article
-                className="news-item content-article"
-                key={node.fields.slug}
-              >
+              <article className="news-item content-article" key={node.fields.slug}>
                 <section className="content-section">
                   <header className="news-item-header">
-                    <small className="news-item-date">
-                      <FaCalendarAlt />
-                      {" Objavljeno: "}
-                      {node.frontmatter.date}
-
-                      {" v "}
-                      {category}
-                    </small>
-                    <h5>
-                      <Link
-                        className="news-item-title"
-                        to={node.fields.slug}
-                      >
-                        {title}
+                    <div className="news-front-image">
+                      <Img fixed={node.frontmatter.image1.childImageSharp.fixed} className={"gallery-image"} />
+                    </div>
+                    <div className="news-front-content">
+                      <small className="news-item-date">
+                        <FaCalendarAlt />
+                        {" Objavljeno: "} {node.frontmatter.date}{" v "}{category}
+                      </small>
+                      <h5>
+                        <Link className="news-item-title" to={node.fields.slug}>
+                          {title}
+                        </Link>
+                      </h5>
+                      <p className="news-item-intro">{node.frontmatter.intro}</p>
+                      <hr />
+                      <Link className="news-item-link" to={node.fields.slug}>
+                        {"Preberi celotni prispevek >> "}
                       </Link>
-                    </h5>
-                    <p className="news-item-intro">{node.frontmatter.intro}</p>
-                    <hr />
-                    <Link className="news-item-link" to={node.fields.slug}>
-                      {"Preberi celotni prispevek >> "}
-                    </Link>
+                    </div>
                   </header>
                 </section>
               </article>
