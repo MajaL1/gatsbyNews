@@ -98,7 +98,11 @@ class IndexPage extends Component {
                   <section className="content-section">
                     <header className="news-item-header sticky-news">
                     <Link className="news-front-image" to={node.fields.slug}>
-                        <Img fixed={node.frontmatter.image1.childImageSharp.fixed} className={"gallery-image"} />
+                        <Img fluid={node.frontmatter.image1.childImageSharp.fluid} 
+                          objectFit="cover"
+                          objectPosition="50% 50%"
+                          alt=""
+                        className={"gallery-image"} />
                       </Link>
                       <div className="news-front-content">
                         <small className="news-item-date">
@@ -160,8 +164,8 @@ export const pageQuery = graphql`
           frontmatter {
             image1 {
               childImageSharp {
-                fixed(width: 400, height: 250) {
-                  ...GatsbyImageSharpFixed
+                fluid(maxWidth: 300) {
+                  ...GatsbyImageSharpFluid
                 }
               }
             }
@@ -191,8 +195,8 @@ export const pageQuery = graphql`
           frontmatter {
             image1 {
               childImageSharp {
-                fixed(width: 400, height: 250) {
-                  ...GatsbyImageSharpFixed
+                fluid(maxWidth: 300) {
+                  ...GatsbyImageSharpFluid
                 }
               }
             }
@@ -222,8 +226,8 @@ export const pageQuery = graphql`
           frontmatter {
             image1 {
               childImageSharp {
-                fixed(width: 400, height: 250) {
-                  ...GatsbyImageSharpFixed
+                fluid(maxWidth: 300) {
+                  ...GatsbyImageSharpFluid
                 }
               }
             }
@@ -253,8 +257,8 @@ export const pageQuery = graphql`
           frontmatter {
             image1 {
               childImageSharp {
-                fixed(width: 400, height: 250) {
-                  ...GatsbyImageSharpFixed
+                fluid(maxWidth: 300) {
+                  ...GatsbyImageSharpFluid
                 }
               }
             }

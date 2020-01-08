@@ -55,9 +55,13 @@ class News extends Component {
               <article className="news-item content-article" key={node.fields.slug}>
                 <section className="content-section">
                   <header className="news-item-header">
-                    <div className="news-front-image">
-                      <Img fixed={node.frontmatter.image1.childImageSharp.fixed} className={"gallery-image"} />
-                    </div>
+                    <Link className="news-front-image">
+                      <Img fluid={node.frontmatter.image1.childImageSharp.fluid} 
+                       objectFit="cover"
+                       objectPosition="50% 50%"
+                       alt=""
+                       className={"gallery-image"} />
+                    </Link>
                     <div className="news-front-content">
                       <small className="news-item-date">
                         <FaCalendarAlt />
