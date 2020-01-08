@@ -43,7 +43,6 @@ export default class ImageContainer extends Component {
       }
     })
 
-    //thumbnails = thumbs
      thumbs.map(function (node) {
       let nodeImage
       nodeImage = node.node.frontmatter
@@ -101,7 +100,7 @@ export default class ImageContainer extends Component {
         onCloseRequest={this.closeLightbox}
         onMovePrevRequest={this.movePrev}
         onMoveNextRequest={this.moveNext}
-        imageLoadErrorMessage="Napaka pri pridobivanju slike"
+        imageLoadErrorMessage=""
         nextLabel="Naprej"
         prevLabel="Nazaj"
         zoomInLabel="Zoom +"

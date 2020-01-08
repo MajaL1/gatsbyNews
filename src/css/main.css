@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css?family=Gudea|Hind+Guntur|Michroma|Sulphur+Point|Mallanna');
 
 
-body {
+body, article {
     font-family: "Montserrat";
 }
 
@@ -22,7 +22,7 @@ body {
 
 .content-title {
     color: #505050;
-    font-family: "Hind Guntur";
+    font-family: "Montserrat";
     font-size: 1.8em;
     margin-bottom: 20px;
     margin-top: 20px;
@@ -93,9 +93,9 @@ li {
 
 .news-item-header {
     background-color: whitesmoke;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     padding: 10px;
-    border-bottom: #c9c7c7 3px solid;
+    border-bottom: #999999 3px solid;
     font-size: smaller;
     display: flex;
     flex-wrap: nowrap;
@@ -277,6 +277,7 @@ a.header-title-link:hover {
 
 .gallery-image {
     transition: 0.9s;
+    
 }
 .gallery-image-content:hover {
     filter: brightness(100%);
@@ -318,7 +319,7 @@ a.header-title-link:hover {
         float: unset; 
         right: unset;
         position: relative;
-        margin-left: 32%;
+        margin-left: 40%;
     }
     .povezave-content {
         width: 100%;

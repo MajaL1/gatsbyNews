@@ -5,8 +5,8 @@ import React from "react"
 const Header = ({ siteTitle, subtitle, description }) => (
   <header className="header row">
     <div className="header-logo col-lg-2 col-md-2 col-sm-12">
-      <img className="header-logo-img" src="../icons/gzs1.png" alt="" />
-    </div>
+     {/*  <img className="header-logo-img" src="../icons/icon-96x96.png" alt="" />
+     */}</div>
     <div className="header-main-div col-lg-8 col-md-8 col-sm-12">
       <span
         className="header-title"
