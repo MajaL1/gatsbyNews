@@ -131,6 +131,10 @@ li {
     font-size: larger;
 }
 
+.nagovor-predsednika {
+    font-size: larger;
+}
+
 .gallery-content {
     margin: 4%;
     color: black;
@@ -142,10 +146,11 @@ li {
 
 .item-title {
     color: black;
-    margin: 20px 0px 20px 20px;
-    border-bottom: 3px solid lightgrey;
+    margin: 20px 0px 20px 0px;
+    border-bottom: 1px solid lightgrey;
     font-family: "Montserrat";
-    
+    padding: 5px;
+    background-image: linear-gradient(to left, #eae9e9, #e3e3e3, #e2dddd); 
 }
 
 .content-section {
@@ -301,8 +306,6 @@ a.header-title-link:hover {
     width: 400px;
     height: 300px;
 }
-
-
 
 .news-item-header.sticky-news {
     background-image: linear-gradient(#dddcdc,#ececec, #d7d4d4);
