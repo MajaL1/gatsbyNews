@@ -44,8 +44,7 @@ class News extends Component {
 
     return (
       <div>
-        <DropdownMenu onChange={this.onChange} />
-        <h5 className="item-title">Zadnje novice</h5>
+        <h5 className="item-title">Novice</h5>
 
         {this.state.currentNews.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
@@ -57,9 +56,6 @@ class News extends Component {
                   <header className="news-item-header">
                     <Link className="news-front-image">
                       <Img fluid={node.frontmatter.image1.childImageSharp.fluid} 
-                       objectFit="cover"
-                       objectPosition="50% 50%"
-                       alt=""
                        className={"gallery-image"} />
                     </Link>
                     <div className="news-front-content">
@@ -68,7 +64,7 @@ class News extends Component {
                         {" Objavljeno: "} {node.frontmatter.date}{" v "}{category}
                       </small>
                       <h5>
-                        <Link className="news-item-title" to={node.fields.slug}>
+                        <Link className="news-item-title section-title" to={node.fields.slug}>
                           {title}
                         </Link>
                       </h5>
@@ -84,7 +80,9 @@ class News extends Component {
             </div>
           )
         })}
+        <DropdownMenu onChange={this.onChange} />
       </div>
+      
     )
   }
 }

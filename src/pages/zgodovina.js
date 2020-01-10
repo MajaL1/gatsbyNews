@@ -2,30 +2,6 @@ import React from "react"
 
 import Layout from "../components/layout"
 import Image from "../components/image"
-import ImageGallery from "../components/ImageGallery"
-
-import thumb01 from "../assets/images/thumbs/01.jpg"
-import thumb02 from "../assets/images/thumbs/02.jpg"
-
-import full01 from "../assets/images/fulls/01.jpg"
-import full02 from "../assets/images/fulls/02.jpg"
-
-const DEFAULT_IMAGES = [
-  {
-    id: "1",
-    source: full01,
-    thumbnail: thumb01,
-    caption: "Photo 1",
-    description: "Lorem ipsum dolor sit amet nisl sed nullam feugiat.",
-  },
-  {
-    id: "2",
-    source: full02,
-    thumbnail: thumb02,
-    caption: "Photo 2",
-    description: "Lorem ipsum dolor sit amet nisl sed nullam feugiat.",
-  },
-]
 
 const Zgodovina = () => (
   <Layout>

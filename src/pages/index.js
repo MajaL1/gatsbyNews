@@ -46,15 +46,12 @@ class IndexPage extends Component {
         <div>
           <article>
             <header>
-
-              <h5 className="item-title">Nagovor predsednika</h5>
+              <hr />
               <div className="nagovor-predsednika">
                 <br />
-                <br />
-                <section className="content-section">
+                <section className="content-section section-title">
                   POZDRAVLJENI DRAGI PRIJATELJI GASILSTVA!
               </section>
-                <br />
                 <br />
                 <section className="content-section">
                   V majhni slovenski občini s površino 94,9 km2 in približno 5200 prebivalci smo, znotraj Gasilske zveze
@@ -71,7 +68,7 @@ class IndexPage extends Component {
               </section>
                 <br />
 
-                <section className="content-section">
+                <section className="content-section section-title">
                   Z gasilskim pozdravom: »NA POMOČ!«
               </section>
                 <br />
@@ -82,8 +79,9 @@ class IndexPage extends Component {
                 <section className="content-section">
                   predsednik PGD
               </section>
+              </div>
                 <br/>
-                <br/>
+                <hr/>
               <section className="content-section">
                   Kontakt:
               </section>
@@ -112,7 +110,7 @@ class IndexPage extends Component {
                 <section className="content-section">
                   Poveljnik: Tomaž Menegalija 041 579 687
               </section>
-              </div>
+              <br/>
             </header>
           </article>
 

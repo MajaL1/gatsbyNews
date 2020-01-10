@@ -21,13 +21,11 @@ exports.onCreateNode = ({ node }, configOptions) => {
     if (!node.frontmatter) {
       return;
     }
-
     deleteFieldsRecursive(node);
 
   }
 };
 
-//Copygatsby-config.js: copy code to clipboard
 module.exports = {
   plugins: ["remove-empty-fields"],
 }

@@ -1,17 +1,15 @@
 .navigation-content {
-/*background-color: rgb(128, 124, 124);*/
     background-image: linear-gradient(#c5c1c1,#aba8a8,#8e8e8e);
     height: 47px;
 }
 
 .dropdown-menu.show {
-
-  background-image: linear-gradient(#b5b3b3,#ccc7c7,#a5a4a4);
+    background-image: linear-gradient(#b5b3b3,#ccc7c7,#a5a4a4);
 }
 
 .navigation-dropdown-link.navigation-link.dropdown.nav-item{
-  color: #611e25;
-  border: none;
+    color: #611e25;
+    border: none;
 }
 
 
@@ -30,58 +28,53 @@
 }
 
 .navigation-link {
-  color: #50030b;
-  text-shadow: "5px 0 #444242, 0 1px black, 1px 0 black, 0 -1px black";
-  display: block;
-  margin: auto;
-  margin-left: 30px;
-  text-transform: uppercase;
-  /*font-family: "Hind Guntur";*/
-  font-family: "Montserrat";
-  font-weight: bold;
-  border: 10px solid transparent;
- /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif*/
- transition: 0.9s;
+    color: #50030b;
+    text-shadow: "5px 0 #444242, 0 1px black, 1px 0 black, 0 -1px black";
+    display: block;
+    margin: auto;
+    margin-left: 30px;
+    text-transform: uppercase;
+    font-family: "Montserrat";
+    font-weight: bold;
+    border: 10px solid transparent;
+    transition: 0.9s;
 }
 
 .navigation-link:hover{
-  background: rgb(94, 93, 93);
-  background-color: rgb(94, 93, 93);
-  color: lightgrey;
-  text-decoration: none;
-  padding: 0px;
+    background: rgb(94, 93, 93);
+    background-color: rgb(94, 93, 93);
+    color: lightgrey;
+    text-decoration: none;
+    padding: 0px;
 }
 
-
 .mr-auto.navbar-nav {
-  margin: 0 auto;
+    margin: 0 auto;
 }
 
 @media (min-width: 200px) and (max-width: 500px) and (orientation: portrait) {
 
   .navigation-link {
-    margin: unset;
-    border-bottom: 1px #ddd4d4 solid;
-    padding: 5px;
+      margin: unset;
+      border-bottom: 1px #ddd4d4 solid;
+      padding: 5px;
   }
   .navigation-dropdown-link.navigation-link.dropdown.nav-item {
-    border-bottom: 1px #ddd4d4  solid;
-    margin-left: 10px;
+      border-bottom: 1px #ddd4d4  solid;
+      margin-left: 10px;
   }
   .dropdown-menu > a.navigation-link {
-    border-bottom: 1px #ddd4d4 solid;
-    padding: 5px;
+      border-bottom: 1px #ddd4d4 solid;
+      padding: 5px;
   }
   .dropdown-menu.show {
-    background: transparent;
-    border-left: none;
-    border-right: none;
-    border-bottom: none;
-    border-top: 1px #ddd4d4 solid;
+      background: transparent;
+      border-left: none;
+      border-right: none;
+      border-bottom: none;
+      border-top: 1px #ddd4d4 solid;
   }
   .navigation-content {
-    height: auto;
+      height: auto;
   }
 }
-
-

@@ -1,15 +1,12 @@
-@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
-@import url('https://fonts.googleapis.com/css?family=Gudea|Hind+Guntur|Michroma|Sulphur+Point|Mallanna');
-
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Gudea|Hind+Guntur|Michroma|Sulphur+Point|Mallanna');
 
 body, article {
     font-family: "Montserrat";
+    color: black;
 }
 
 .top-div {
     min-height: 800px;
-    color: black;
 }
 
 .main-content {
@@ -28,20 +25,9 @@ body, article {
     margin-top: 20px;
 }
 
-.news-link {
-    color: rgb(75, 28, 184);
-    font-weight: bold;
-}
-
 li {
     text-decoration: none;
     list-style: none;
-}
-
-.news-title {
-
-    color: brown;
-
 }
 
 .news-content {
@@ -50,7 +36,8 @@ li {
 }
 
 .header {
-    background-image: linear-gradient(to bottom, #a21e0b, #ad1c1c, #670606);
+   /* background-image: linear-gradient(to bottom, #a21e0b, #ad1c1c, #670606); */
+    background-image: linear-gradient(to bottom, #a21e0b, #841515, #670606);
     margin-bottom: 0rem;
 }
 .header.row {
@@ -68,9 +55,6 @@ li {
 }
 
 .news-item-title {
-    color: black;
-    /*background-color: grey;*/
-    /*background-image: linear-gradient(#cacaca, #e6e6e6,#d8d5d5);*/
     padding: 5px;
     width: 100%;
     padding-left: 15px;
@@ -78,6 +62,7 @@ li {
     border-bottom: 1px #c6c6c6 solid;
     text-align: start;
     font-family: "Montserrat";
+    color: black;
 }
 
 .content-main-div {
@@ -86,9 +71,10 @@ li {
     padding: 0px 1.0875rem 1.45rem;
     padding-top: 0;
     background-image: linear-gradient(#b5b5b5, #dedcdc, #cacaca, #b9b7b7);
-   /*  background-image: linear-gradient(#941818, #b93636, #ad4545, #772e2e); */
-   /*background-image: linear-gradient(#310202, #4e0606, #4e0909, #250505); */
-    
+}
+
+.dropdown{
+    width:25%;
 }
 
 .news-item-header {
@@ -117,7 +103,6 @@ li {
 }
 
 .news-item-date {
-    color: black;
     padding-left: 15px;
     margin-bottom: 10px;
     display: inline-block;
@@ -132,56 +117,62 @@ li {
 }
 
 .nagovor-predsednika {
-    font-size: larger;
+    font-style: italic;
+    font-family: "Calibri";
+}
+.section-title {
+    text-align: left;
 }
 
 .gallery-content {
     margin: 4%;
-    color: black;
 }
-
-.news-content-section {
-    color: black;
+.section-column {
+    float: left;
+    width: 30%;
+    padding: 10px;
+}
+  
+.section-row:after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 .item-title {
-    color: black;
     margin: 20px 0px 20px 0px;
     border-bottom: 1px solid lightgrey;
     font-family: "Montserrat";
     padding: 5px;
     background-image: linear-gradient(to left, #eae9e9, #e3e3e3, #e2dddd); 
+    color: black;
 }
 
 .content-section {
     padding: 0% 3%;
-    color: black;
 }
 article.content-section {
     padding: 5% 3%;
-    color: black;
 }
 
 .content-section-contact {
     padding: 10px;
-    color: black;
     line-height: 0.4rem;
 }
 
 .footer{
-  height: auto;
+    height: auto;
     background-image: linear-gradient(to bottom, #a21e0b, #ad1c1c, #670606);
-   /* background-image: linear-gradient(#c5c1c1,#aba8a8,#8e8e8e);*/
     bottom: 0;
     height: 65px;
     width: 100%;
 }
 
 .footer-text {
-  text-align: center;
-  display: block;
-  color: white;
-  padding-top: 1%;
+    text-align: center;
+    display: block;
+    color: white;
+    padding-top: 1%;
 }
 
 .login-text {
@@ -206,23 +197,23 @@ article {
 }
 
 .header-icons {
-  margin-top: 10px;
+    margin-top: 10px;
 }
 
 .header-icons > a > img {
-  float: right;
+    float: right;
     margin-left: 5px;
 }
 
 .header-logo-img {
- float: right;
- right: 0%;
- position: absolute;
- margin-top: -20%;
+    float: right;
+    right: 0%;
+    position: absolute;
+    margin-top: -20%;
 }
 
 .header-logo {
-  margin-top: 5%;
+    margin-top: 5%;
 }
 
 .povezave-content {
@@ -236,7 +227,7 @@ article {
  
 .navbar-nav .dropdown-menu {
     position: absolute;
-  }
+}
 
 .thumb {
     width: 200px;
@@ -251,28 +242,23 @@ article {
 }
 
 .header-title {
-    margin: 0 auto;
-    max-width: 960px;
     padding: 1.45rem 1.0875rem;
     text-align: center;
 }
 
 .header-title-link {
-        color: lightGray;
-        text-decoration: none;
-        text-align: center;
-       /* font-family: "Montserrat"; */
-        /*font-family: "Hind Guntur";*/
-
-        text-shadow: 1px 0 #444242, 0 1px black, 1px 0 black, 0 -1px black;
+    color: lightGray;
+    text-decoration: none;
+    text-align: center;
+    text-shadow: 1px 0 #444242, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 .header-title-p {
-        color: #d6d673;
-        text-decoration: none;
-        text-align: center;
-        font-family: "Montserrat";
-        text-shadow: black 1px 0px, black 0px 1px, black 1px 0px, black 0px 1px;
+    color: #d6d673;
+    text-decoration: none;
+    text-align: center;
+    font-family: "Hind Guntur";
+    text-shadow: black 1px 0px, black 0px 1px, black 1px 0px, black 0px 1px;
 }
 a.header-title-link:hover {
     text-decoration: none;
@@ -292,7 +278,7 @@ a.header-title-link:hover {
 .gallery-content {
     display: flex;
     flex-wrap: wrap;
-    justify-content: stretch;
+    justify-content: center;
 }
 .gallery-image-content {
     align-self: center;
