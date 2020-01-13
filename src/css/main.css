@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat|Gudea|Hind+Guntur|Michroma|Sulphur+Point|Mallanna');
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Gudea|Hind+Guntur|Michroma|Sulphur+Point|Mallanna|Lora|Handlee');
 
 body, article {
     font-family: "Montserrat";
@@ -37,11 +37,13 @@ li {
 
 .header {
    /* background-image: linear-gradient(to bottom, #a21e0b, #ad1c1c, #670606); */
-    background-image: linear-gradient(to bottom, #a21e0b, #841515, #670606);
+    /* background-image: linear-gradient(to bottom, #a21e0b, #841515, #670606); */
+    background-image: linear-gradient(to bottom, #991f0d, #9b1a1a, #820404);
     margin-bottom: 0rem;
 }
 .header.row {
-    margin-right: 0px;
+    padding: 10px;
+    display: flex;
 }
 
 .news-date {
@@ -118,7 +120,7 @@ li {
 
 .nagovor-predsednika {
     font-style: italic;
-    font-family: "Calibri";
+    font-family: "Lora";
 }
 .section-title {
     text-align: left;
@@ -129,16 +131,18 @@ li {
 }
 .section-column {
     float: left;
-    width: 30%;
+    width: 20%;
     padding: 10px;
 }
-  
-.section-row:after {
-    content: "";
-    display: table;
-    clear: both;
+
+.first-column {
+    width: 40%;
 }
 
+.section-table {
+    margin: auto;
+    font-size: smaller;
+}
 .item-title {
     margin: 20px 0px 20px 0px;
     border-bottom: 1px solid lightgrey;
@@ -152,7 +156,13 @@ li {
     padding: 0% 3%;
 }
 article.content-section {
-    padding: 5% 3%;
+    padding: 2% 3%;
+    background-color: whitesmoke;
+}
+
+table {
+    font-size: small;
+    width: 60%;
 }
 
 .content-section-contact {
@@ -196,24 +206,23 @@ article {
     margin-left: 15px;
 }
 
-.header-icons {
-    margin-top: 10px;
-}
-
-.header-icons > a > img {
-    float: right;
-    margin-left: 5px;
-}
-
-.header-logo-img {
-    float: right;
-    right: 0%;
-    position: absolute;
-    margin-top: -20%;
+.header-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .header-logo {
-    margin-top: 5%;
+    flex-grow: 1;
+}
+
+.header-main-div {
+    flex-grow: 4;
+    text-align: center;
+    padding: 10px;
+}
+.header-icons {
+    flex-grow: 1;
 }
 
 .povezave-content {
@@ -241,16 +250,17 @@ article {
     padding: 0;
 }
 
-.header-title {
-    padding: 1.45rem 1.0875rem;
+/*.header-title {
     text-align: center;
 }
+*/
 
 .header-title-link {
-    color: lightGray;
+    color: #dbd9d9;
     text-decoration: none;
     text-align: center;
-    text-shadow: 1px 0 #444242, 0 1px black, 1px 0 black, 0 -1px black;
+    font-family: "Arial";
+    text-shadow: 0.5px 0 #444242, 0 0.5px black, 0.5px 0 black, 0 -0.5px black;
 }
 
 .header-title-p {
@@ -258,7 +268,10 @@ article {
     text-decoration: none;
     text-align: center;
     font-family: "Hind Guntur";
-    text-shadow: black 1px 0px, black 0px 1px, black 1px 0px, black 0px 1px;
+    font-size: smaller;
+    text-shadow: black 0.11px 0px, black 0px 0.1px, black 0.1px 0px, black 0px 0.1px;    
+    display: block;
+    padding: 0 20px;
 }
 a.header-title-link:hover {
     text-decoration: none;
@@ -272,7 +285,7 @@ a.header-title-link:hover {
 }
 .gallery-image-content:hover {
     filter: brightness(100%);
-    transform: scale(1.05);
+    transform: scale(1.01);
 }
 
 .gallery-content {
@@ -299,17 +312,13 @@ a.header-title-link:hover {
 
 @media (min-width: 200px) and (max-width: 500px) and (orientation: portrait) {
 
-    .header-row{
-        height: 110px;
+    .header.row{
+        flex-direction: column;
     }
-    .header-logo-img{
-        height: auto;
-        margin-top: 0px;
-        float: unset; 
-        right: unset;
-        position: relative;
-        margin-left: 40%;
+    .header-icons {
+        align-self: center;
     }
+    
     .povezave-content {
         width: 100%;
     }
@@ -336,5 +345,8 @@ a.header-title-link:hover {
     .news-item-date {
         margin-bottom: 10px;
         margin-top: 5px;
+    }
+    table {
+        width: 100%;
     }
  }

@@ -1,30 +1,29 @@
-let fieldsToRemove = [];
+let fieldsToRemove = []
 
-const deleteFieldsRecursive = (node) => {
+const deleteFieldsRecursive = node => {
   fieldsToRemove.forEach(fieldToRemove => {
-    if (node[fieldToRemove] === '') {
-      delete node[fieldToRemove];
+    if (node[fieldToRemove] === "") {
+      delete node[fieldToRemove]
     }
-  });
+  })
 
-  if (typeof node === 'object') {
+  if (typeof node === "object") {
     Object.values(node).forEach(subNode => {
-      deleteFieldsRecursive(subNode);
+      deleteFieldsRecursive(subNode)
     })
   }
-};
+}
 
 exports.onCreateNode = ({ node }, configOptions) => {
-  fieldsToRemove = configOptions.fieldsToRemove;
+  fieldsToRemove = configOptions.fieldsToRemove
 
-  if (node.internal.type === 'MarkdownRemark') {
+  if (node.internal.type === "MarkdownRemark") {
     if (!node.frontmatter) {
-      return;
+      return
     }
-    deleteFieldsRecursive(node);
-
+    deleteFieldsRecursive(node)
   }
-};
+}
 
 module.exports = {
   plugins: ["remove-empty-fields"],

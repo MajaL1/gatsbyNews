@@ -4,24 +4,23 @@ import React from "react"
 
 const Header = ({ siteTitle, subtitle, description }) => (
   <header className="header row">
-    <div className="header-logo col-lg-2 col-md-2 col-sm-12">
+    <div className="header-logo">
       {/* <img className="header-logo-img" src="../icons/icon-96x96.png" alt="" />
- */}    </div>
-    <div className="header-main-div col-lg-8 col-md-8 col-sm-12">
-      <span
-        className="header-title"
-      >
-        <h1>
+       */}{" "}
+    </div>
+    <div className="header-main-div">
+      <span className="header-title">
+        <h3>
           <Link to="/" className="header-title-link">
             {siteTitle}
           </Link>
-        </h1>
+        </h3>
         <p className="header-title-p">
           <i>{subtitle}</i>
         </p>
       </span>
     </div>
-    <div className="header-icons col-lg-2 col-md-2 col-sm-12">
+    <div className="header-icons">
       <a
         href="https://www.facebook.com"
         target="_blank"
