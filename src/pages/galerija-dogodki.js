@@ -123,7 +123,7 @@ export const pageQuery = graphql`
       filter: {
         frontmatter: { category: { eq: "Dogodki" }, top: { eq: false } }
       }
-    ) {
+    )  {
       edges {
         node {
           frontmatter {
@@ -136,7 +136,7 @@ export const pageQuery = graphql`
             }
             image1 {
               childImageSharp {
-                fixed(width: 300, height: 250) {
+                fixed(width: 220, height: 150) {
                   ...GatsbyImageSharpFixed
                 }
               }
@@ -150,7 +150,7 @@ export const pageQuery = graphql`
             }
             image2 {
               childImageSharp {
-                fixed(width: 300, height: 250) {
+                fixed(width: 220, height: 150) {
                   ...GatsbyImageSharpFixed
                 }
               }
@@ -164,7 +164,7 @@ export const pageQuery = graphql`
             }
             image3 {
               childImageSharp {
-                fixed(width: 300, height: 250) {
+                fixed(width: 220, height: 150) {
                   ...GatsbyImageSharpFixed
                 }
               }
@@ -178,7 +178,7 @@ export const pageQuery = graphql`
             }
             image4 {
               childImageSharp {
-                fixed(width: 300, height: 250) {
+                fixed(width: 220, height: 150) {
                   ...GatsbyImageSharpFixed
                 }
               }
@@ -192,7 +192,7 @@ export const pageQuery = graphql`
             }
             image5 {
               childImageSharp {
-                fixed(width: 300, height: 250) {
+                fixed(width: 220, height: 150) {
                   ...GatsbyImageSharpFixed
                 }
               }

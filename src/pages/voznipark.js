@@ -27,19 +27,19 @@ class VozniPark extends Component {
     }
 
 
-    if(! this.props.data.image1.childImageSharp.fluid.sizes.startsWith("(max-width: 1px)")){
+    if (!this.props.data.image1.childImageSharp.fluid.sizes.startsWith("(max-width: 1px)")) {
       images.push(this.props.data.image1)
     }
-    if(! this.props.data.image2.childImageSharp.fluid.sizes.startsWith("(max-width: 1px)")){
+    if (!this.props.data.image2.childImageSharp.fluid.sizes.startsWith("(max-width: 1px)")) {
       images.push(this.props.data.image2)
     }
-    if(! this.props.data.image3.childImageSharp.fluid.sizes.startsWith("(max-width: 1px)")){
+    if (!this.props.data.image3.childImageSharp.fluid.sizes.startsWith("(max-width: 1px)")) {
       images.push(this.props.data.image3)
     }
-    if(! this.props.data.image4.childImageSharp.fluid.sizes.startsWith("(max-width: 1px)")){
+    if (!this.props.data.image4.childImageSharp.fluid.sizes.startsWith("(max-width: 1px)")) {
       images.push(this.props.data.image4)
     }
-    if(! this.props.data.image5.childImageSharp.fluid.sizes.startsWith("(max-width: 1px)")){
+    if (!this.props.data.image5.childImageSharp.fluid.sizes.startsWith("(max-width: 1px)")) {
       images.push(this.props.data.image5)
     }
 
@@ -53,9 +53,9 @@ class VozniPark extends Component {
     return (
       <Layout>
 
-      <div class="gallery-content">
+        <div class="gallery-content">
           <ImageContainer images={this.state.images} thumbs={this.state.thumbs} />
-      </div>
+        </div>
       </Layout>
     )
   }
@@ -74,7 +74,7 @@ export const query = graphql`
     }
     image1: file(relativePath: { eq: "vozila1.jpg" }) {
       childImageSharp {
-        fixed(width: 300, height: 250) {
+        fixed(width: 220, height: 150) {
           ...GatsbyImageSharpFixed
         }
       }
@@ -88,7 +88,7 @@ export const query = graphql`
     }
     image2: file(relativePath: { eq: "vozila2.jpg" }) {
       childImageSharp {
-        fixed(width: 300, height: 250) {
+        fixed(width: 220, height: 150) {
           ...GatsbyImageSharpFixed
         }
       }
@@ -102,7 +102,7 @@ export const query = graphql`
     }
     image3: file(relativePath: { eq: "vozila3.jpg" }) {
       childImageSharp {
-        fixed(width: 300, height: 250) {
+        fixed(width: 220, height: 150) {
           ...GatsbyImageSharpFixed
         }
       }
@@ -116,7 +116,7 @@ export const query = graphql`
     }
     image4: file(relativePath: { eq: "vozila4.jpeg" }) {
       childImageSharp {
-        fixed(width: 300, height: 250) {
+        fixed(width: 220, height: 150) {
           ...GatsbyImageSharpFixed
         }
       }
@@ -130,7 +130,7 @@ export const query = graphql`
     }
     image5: file(relativePath: { eq: "vozila5.jpeg" }) {
       childImageSharp {
-        fixed(width: 300, height: 250) {
+        fixed(width: 220, height: 150) {
           ...GatsbyImageSharpFixed
         }
       }
