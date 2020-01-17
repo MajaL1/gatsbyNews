@@ -32,6 +32,7 @@ class DropdownMenu extends Component {
           value={defaultOption}
           placeholder="Izberi leto"
         />
+        <br />
       </article>
     )
   }

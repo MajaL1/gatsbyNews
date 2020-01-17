@@ -51,48 +51,46 @@ class News extends Component {
           const category = node.frontmatter.category
           return (
             <div key={node.fields.slug}>
-              <article
-                className="news-item content-article"
+              <section
+                className="news-item content-section"
                 key={node.fields.slug}
               >
-                <section className="content-section">
-                  <header className="news-item-header">
-                    <Link className="news-front-image">
-                      <Img
-                        fluid={node.frontmatter.image1.childImageSharp.fluid}
-                        className={"gallery-image"}
-                      />
-                    </Link>
-                    <div className="news-front-content">
-                      <small className="news-item-date">
-                        <FaCalendarAlt />
-                        {" Objavljeno: "} {node.frontmatter.date}
-                        {" v "}
-                        {category}
-                      </small>
-                      <h5>
-                        <Link
-                          className="news-item-title section-title"
-                          to={node.fields.slug}
-                        >
-                          {title}
-                        </Link>
-                      </h5>
-                      <p className="news-item-intro">
-                        {node.frontmatter.intro}
-                      </p>
-                      <hr />
-                      <Link className="news-item-link" to={node.fields.slug}>
-                        {"Preberi celotni prispevek >> "}
+                <header className="news-item-header">
+                  <Link className="news-front-image">
+                    <Img
+                      fluid={node.frontmatter.image1.childImageSharp.fluid}
+                      className={"gallery-image"}
+                    />
+                  </Link>
+                  <div className="news-front-content">
+                    <small className="news-item-date">
+                      <FaCalendarAlt />
+                      {" Objavljeno: "} {node.frontmatter.date}
+                      {" v "}
+                      {category}
+                    </small>
+                    <h5>
+                      <Link
+                        className="news-item-title section-title"
+                        to={node.fields.slug}
+                      >
+                        {title}
                       </Link>
-                    </div>
-                  </header>
-                </section>
-              </article>
+                    </h5>
+                    <p className="news-item-intro">{node.frontmatter.intro}</p>
+                    <hr />
+                    <Link className="news-item-link" to={node.fields.slug}>
+                      {"Preberi celotni prispevek >> "}
+                    </Link>
+                  </div>
+                </header>
+              </section>
             </div>
           )
         })}
-        <DropdownMenu onChange={this.onChange} />
+        <div class="content-section">
+          <DropdownMenu onChange={this.onChange} />
+        </div>
       </div>
     )
   }

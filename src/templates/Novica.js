@@ -3,7 +3,6 @@ import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Image from 'gatsby-image'
 import ImageContainer from "../components/ImageContainer"
 
 class Novica extends React.Component {
@@ -13,44 +12,72 @@ class Novica extends React.Component {
     const siteTitle = this.props.data.site.siteMetadata.title
     const { previous, next } = this.props.pageContext
 
+    let images = new Array()
+    let thumbs = new Array()
 
-    /******* ToDo: optimize image fetching ****************/
-    let images = new Array();
-    let thumbs = new Array();
-
-
-    if (post.frontmatter.image1.childImageSharp.fixed.height > 1 && post.frontmatter.image1.childImageSharp.fixed.width > 1) {
+    if (
+      post.frontmatter.image1.childImageSharp.fixed.height > 1 &&
+      post.frontmatter.image1.childImageSharp.fixed.width > 1
+    ) {
       thumbs.push(post.frontmatter.image1)
     }
-    if (post.frontmatter.image2.childImageSharp.fixed.height > 1 && post.frontmatter.image2.childImageSharp.fixed.width > 1) {
+    if (
+      post.frontmatter.image2.childImageSharp.fixed.height > 1 &&
+      post.frontmatter.image2.childImageSharp.fixed.width > 1
+    ) {
       thumbs.push(post.frontmatter.image2)
     }
-    if (post.frontmatter.image3.childImageSharp.fixed.height > 1 && post.frontmatter.image3.childImageSharp.fixed.width > 1) {
+    if (
+      post.frontmatter.image3.childImageSharp.fixed.height > 1 &&
+      post.frontmatter.image3.childImageSharp.fixed.width > 1
+    ) {
       thumbs.push(post.frontmatter.image3)
     }
-    if (post.frontmatter.image4.childImageSharp.fixed.height > 1 && post.frontmatter.image4.childImageSharp.fixed.width > 1) {
+    if (
+      post.frontmatter.image4.childImageSharp.fixed.height > 1 &&
+      post.frontmatter.image4.childImageSharp.fixed.width > 1
+    ) {
       thumbs.push(post.frontmatter.image4)
     }
-    if (post.frontmatter.image5.childImageSharp.fixed.height > 1 && post.frontmatter.image5.childImageSharp.fixed.width > 1) {
+    if (
+      post.frontmatter.image5.childImageSharp.fixed.height > 1 &&
+      post.frontmatter.image5.childImageSharp.fixed.width > 1
+    ) {
       thumbs.push(post.frontmatter.image5)
     }
-/******* end ToDo: optimize image fetching ****************/
-
-    let image1, image2, image3, image4, image5
-
-    if(! post.frontmatter.image1.childImageSharp.fluid.sizes.startsWith("(max-width: 1px)")){
+    if (
+      !post.frontmatter.image1.childImageSharp.fluid.sizes.startsWith(
+        "(max-width: 1px)"
+      )
+    ) {
       images.push(post.frontmatter.image1)
     }
-    if(! post.frontmatter.image2.childImageSharp.fluid.sizes.startsWith("(max-width: 1px)")){
+    if (
+      !post.frontmatter.image2.childImageSharp.fluid.sizes.startsWith(
+        "(max-width: 1px)"
+      )
+    ) {
       images.push(post.frontmatter.image2)
     }
-    if(! post.frontmatter.image3.childImageSharp.fluid.sizes.startsWith("(max-width: 1px)")){
+    if (
+      !post.frontmatter.image3.childImageSharp.fluid.sizes.startsWith(
+        "(max-width: 1px)"
+      )
+    ) {
       images.push(post.frontmatter.image3)
     }
-    if(! post.frontmatter.image4.childImageSharp.fluid.sizes.startsWith("(max-width: 1px)")){
+    if (
+      !post.frontmatter.image4.childImageSharp.fluid.sizes.startsWith(
+        "(max-width: 1px)"
+      )
+    ) {
       images.push(post.frontmatter.image4)
     }
-    if(! post.frontmatter.image5.childImageSharp.fluid.sizes.startsWith("(max-width: 1px)")){
+    if (
+      !post.frontmatter.image5.childImageSharp.fluid.sizes.startsWith(
+        "(max-width: 1px)"
+      )
+    ) {
       images.push(post.frontmatter.image5)
     }
 
@@ -64,7 +91,9 @@ class Novica extends React.Component {
         <SEO title={post.frontmatter.title} />
         <article className="content-section">
           <header>
-            <h5 className="news-item-title item-title">{post.frontmatter.title}</h5>
+            <h5 className="news-item-title item-title">
+              {post.frontmatter.title}
+            </h5>
             <p>
               <small className="news-item-date">
                 {"Objavljeno: "}
@@ -76,15 +105,18 @@ class Novica extends React.Component {
             <p className="news-content-section">{post.frontmatter.intro}</p>
           </header>
 
-         {/*  { image1 && <Image fluid={post.frontmatter.image1.childImageSharp.fluid} /> }
+          {/*  { image1 && <Image fluid={post.frontmatter.image1.childImageSharp.fluid} /> }
           { image2 && <Image fluid={post.frontmatter.image2.childImageSharp.fluid} /> }
           { image3 && <Image fluid={post.frontmatter.image3.childImageSharp.fluid} /> }
           { image4 && <Image fluid={post.frontmatter.image4.childImageSharp.fluid} /> }
           { image5 && <Image fluid={post.frontmatter.image5.childImageSharp.fluid} /> } */}
-         <div class="gallery-content">
-          <ImageContainer images={this.state.images} thumbs={this.state.thumbs} />
+          <div class="gallery-content">
+            <ImageContainer
+              images={this.state.images}
+              thumbs={this.state.thumbs}
+            />
           </div>
-{/* 
+          {/* 
           <ImageContainer
             images={images.map(({ node, index }) => ({
               node, index
@@ -199,10 +231,10 @@ export const pageQuery1 = graphql`
           }
         }
         image5 {
-           childImageSharp {
-             fluid(maxWidth: 800) {
-               ...GatsbyImageSharpFluid
-             }
+          childImageSharp {
+            fluid(maxWidth: 800) {
+              ...GatsbyImageSharpFluid
+            }
           }
         }
         image5 {

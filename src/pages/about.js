@@ -25,9 +25,11 @@ const About = () => (
         <div>
           <table>
             <tr>
-              <th>Vir: statistični urad RS 2019</th>
-              <th>Površina [km2]</th>
-              <th>prebivalci s stalnim naslovom [2019]</th>
+              <th className="item-title">Vir: statistični urad RS 2019</th>
+              <th className="item-title">Površina [km2]</th>
+              <th className="item-title">
+                prebivalci s stalnim naslovom [2019]
+              </th>
             </tr>
             <tr>
               <td>Dragovšek</td>
@@ -80,23 +82,43 @@ const About = () => (
               <td>101</td>
             </tr>
             <tr>
-              <td>Skupaj</td>
-              <td>26,42</td>
-              <td>668</td>
+              <td>
+                <strong>Skupaj </strong>
+              </td>
+              <td>
+                <strong>26,42</strong>
+              </td>
+              <td>
+                <strong>668</strong>
+              </td>
             </tr>
             <tr>
-              <td>Kar predstavlja</td>
-              <td>28%</td>
-              <td>12%</td>
+              <td>
+                <strong>Kar predstavlja</strong>
+              </td>
+              <td>
+                <strong>28%</strong>
+              </td>
+              <td>
+                <strong>12%</strong>
+              </td>
             </tr>
             <tr>
-              <td>Celotna občina Šmartno pri Litiji</td>
-              <td>94,97</td>
-              <td>5.603</td>
+              <td>
+                <strong>Celotna občina Šmartno pri Litiji</strong>
+              </td>
+              <td>
+                <strong>94,97</strong>
+              </td>
+              <td>
+                <strong>5.603</strong>
+              </td>
             </tr>
           </table>
         </div>
       </section>
+      <br />
+      <br />
       <section className="content-section">
         Naše operativno območje je podeželsko, hribovito in v večjem delu
         poraščeno z gozdom. Kako razgiban je teren pove podatek o najnižji

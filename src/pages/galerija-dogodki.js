@@ -14,7 +14,7 @@ class GalerijaDogodki extends Component {
     let thumbnails = new Array()
     let nodes = this.props.data.galerijaDogodkiImages
 
-    nodes.edges.map(function (node) {
+    nodes.edges.map(function(node) {
       let nodeImage
       nodeImage = node.node.frontmatter
       if (
@@ -107,13 +107,15 @@ class GalerijaDogodki extends Component {
       <Layout>
         <h5 className="item-title">Galerija - dogodki</h5>
         <div className="gallery-content">
-          <ImageContainer images={this.state.images} thumbs={this.state.thumbs} />
+          <ImageContainer
+            images={this.state.images}
+            thumbs={this.state.thumbs}
+          />
         </div>
       </Layout>
     )
   }
 }
-
 
 export default GalerijaDogodki
 
@@ -123,7 +125,7 @@ export const pageQuery = graphql`
       filter: {
         frontmatter: { category: { eq: "Dogodki" }, top: { eq: false } }
       }
-    )  {
+    ) {
       edges {
         node {
           frontmatter {

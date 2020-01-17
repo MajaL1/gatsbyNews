@@ -1,7 +1,6 @@
 import React from "react"
 import { Link } from "@reach/router"
 import { Nav, Navbar, NavDropdown } from "react-bootstrap"
-//import '../css/navigation.css'
 import "../lib/bootstrap.min.css"
 
 const Navigation = class extends React.Component {
@@ -39,45 +38,58 @@ const Navigation = class extends React.Component {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
-              <NavLink className="navigation-link" to="/">
+              <div class="dropdown-divider"></div>
+              <NavLink className="navigation-link" to="/nagovor-predsednika">
                 Domov
               </NavLink>
+              <div class="dropdown-divider"></div>
+              <NavLink className="navigation-link" to="/">
+                Novice
+              </NavLink>
+              <div class="dropdown-divider"></div>
               <NavLink className="navigation-link" to="/about">
                 O&nbsp;nas
               </NavLink>
+              <div class="dropdown-divider"></div>
               <NavDropdown
                 title="Operativa"
                 id="basic-nav-dropdown"
                 className="navigation-dropdown-link navigation-link"
               >
+                <div class="dropdown-divider"></div>
+
                 <NavLink className="navigation-link" to="/voznipark">
                   Vozni park
                 </NavLink>
+                <div class="dropdown-divider"></div>
                 <NavLink className="navigation-link" to="/pozarninacrt">
                   Požarni načrt
                 </NavLink>
+                <div class="dropdown-divider"></div>
                 <NavLink className="navigation-link" to="/aed-lokacije">
                   AED lokacije
                 </NavLink>
               </NavDropdown>
-
+              <div class="dropdown-divider"></div>
               <NavLink className="navigation-link" to="/zgodovina">
                 Zgodovina
               </NavLink>
-              <NavLink className="navigation-link" to="/povezave">
-                Povezave
-              </NavLink>
+              <div class="dropdown-divider"></div>
               <NavDropdown
                 title="Galerija"
                 id="basic-nav-dropdown"
                 className="navigation-dropdown-link navigation-link"
               >
+                <div class="dropdown-divider"></div>
+
                 <NavLink className="navigation-link" to="/galerija-operativa">
                   Operativa
                 </NavLink>
+                <div class="dropdown-divider"></div>
                 <NavLink className="navigation-link" to="/galerija-mladina">
                   Mladina
                 </NavLink>
+                <div class="dropdown-divider"></div>
                 <NavLink className="navigation-link" to="/galerija-dogodki">
                   Dogodki
                 </NavLink>

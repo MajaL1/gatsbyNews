@@ -31,7 +31,7 @@
     "netlify-cms": "^2.9.7",
     "popper.js": "^1.16.0",
     "prop-types": "^15.7.2",
-    "react": "^16.10.2",
+    "react": "^16.12.0",
     "react-bootstrap": "^1.0.0-beta.14",
     "react-dom": "^16.12.0",
     "react-dropdown": "^1.6.4",

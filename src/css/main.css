@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat|Gudea|Hind+Guntur|Michroma|Sulphur+Point|Mallanna|Lora|Handlee');
 
-body, article {
+body, article, section, .main-content-right   {
     font-family: "Montserrat";
     color: black;
 }
@@ -12,10 +12,38 @@ body, article {
 .main-content {
     background-color: #eaeaea;
     padding: 10px;
-    width: 60%;
+    width:60%;
     margin: 0 auto;
     min-height: 800px;
+    flex-grow: 3;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
 }
+.povezave-right {
+    font-size: smaller;
+    line-height: 0.5em;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.main-content-left {
+    width: 15%;
+}
+
+.main-content-right {
+    width: 17%;
+    background-image: linear-gradient(#d6d6d6, #dedcdc, #cacaca, #b9b7b7);
+}
+
+.main-content-right-title {
+    color: black;
+    margin-top: 10px;
+    text-align: center;
+    display: block;
+    margin-bottom: 10px;
+}
+
 
 .content-title {
     color: #505050;
@@ -36,8 +64,6 @@ li {
 }
 
 .header {
-   /* background-image: linear-gradient(to bottom, #a21e0b, #ad1c1c, #670606); */
-    /* background-image: linear-gradient(to bottom, #a21e0b, #841515, #670606); */
     background-image: linear-gradient(to bottom, #991f0d, #9b1a1a, #820404);
     margin-bottom: 0rem;
 }
@@ -64,15 +90,22 @@ li {
     border-bottom: 1px #c6c6c6 solid;
     text-align: start;
     font-family: "Montserrat";
-    color: black;
+    color: #640c0c;
+    font-weight: bold;
 }
 
 .content-main-div {
     margin: 0 auto;  
     width: auto;
-    padding: 0px 1.0875rem 1.45rem;
     padding-top: 0;
     background-image: linear-gradient(#b5b5b5, #dedcdc, #cacaca, #b9b7b7);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+a.povezava-item>img {
+    width: 70px;
+    margin-bottom: 10px;
 }
 
 .dropdown{
@@ -87,6 +120,7 @@ li {
     font-size: smaller;
     display: flex;
     flex-wrap: nowrap;
+    background-image: linear-gradient(#dddcdc,#ececec, #d7d4d4);
 }
 
 .news-front-image {
@@ -101,7 +135,6 @@ li {
 
 .news-item-link {
     margin-left: 5%;
-    font-family: "Montserrat";
 }
 
 .news-item-date {
@@ -109,7 +142,6 @@ li {
     margin-bottom: 10px;
     display: inline-block;
     font-style: italic;
-    font-family: "Montserrat";
 }
 
 .news-item-intro {
@@ -122,6 +154,7 @@ li {
     font-style: italic;
     font-family: "Lora";
 }
+
 .section-title {
     text-align: left;
 }
@@ -129,6 +162,7 @@ li {
 .gallery-content {
     margin: 4%;
 }
+
 .section-column {
     float: left;
     width: 20%;
@@ -143,6 +177,7 @@ li {
     margin: auto;
     font-size: smaller;
 }
+
 .item-title {
     margin: 20px 0px 20px 0px;
     border-bottom: 1px solid lightgrey;
@@ -155,6 +190,7 @@ li {
 .content-section {
     padding: 0% 3%;
 }
+
 article.content-section {
     padding: 2% 3%;
     background-color: whitesmoke;
@@ -195,13 +231,16 @@ table {
   font-size: 2rem;
   color: white;
 }
+
 article {
     text-align: justify;
     font-size: smaller;
 }
+
 .work-item{
     margin-left: 15px;
 }
+
 .img-article {
     margin-left: 15px;
 }
@@ -221,21 +260,35 @@ article {
     text-align: center;
     padding: 10px;
 }
+
 .header-icons {
     flex-grow: 1;
 }
 
-.povezave-content {
-    width: 60%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin-inline-start: 10%;
-    margin: 0 auto;
-}
- 
 .navbar-nav .dropdown-menu {
     position: absolute;
+}
+
+th.item-title {
+    background: none;
+    text-align: left;
+    background-color:rgb(224, 224, 224);
+}
+
+tr > td:first-child {
+    text-align: left;
+}
+
+th {
+    padding: 5px;
+}
+
+td {
+    padding: 10px;
+}
+
+table > tr > th {
+    width:35%;
 }
 
 .thumb {
@@ -250,16 +303,11 @@ article {
     padding: 0;
 }
 
-/*.header-title {
-    text-align: center;
-}
-*/
-
 .header-title-link {
     color: #dbd9d9;
     text-decoration: none;
     text-align: center;
-    font-family: "Arial";
+    font-family: "Hind Guntur";
     text-shadow: 0.5px 0 #444242, 0 0.5px black, 0.5px 0 black, 0 -0.5px black;
 }
 
@@ -306,8 +354,19 @@ a.header-title-link:hover {
     height: 300px;
 }
 
-.news-item-header.sticky-news {
-    background-image: linear-gradient(#dddcdc,#ececec, #d7d4d4);
+.povezave-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.povezave-link {
+    text-align: center;
+}
+
+.povezave-link > a {
+    font-size: x-small;
+    color: #7d0b0b;
+    font-family: Verdana;
 }
 
 @media (min-width: 200px) and (max-width: 500px) and (orientation: portrait) {
@@ -315,6 +374,7 @@ a.header-title-link:hover {
     .header.row{
         flex-direction: column;
     }
+
     .header-icons {
         align-self: center;
     }
@@ -322,13 +382,16 @@ a.header-title-link:hover {
     .povezave-content {
         width: 100%;
     }
+
     .gallery-content {
         margin: 0;
     }
+
     .gallery-image {
         width: auto;
         height: auto;
     }
+
     .news-front-image {
         flex-basis: auto;
         width: 100%;
@@ -338,10 +401,28 @@ a.header-title-link:hover {
         flex-wrap: wrap;
     }
 
+    .main-content {
+        width: 95%;
+    }
+
+    .main-content-right {
+        width: 100%;
+        border-top: 2px darkgray solid;
+    }
+    .povezave-right {
+        text-align: center;
+        margin-left: 0px;
+    }
+    .povezave-link {
+        text-align: center;
+        margin-left: 0px;
+    }
+
     .news-item-title, .news-item-intro, .news-item-date, .content-section {
         padding: 0;
         margin: 0;
     }
+
     .news-item-date {
         margin-bottom: 10px;
         margin-top: 5px;

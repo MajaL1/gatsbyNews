@@ -22,7 +22,7 @@ const Header = ({ siteTitle, subtitle, description }) => (
     </div>
     <div className="header-icons">
       <a
-        href="https://www.facebook.com"
+        href="https://www.facebook.com/pgdsp/"
         target="_blank"
         rel="noopener noreferrer"
       >

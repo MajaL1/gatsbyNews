@@ -14,7 +14,7 @@ class GalerijaMladina extends Component {
     let thumbnails = new Array()
     let nodes = this.props.data.galerijaMladinaImages
 
-    nodes.edges.map(function (node) {
+    nodes.edges.map(function(node) {
       let nodeImage
       nodeImage = node.node.frontmatter
       if (
@@ -107,13 +107,15 @@ class GalerijaMladina extends Component {
       <Layout>
         <h5 className="item-title">Galerija - mladina</h5>
         <div className="gallery-content">
-          <ImageContainer images={this.state.images} thumbs={this.state.thumbs} />
+          <ImageContainer
+            images={this.state.images}
+            thumbs={this.state.thumbs}
+          />
         </div>
       </Layout>
     )
   }
 }
-
 
 export default GalerijaMladina
 
