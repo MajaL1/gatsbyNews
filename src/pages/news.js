@@ -88,7 +88,7 @@ class News extends Component {
             </div>
           )
         })}
-        <div class="content-section">
+        <div className="content-section">
           <DropdownMenu onChange={this.onChange} />
         </div>
       </div>

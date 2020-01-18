@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import Layout from "../components/layout"
 import ImageContainer from "../components/ImageContainer"
+import { graphql } from 'gatsby'
 
 class VozniPark extends Component {
   constructor(props) {
@@ -64,7 +65,7 @@ class VozniPark extends Component {
               Vozni park
             </h5>
             <br />
-            <div class="gallery-content">
+            <div className="gallery-content">
               <ImageContainer
                 images={this.state.images}
                 thumbs={this.state.thumbs}

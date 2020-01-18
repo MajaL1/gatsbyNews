@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import React from "react"
 
 const Header = ({ siteTitle, subtitle, description }) => (
-  <header className="header row">
+  <header className="header">
     <div className="header-logo">
       {/* <img className="header-logo-img" src="../icons/icon-96x96.png" alt="" />
        */}{" "}

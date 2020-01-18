@@ -48,7 +48,6 @@ class IndexPage extends Component {
         {this.props.data.stickyNews.edges.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           const category = node.frontmatter.category
-          console.log("node.frontmatter.image1, ", node.frontmatter.image1)
 
           return (
             <div key={node.fields.slug}>
@@ -58,12 +57,9 @@ class IndexPage extends Component {
               >
                 <section className="content-section">
                   <header className="news-item-header sticky-news">
-                    <Link className="news-front-image" to={node.fields.slug}>
+                    <Link className="news-front-image">
                       <Img
                         fluid={node.frontmatter.image1.childImageSharp.fluid}
-                        objectFit="cover"
-                        objectPosition="50% 50%"
-                        alt=""
                         className={"gallery-image"}
                       />
                     </Link>

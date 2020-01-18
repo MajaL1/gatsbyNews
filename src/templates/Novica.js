@@ -110,7 +110,7 @@ class Novica extends React.Component {
           { image3 && <Image fluid={post.frontmatter.image3.childImageSharp.fluid} /> }
           { image4 && <Image fluid={post.frontmatter.image4.childImageSharp.fluid} /> }
           { image5 && <Image fluid={post.frontmatter.image5.childImageSharp.fluid} /> } */}
-          <div class="gallery-content">
+          <div className="gallery-content">
             <ImageContainer
               images={this.state.images}
               thumbs={this.state.thumbs}

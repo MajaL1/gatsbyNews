@@ -1,7 +1,5 @@
 import React from "react"
 
-import Layout from "../components/layout"
-
 const ContentRight = () => (
     <div>
         <div className="povezave-right">
@@ -10,9 +8,8 @@ const ContentRight = () => (
             <p className="">tukaj lahko dodamo text</p>
         </div>
         <br />
-        <hr />
 
-        <h7 className="main-content-right-title">Povezave</h7>
+        <p className="main-content-right-title">Povezave</p>
 
         <div className="povezave-content content-section">
             <a
@@ -53,7 +50,6 @@ const ContentRight = () => (
                 <img src="../icons/gzs.gif" alt="Logo" />
             </a>
         </div>
-        <hr />
         <div className="povezave-right">
             <br />
             <p className="">PGD Štangarske Poljane</p>
@@ -63,9 +59,7 @@ const ContentRight = () => (
         <br />
         <p className="povezave-link">
             <a href="mailto: pgdstangarskepoljane@gmail.com">
-                pgdstangarskepoljane
-                <br />
-                @gmail.com
+                pgdstangarskepoljane@gmail.com
               </a>
         </p>
         <br />

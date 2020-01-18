@@ -207,18 +207,16 @@ table {
 }
 
 .footer{
-    height: auto;
     background-image: linear-gradient(to bottom, #a21e0b, #ad1c1c, #670606);
-    bottom: 0;
     height: 65px;
-    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.footer-text {
-    text-align: center;
-    display: block;
+.footer-text {    
     color: white;
-    padding-top: 1%;
+    display: inline-block;
 }
 
 .login-text {
@@ -245,7 +243,7 @@ article {
     margin-left: 15px;
 }
 
-.header-row {
+.header {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -263,6 +261,7 @@ article {
 
 .header-icons {
     flex-grow: 1;
+    padding-top: 10px;
 }
 
 .navbar-nav .dropdown-menu {
@@ -307,7 +306,7 @@ table > tr > th {
     color: #dbd9d9;
     text-decoration: none;
     text-align: center;
-    font-family: "Hind Guntur";
+    font-family: "Helvetica";
     text-shadow: 0.5px 0 #444242, 0 0.5px black, 0.5px 0 black, 0 -0.5px black;
 }
 
@@ -377,8 +376,9 @@ a.header-title-link:hover {
 @media (min-width: 200px) and (max-width: 500px) and (orientation: portrait)
 , (min-width: 200px) and (max-width: 500px) and (orientation: landscape) {
 
-    .header.row{
+    .header{
         flex-direction: column;
+        padding: 25px;
     }
 
     .header-icons {

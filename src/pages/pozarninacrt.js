@@ -1,10 +1,10 @@
 import React, { Component } from "react"
-import Img from "gatsby-image"
 import Layout from "../components/layout"
 import ImageContainer from "../components/ImageContainer"
+import { graphql } from 'gatsby'
 
-let images = new Array()
-let thumbs = new Array()
+let images = []
+let thumbs = []
 
 class PozarniNacrt extends Component {
 
@@ -41,7 +41,7 @@ class PozarniNacrt extends Component {
           </small>
           </p>
 
-          <div class="gallery-content">
+          <div className="gallery-content">
             <ImageContainer
               images={this.state.images}
               thumbs={this.state.thumbs}

@@ -10,11 +10,11 @@ class GalerijaDogodki extends Component {
       images: "",
       thumbs: "",
     }
-    let fulls = new Array()
-    let thumbnails = new Array()
+    let fulls = []
+    let thumbnails = []
     let nodes = this.props.data.galerijaDogodkiImages
 
-    nodes.edges.map(function(node) {
+    nodes.edges.map(function (node) {
       let nodeImage
       nodeImage = node.node.frontmatter
       if (

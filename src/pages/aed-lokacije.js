@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import Layout from "../components/layout"
 import Img from "gatsby-image"
+import { graphql } from 'gatsby'
 
 let image2, image3, image5
 class AedLokacije extends Component {
