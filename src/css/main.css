@@ -361,12 +361,17 @@ a.header-title-link:hover {
 }
 .povezave-link {
     text-align: center;
+    padding: 5px;
 }
 
 .povezave-link > a {
     font-size: x-small;
     color: #7d0b0b;
     font-family: Verdana;
+}
+
+.header-icons > a {
+    margin: 5px;
 }
 
 @media (min-width: 200px) and (max-width: 500px) and (orientation: portrait)
@@ -438,4 +443,9 @@ a.header-title-link:hover {
        width: 200px;
    } 
 
+}
+    @media (min-width: 700px) and (max-width: 1200px) and (orientation: portrait) {
+        .gallery-image {
+            width: 200px;
+        } 
 }

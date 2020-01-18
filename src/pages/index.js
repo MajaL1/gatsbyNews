@@ -75,10 +75,7 @@ class IndexPage extends Component {
                         {category}
                       </small>
                       <h5>
-                        <Link
-                          className="news-item-title"
-                          to={node.fields.slug}
-                        >
+                        <Link className="news-item-title" to={node.fields.slug}>
                           {title}
                         </Link>
                       </h5>
@@ -103,7 +100,7 @@ class IndexPage extends Component {
           news2018={this.props.data.newsfor2018.edges}
           news2017={this.props.data.newsfor2017.edges}
         />
-      </Layout >
+      </Layout>
     )
   }
 }

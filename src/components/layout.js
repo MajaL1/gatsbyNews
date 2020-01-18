@@ -2,7 +2,6 @@ import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 
-
 import Header from "./header"
 import Footer from "./footer"
 import Navigation from "./Navigation"
@@ -101,14 +100,20 @@ const Layout = ({ children }) => (
               <p className="">1275, Šmartno pri Litiji</p>
             </div>
             <br />
-            <p className="povezave-link"><a href="mailto: pgdstangarskepoljane@gmail.com">pgdstangarskepoljane@gmail.com</a></p>
+            <p className="povezave-link">
+              <a href="mailto: pgdstangarskepoljane@gmail.com">
+                pgdstangarskepoljane
+                <br />
+                @gmail.com
+              </a>
+            </p>
             <br />
             <hr />
           </div>
         </div>
 
         <Footer />
-      </div >
+      </div>
     )}
   />
 )

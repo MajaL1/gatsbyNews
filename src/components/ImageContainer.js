@@ -71,9 +71,6 @@ export default class ImageContainer extends Component {
       thumbs: this.props.thumbs,
     }
 
-    console.log("IMAGES: ", this.props)
-    console.log("THUMBS: ", this.props.thumbs)
-
     this.renderLightBox = this.renderLightBox.bind(this)
     this.openLightBox = this.openLightBox.bind(this)
     this.closeLightbox = this.closeLightbox.bind(this)
@@ -137,13 +134,9 @@ export default class ImageContainer extends Component {
   }
 
   render() {
-    console.log("this.state.thumbs on RENDER ImageConteiner", this.props.thumbs)
-    console.log("this.state.fulls on RENDER ImageContainer", this.props.images)
-
     return (
       <React.Fragment>
         {this.props.thumbs.map((thumbnail, index) => {
-          console.log("this.props.thumbs, ", this.props.thumbs)
           return (
             <div
               className="gallery-image-content"
