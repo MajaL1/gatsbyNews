@@ -71,7 +71,7 @@ const Layout = ({ children }) => (
                 href="http://wap.sos112.si/Dogodek"
               >
                 {/* SOS */}
-                <img src="./icons/spin112.png" alt="Logo" />
+                <img src="../icons/spin112.png" alt="Logo" />
               </a>
               <a
                 className="povezava-item"
