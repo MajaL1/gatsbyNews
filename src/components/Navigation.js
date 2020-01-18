@@ -22,11 +22,11 @@ const Navigation = class extends React.Component {
         // set the class in state for the navbar accordingly
         this.state.active
           ? this.setState({
-              navBarActiveClass: "is-active",
-            })
+            navBarActiveClass: "is-active",
+          })
           : this.setState({
-              navBarActiveClass: "",
-            })
+            navBarActiveClass: "",
+          })
       }
     )
   }
@@ -63,7 +63,7 @@ const Navigation = class extends React.Component {
                 </NavLink>
                 <div class="dropdown-divider"></div>
                 <NavLink className="navigation-link" to="/pozarninacrt">
-                  Požarni načrt
+                  Območje delovanja
                 </NavLink>
                 <div class="dropdown-divider"></div>
                 <NavLink className="navigation-link" to="/aed-lokacije">
