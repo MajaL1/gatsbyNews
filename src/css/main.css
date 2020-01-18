@@ -21,10 +21,10 @@ body, article, section, .main-content-right   {
     padding: 20px;
 }
 .povezave-right {
-    font-size: smaller;
-    line-height: 0.5em;
+    font-size: x-small;
     text-align: center;
     margin-top: 30px;
+    padding: 0px 5px;
 }
 
 .main-content-left {
@@ -369,7 +369,8 @@ a.header-title-link:hover {
     font-family: Verdana;
 }
 
-@media (min-width: 200px) and (max-width: 500px) and (orientation: portrait) {
+@media (min-width: 200px) and (max-width: 500px) and (orientation: portrait)
+, (min-width: 200px) and (max-width: 500px) and (orientation: landscape) {
 
     .header.row{
         flex-direction: column;
@@ -431,3 +432,10 @@ a.header-title-link:hover {
         width: 100%;
     }
  }
+
+ @media (min-width: 300px) and (max-width: 900px) and (orientation: landscape) {
+   .gallery-image {
+       width: 200px;
+   } 
+
+}

@@ -93,6 +93,7 @@ const Navigation = class extends React.Component {
                 <NavLink className="navigation-link" to="/galerija-dogodki">
                   Dogodki
                 </NavLink>
+                <div class="dropdown-divider"></div>
               </NavDropdown>
             </Nav>
           </Navbar.Collapse>

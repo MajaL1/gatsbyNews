@@ -95,7 +95,7 @@ class AedLokacije extends Component {
       <Layout>
         <article>
           <section className="content-section">
-            <h5 className="item-title">
+            <h5 className="item-title news-item-title ">
               Lokacije AED - PGD Štangarske Poljane
             </h5>
             <br />

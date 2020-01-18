@@ -53,7 +53,6 @@
 }
 
 @media (min-width: 200px) and (max-width: 500px) and (orientation: portrait) {
-
   .navigation-link {
       margin: unset;
      /* border-bottom: 1px #ddd4d4 solid; */
@@ -82,7 +81,17 @@
     background: #ababab;
   }
   .navigation-dropdown-link.navigation-link.dropdown.nav-item>a:hover {
-    color: #50030b;
+        color: #50030b;
+  }
 }
 
+@media (min-width: 300px) and (max-width: 800px) and (orientation: landscape) {
+    
+    .mr-auto.navbar-nav {
+        background-image: linear-gradient(#b5b3b3,#ccc7c7,#a5a4a4);
+        width: 50%;
+        float: left;
+        z-index: 99999;
+    }   
 }
+ 
