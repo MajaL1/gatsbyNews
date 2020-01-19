@@ -7,8 +7,8 @@ class VozniPark extends Component {
   constructor(props) {
     super(props)
 
-    let images = new Array()
-    let thumbs = new Array()
+    let images = []
+    let thumbs = []
 
     if (
       this.props.data.image1.childImageSharp.fixed.height > 1 &&

@@ -5,8 +5,6 @@ import { FaCalendarAlt } from "react-icons/fa"
 import DropdownMenu from "../components/dropdown"
 import Img from "gatsby-image"
 
-//let stickyNews;
-
 class News extends Component {
   constructor(props) {
     super(props)
@@ -36,6 +34,11 @@ class News extends Component {
           currentNews: this.props.news2017,
         })
         break
+      default:
+        this.setState({
+          currentNews: this.props.news2019,
+        })
+        break
     }
   }
 
@@ -56,7 +59,7 @@ class News extends Component {
                 key={node.fields.slug}
               >
                 <header className="news-item-header">
-                  <Link className="news-front-image">
+                  <Link className="news-front-image" to={node.fields.slug}>
                     <Img
                       fluid={node.frontmatter.image1.childImageSharp.fluid}
                       className={"gallery-image"}

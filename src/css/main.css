@@ -20,6 +20,7 @@ body, article, section, .main-content-right   {
     align-items: center;
     padding: 20px;
 }
+
 .povezave-right {
     font-size: x-small;
     text-align: center;
@@ -33,7 +34,7 @@ body, article, section, .main-content-right   {
 
 .main-content-right {
     width: 17%;
-    background-image: linear-gradient(#d6d6d6, #dedcdc, #cacaca, #b9b7b7);
+    background: transparent;
 }
 
 .main-content-right-title {
@@ -67,6 +68,7 @@ li {
     background-image: linear-gradient(to bottom, #991f0d, #9b1a1a, #820404);
     margin-bottom: 0rem;
 }
+
 .header.row {
     padding: 10px;
     display: flex;
@@ -108,7 +110,8 @@ a.povezava-item>img {
     margin-bottom: 10px;
 }
 
-.dropdown{
+.dropdown {
+
     width:25%;
 }
 
@@ -120,7 +123,8 @@ a.povezava-item>img {
     font-size: smaller;
     display: flex;
     flex-wrap: nowrap;
-    background-image: linear-gradient(#dddcdc,#ececec, #d7d4d4);
+    /* background-image: linear-gradient(#dddcdc,#ececec, #d7d4d4); */
+    background-image: linear-gradient(#cccbcb,#fff9f9, #d2d0d0);
 }
 
 .news-front-image {
@@ -135,6 +139,7 @@ a.povezava-item>img {
 
 .news-item-link {
     margin-left: 5%;
+    color: #640c0c;
 }
 
 .news-item-date {
@@ -320,6 +325,7 @@ table > tr > th {
     display: block;
     padding: 0 20px;
 }
+
 a.header-title-link:hover {
     text-decoration: none;
     color: lightgray;
@@ -340,6 +346,7 @@ a.header-title-link:hover {
     flex-wrap: wrap;
     justify-content: center;
 }
+
 .gallery-image-content {
     align-self: center;
     transform-origin: 50% 65%;
@@ -358,6 +365,7 @@ a.header-title-link:hover {
     flex-direction: column;
     align-items: center;
 }
+
 .povezave-link {
     text-align: center;
     padding: 5px;
@@ -379,6 +387,10 @@ a.header-title-link:hover {
     .header{
         flex-direction: column;
         padding: 25px;
+    }
+
+    .dropdown{
+        width: auto;
     }
 
     .header-icons {
@@ -415,10 +427,12 @@ a.header-title-link:hover {
         width: 100%;
         border-top: 2px darkgray solid;
     }
+
     .povezave-right {
         text-align: center;
         margin-left: 0px;
     }
+
     .povezave-link {
         text-align: center;
         margin-left: 0px;
@@ -433,6 +447,7 @@ a.header-title-link:hover {
         margin-bottom: 10px;
         margin-top: 5px;
     }
+
     table {
         width: 100%;
     }
@@ -442,10 +457,10 @@ a.header-title-link:hover {
    .gallery-image {
        width: 200px;
    } 
-
 }
-    @media (min-width: 700px) and (max-width: 1200px) and (orientation: portrait) {
-        .gallery-image {
-            width: 200px;
-        } 
+    
+@media (min-width: 700px) and (max-width: 1200px) and (orientation: portrait) {
+    .gallery-image {
+       width: 200px;
+    } 
 }

@@ -14,7 +14,7 @@ class GalerijaDogodki extends Component {
     let thumbnails = []
     let nodes = this.props.data.galerijaDogodkiImages
 
-    nodes.edges.map(function (node) {
+    nodes.edges.forEach(function (node) {
       let nodeImage
       nodeImage = node.node.frontmatter
       if (
@@ -94,7 +94,7 @@ class GalerijaDogodki extends Component {
     if (
       typeof this.state.images == "undefined" ||
       this.state.images == null ||
-      this.state.images.length == 0
+      this.state.images.length === 0
     )
       return (
         <Layout>

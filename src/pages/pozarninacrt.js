@@ -3,16 +3,18 @@ import Layout from "../components/layout"
 import ImageContainer from "../components/ImageContainer"
 import { graphql } from 'gatsby'
 
-let images = []
-let thumbs = []
+
 
 class PozarniNacrt extends Component {
 
   constructor(props) {
     super(props)
-
-  }
-  render() {
+    this.state = {
+      images: "",
+      thumbs: "",
+    }
+    let images = []
+    let thumbs = []
     if (
       this.props.data.image1.childImageSharp.fixed.height > 1 &&
       this.props.data.image1.childImageSharp.fixed.width > 1
@@ -29,6 +31,9 @@ class PozarniNacrt extends Component {
       images: images,
       thumbs: thumbs,
     }
+  }
+  render() {
+
     return (
       <Layout>
         <section className="content-section">
@@ -50,96 +55,100 @@ class PozarniNacrt extends Component {
           <section className="content-section section-table">
             <div>
               <table>
-                <tr>
-                  <th className="item-title">Vir: statistični urad RS 2019</th>
-                  <th className="item-title">Površina [km2]</th>
-                  <th className="item-title">
-                    prebivalci s stalnim naslovom [2019]
-              </th>
-                </tr>
-                <tr>
-                  <td>Dragovšek</td>
-                  <td>1,75</td>
-                  <td>66</td>
-                </tr>
-                <tr>
-                  <td>Gozd - Reka</td>
-                  <td>7,7</td>
-                  <td>144</td>
-                </tr>
-                <tr>
-                  <td>Jastrebnik</td>
-                  <td>1,63</td>
-                  <td>39</td>
-                </tr>
-                <tr>
-                  <td>Koške Poljane</td>
-                  <td>1,72</td>
-                  <td>11</td>
-                </tr>
-                <tr>
-                  <td>Mala Štanga</td>
-                  <td>1,81</td>
-                  <td>32</td>
-                </tr>
-                <tr>
-                  <td>Račica</td>
-                  <td>2,37</td>
-                  <td>57</td>
-                </tr>
-                <tr>
-                  <td>Ščit</td>
-                  <td>2,78</td>
-                  <td>25</td>
-                </tr>
-                <tr>
-                  <td>Štangarske Poljane</td>
-                  <td>0,89</td>
-                  <td>76</td>
-                </tr>
-                <tr>
-                  <td>Velika Štanga</td>
-                  <td>2,87</td>
-                  <td>117</td>
-                </tr>
-                <tr>
-                  <td>Volčja Jama</td>
-                  <td>2,9</td>
-                  <td>101</td>
-                </tr>
-                <tr>
-                  <td>
-                    <strong>Skupaj </strong>
-                  </td>
-                  <td>
-                    <strong>26,42</strong>
-                  </td>
-                  <td>
-                    <strong>668</strong>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <strong>Kar predstavlja</strong>
-                  </td>
-                  <td>
-                    <strong>28%</strong>
-                  </td>
-                  <td>
-                    <strong>12%</strong>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <strong>Celotna občina Šmartno pri Litiji</strong>
-                  </td>
-                  <td>
-                    <strong>94,97</strong>
-                  </td>
-                  <td>
-                    <strong>5.603</strong>
-                  </td>
-                </tr>
+                <thead>
+                  <tr>
+                    <th className="item-title">Vir: statistični urad RS 2019</th>
+                    <th className="item-title">Površina [km2]</th>
+                    <th className="item-title">
+                      prebivalci s stalnim naslovom [2019]
+                  </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Dragovšek</td>
+                    <td>1,75</td>
+                    <td>66</td>
+                  </tr>
+                  <tr>
+                    <td>Gozd - Reka</td>
+                    <td>7,7</td>
+                    <td>144</td>
+                  </tr>
+                  <tr>
+                    <td>Jastrebnik</td>
+                    <td>1,63</td>
+                    <td>39</td>
+                  </tr>
+                  <tr>
+                    <td>Koške Poljane</td>
+                    <td>1,72</td>
+                    <td>11</td>
+                  </tr>
+                  <tr>
+                    <td>Mala Štanga</td>
+                    <td>1,81</td>
+                    <td>32</td>
+                  </tr>
+                  <tr>
+                    <td>Račica</td>
+                    <td>2,37</td>
+                    <td>57</td>
+                  </tr>
+                  <tr>
+                    <td>Ščit</td>
+                    <td>2,78</td>
+                    <td>25</td>
+                  </tr>
+                  <tr>
+                    <td>Štangarske Poljane</td>
+                    <td>0,89</td>
+                    <td>76</td>
+                  </tr>
+                  <tr>
+                    <td>Velika Štanga</td>
+                    <td>2,87</td>
+                    <td>117</td>
+                  </tr>
+                  <tr>
+                    <td>Volčja Jama</td>
+                    <td>2,9</td>
+                    <td>101</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Skupaj </strong>
+                    </td>
+                    <td>
+                      <strong>26,42</strong>
+                    </td>
+                    <td>
+                      <strong>668</strong>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Kar predstavlja</strong>
+                    </td>
+                    <td>
+                      <strong>28%</strong>
+                    </td>
+                    <td>
+                      <strong>12%</strong>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Celotna občina Šmartno pri Litiji</strong>
+                    </td>
+                    <td>
+                      <strong>94,97</strong>
+                    </td>
+                    <td>
+                      <strong>5.603</strong>
+                    </td>
+                  </tr>
+                </tbody>
               </table>
             </div>
           </section>

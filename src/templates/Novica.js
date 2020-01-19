@@ -6,86 +6,93 @@ import SEO from "../components/seo"
 import ImageContainer from "../components/ImageContainer"
 
 class Novica extends React.Component {
-  render() {
-    const post = this.props.data.markdownRemark
-    const category = post.frontmatter.category
-    const siteTitle = this.props.data.site.siteMetadata.title
-    const { previous, next } = this.props.pageContext
 
-    let images = new Array()
-    let thumbs = new Array()
+  constructor(props) {
+    super(props)
+    this.state = {
+      images: "",
+      thumbs: "",
+    }
+    const node = this.props.data.markdownRemark
 
+    let images = []
+    let thumbs = []
     if (
-      post.frontmatter.image1.childImageSharp.fixed.height > 1 &&
-      post.frontmatter.image1.childImageSharp.fixed.width > 1
+      node.frontmatter.image1.childImageSharp.fixed.height > 1 &&
+      node.frontmatter.image1.childImageSharp.fixed.width > 1
     ) {
-      thumbs.push(post.frontmatter.image1)
+      thumbs.push(node.frontmatter.image1)
     }
     if (
-      post.frontmatter.image2.childImageSharp.fixed.height > 1 &&
-      post.frontmatter.image2.childImageSharp.fixed.width > 1
+      node.frontmatter.image2.childImageSharp.fixed.height > 1 &&
+      node.frontmatter.image2.childImageSharp.fixed.width > 1
     ) {
-      thumbs.push(post.frontmatter.image2)
+      thumbs.push(node.frontmatter.image2)
     }
     if (
-      post.frontmatter.image3.childImageSharp.fixed.height > 1 &&
-      post.frontmatter.image3.childImageSharp.fixed.width > 1
+      node.frontmatter.image3.childImageSharp.fixed.height > 1 &&
+      node.frontmatter.image3.childImageSharp.fixed.width > 1
     ) {
-      thumbs.push(post.frontmatter.image3)
+      thumbs.push(node.frontmatter.image3)
     }
     if (
-      post.frontmatter.image4.childImageSharp.fixed.height > 1 &&
-      post.frontmatter.image4.childImageSharp.fixed.width > 1
+      node.frontmatter.image4.childImageSharp.fixed.height > 1 &&
+      node.frontmatter.image4.childImageSharp.fixed.width > 1
     ) {
-      thumbs.push(post.frontmatter.image4)
+      thumbs.push(node.frontmatter.image4)
     }
     if (
-      post.frontmatter.image5.childImageSharp.fixed.height > 1 &&
-      post.frontmatter.image5.childImageSharp.fixed.width > 1
+      node.frontmatter.image5.childImageSharp.fixed.height > 1 &&
+      node.frontmatter.image5.childImageSharp.fixed.width > 1
     ) {
-      thumbs.push(post.frontmatter.image5)
+      thumbs.push(node.frontmatter.image5)
     }
     if (
-      !post.frontmatter.image1.childImageSharp.fluid.sizes.startsWith(
+      !node.frontmatter.image1.childImageSharp.fluid.sizes.startsWith(
         "(max-width: 1px)"
       )
     ) {
-      images.push(post.frontmatter.image1)
+      images.push(node.frontmatter.image1)
     }
     if (
-      !post.frontmatter.image2.childImageSharp.fluid.sizes.startsWith(
+      !node.frontmatter.image2.childImageSharp.fluid.sizes.startsWith(
         "(max-width: 1px)"
       )
     ) {
-      images.push(post.frontmatter.image2)
+      images.push(node.frontmatter.image2)
     }
     if (
-      !post.frontmatter.image3.childImageSharp.fluid.sizes.startsWith(
+      !node.frontmatter.image3.childImageSharp.fluid.sizes.startsWith(
         "(max-width: 1px)"
       )
     ) {
-      images.push(post.frontmatter.image3)
+      images.push(node.frontmatter.image3)
     }
     if (
-      !post.frontmatter.image4.childImageSharp.fluid.sizes.startsWith(
+      !node.frontmatter.image4.childImageSharp.fluid.sizes.startsWith(
         "(max-width: 1px)"
       )
     ) {
-      images.push(post.frontmatter.image4)
+      images.push(node.frontmatter.image4)
     }
     if (
-      !post.frontmatter.image5.childImageSharp.fluid.sizes.startsWith(
+      !node.frontmatter.image5.childImageSharp.fluid.sizes.startsWith(
         "(max-width: 1px)"
       )
     ) {
-      images.push(post.frontmatter.image5)
+      images.push(node.frontmatter.image5)
     }
 
     this.state = {
       images: images,
       thumbs: thumbs,
     }
-
+  }
+  render() {
+    const post = this.props.data.markdownRemark
+    const category = post.frontmatter.category
+    const siteTitle = this.props.data.site.siteMetadata.title
+    const { previous, next } = this.props.pageContext
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title={post.frontmatter.title} />
@@ -104,26 +111,12 @@ class Novica extends React.Component {
             </p>
             <p className="news-content-section">{post.frontmatter.intro}</p>
           </header>
-
-          {/*  { image1 && <Image fluid={post.frontmatter.image1.childImageSharp.fluid} /> }
-          { image2 && <Image fluid={post.frontmatter.image2.childImageSharp.fluid} /> }
-          { image3 && <Image fluid={post.frontmatter.image3.childImageSharp.fluid} /> }
-          { image4 && <Image fluid={post.frontmatter.image4.childImageSharp.fluid} /> }
-          { image5 && <Image fluid={post.frontmatter.image5.childImageSharp.fluid} /> } */}
           <div className="gallery-content">
             <ImageContainer
               images={this.state.images}
               thumbs={this.state.thumbs}
             />
           </div>
-          {/* 
-          <ImageContainer
-            images={images.map(({ node, index }) => ({
-              node, index
-            }))} thumbs={thumbs.map(({ node, index }) => ({
-              node, index
-            }))}
-          /> */}
           <section
             className="news-content-section"
             dangerouslySetInnerHTML={{ __html: post.html }}
