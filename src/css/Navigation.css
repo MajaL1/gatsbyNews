@@ -11,6 +11,9 @@
     color: #611e25;
     border: none;
 }
+a.dropdown-toggle.nav-link {
+    padding: 10px 0px;
+}
 
 .navigation-dropdown-link.navigation-link.dropdown.nav-item>a {
     color: #611e25;
@@ -81,7 +84,7 @@
   .navigation-dropdown-link.navigation-link.dropdown.nav-item>a:hover {
         color: #50030b;
   }
-  
+
 }
 
 @media (min-width: 300px) and (max-width: 800px) and (orientation: landscape) {

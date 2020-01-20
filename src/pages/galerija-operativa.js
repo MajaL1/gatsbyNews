@@ -14,7 +14,7 @@ class GalerijaOperativa extends Component {
     let thumbnails = []
     let nodes = this.props.data.galerijaOperativaImages
 
-    nodes.edges.foreach(function (node) {
+    nodes.edges.forEach(function (node) {
       let nodeImage
       nodeImage = node.node.frontmatter
       if (
