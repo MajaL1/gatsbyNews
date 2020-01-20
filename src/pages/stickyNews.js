@@ -16,7 +16,7 @@ class StickyNews extends Component {
 
   render() {
     return (
-      this.state.stickyNews.map(({ node }) => {
+      this.props.stickyNews.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
         const category = node.frontmatter.category
 
