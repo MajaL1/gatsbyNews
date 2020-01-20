@@ -8,11 +8,17 @@ import Img from "gatsby-image"
 class StickyNews extends Component {
   constructor(props) {
     super(props)
+
+    this.state = {
+      stickyNews: this.props.stickyNews,
+    }
   }
 
   render() {
+    if (typeof this.state.stickyNews == "undefined") return <div>No data</div>
+
     return (
-      this.props.stickyNews.map(({ node }) => {
+      this.state.stickyNews.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
         const category = node.frontmatter.category
 
