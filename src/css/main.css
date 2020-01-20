@@ -96,6 +96,11 @@ li {
     font-weight: bold;
 }
 
+a.news-item-title:hover {
+    color: #9a1c14;
+}
+
+
 .content-main-div {
     margin: 0 auto;  
     width: auto;

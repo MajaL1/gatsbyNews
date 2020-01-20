@@ -98,9 +98,6 @@ class Novica extends React.Component {
         <SEO title={post.frontmatter.title} />
         <article className="content-section">
           <header>
-            <h5 className="news-item-title item-title">
-              {post.frontmatter.title}
-            </h5>
             <p>
               <small className="news-item-date">
                 {"Objavljeno: "}
@@ -109,6 +106,10 @@ class Novica extends React.Component {
                 {category}
               </small>
             </p>
+            <h5 className="news-item-title item-title">
+              {post.frontmatter.title}
+            </h5>
+
             <p className="news-content-section">{post.frontmatter.intro}</p>
           </header>
           <div className="gallery-content">
