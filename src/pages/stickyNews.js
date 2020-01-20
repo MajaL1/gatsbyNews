@@ -8,10 +8,6 @@ import Img from "gatsby-image"
 class StickyNews extends Component {
   constructor(props) {
     super(props)
-
-    this.state = {
-      stickyNews: this.props.stickyNews,
-    }
   }
 
   render() {
