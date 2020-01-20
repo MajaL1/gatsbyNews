@@ -55,7 +55,6 @@ class StickyNews extends Component {
                     <Link className="news-item-link" to={node.fields.slug}>
                       {"Preberi celotni prispevek >> "}
                     </Link>
-                    <hr />
                   </div>
                 </header>
               </section>

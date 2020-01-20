@@ -119,7 +119,7 @@ a.povezava-item>img {
     background-color: whitesmoke;
     margin-bottom: 20px;
     padding: 10px;
-    border-bottom: #723937 3px solid;
+    border-bottom: #762a2a 1px solid;
     font-size: smaller;
     display: flex;
     flex-wrap: nowrap;
@@ -189,7 +189,8 @@ a.povezava-item>img {
     font-family: "Montserrat";
     padding: 5px;
     background-image: linear-gradient(to left, #eae9e9, #e3e3e3, #e2dddd); 
-    color: black;
+    color: #762a2a;
+    font-weight: 600;
 }
 
 .content-section {
