@@ -95,6 +95,7 @@ export default class ImageContainer extends Component {
               <Img
                 fixed={thumbnail.childImageSharp.fixed}
                 className={"gallery-image"}
+                objectFit="contain"
               />
             </div>
           )

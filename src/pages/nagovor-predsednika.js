@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 const NagovorPredsednika = () => (
   <Layout>
     <article>
-      <section className="content-section history-section">
+      <section className="content-section home-section">
         <header>
           <hr />
           <div className="nagovor-predsednika">
