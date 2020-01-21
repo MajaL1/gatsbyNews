@@ -134,7 +134,7 @@ a.povezava-item>img {
 
 .news-front-image {
     flex-basis: auto;
-    width: 400px;
+    min-width: 300px;
 }
 
 .news-front-content {
@@ -467,6 +467,10 @@ a.header-title-link:hover {
 
     table {
         width: 100%;
+    }
+
+    .news-front-image {
+        min-width: 200px;
     }
  }
 
