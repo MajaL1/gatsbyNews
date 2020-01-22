@@ -4,6 +4,7 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import ImageContainer from "../components/ImageContainer"
+import { FaCalendarAlt } from "react-icons/fa"
 
 class Novica extends React.Component {
 
@@ -99,6 +100,7 @@ class Novica extends React.Component {
         <article className="content-section">
           <header>
             <p>
+              <FaCalendarAlt />
               <small className="news-item-date">
                 {"Objavljeno: "}
                 {post.frontmatter.date}
@@ -122,22 +124,20 @@ class Novica extends React.Component {
             className="news-content-section"
             dangerouslySetInnerHTML={{ __html: post.html }}
           />
-          <hr />
-          <footer></footer>
         </article>
 
         <nav>
           <ul className="ul-news-link">
             <li>
               {previous && (
-                <Link to={previous.fields.slug} rel="prev">
+                <Link to={previous.fields.slug} rel="prev" className="link-news">
                   ← {previous.frontmatter.title}
                 </Link>
               )}
             </li>
             <li>
               {next && (
-                <Link to={next.fields.slug} rel="next">
+                <Link to={next.fields.slug} rel="next" className="link-news">
                   {next.frontmatter.title} →
                 </Link>
               )}

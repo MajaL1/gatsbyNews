@@ -128,7 +128,7 @@ class PozarniNacrt extends Component {
                   </tr>
                   <tr>
                     <td>
-                      <strong>Kar predstavlja</strong>
+                      <strong>Delež v občini</strong>
                     </td>
                     <td>
                       <strong>28%</strong>

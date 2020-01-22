@@ -44,18 +44,18 @@ module.exports = {
         path: `${__dirname}/content/blog`, // for the path you can change it based on your preferred folder structure
       },
     },
-    {
+    /* {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: "gatsby-starter-default",
-        short_name: "starter",
+        name: "pgd-st-poljane",
+        short_name: "pgd-st-poljane",
         start_url: "/",
         background_color: "#663399",
         theme_color: "#663399",
         display: "minimal-ui",
         icon: "src/images/gasilski-grb.png", // This path is relative to the root of the site.
       },
-    },
+    }, */
     "gatsby-plugin-offline",
     "gatsby-theme-gallery",
     "gatsby-plugin-react-helmet",
