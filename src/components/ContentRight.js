@@ -2,14 +2,47 @@ import React from "react"
 
 const ContentRight = () => (
     <div>
+        <p className="right-112-title">KLIC V SILI 112 </p>
+
         <div className="povezave-right">
-            <br />
-
-            <p className="">tukaj lahko dodamo text</p>
+            <ul className="right-list-112">
+                <li className="right-112">
+                    <strong>KDO</strong> kliče
+                </li>
+                <br />
+                <li className="right-112">
+                    <strong> KAJ </strong>se je zgodilo
+                </li>
+                <br />
+                <li className="right-112">
+                    <strong>KJE</strong> se je zgodilo
+                </li>
+                <br />
+                <li className="right-112">
+                    <strong> KDAJ</strong> se je zgodilo
+                </li>
+                <br />
+                <li className="right-112">
+                    <strong>KOLIKO</strong> je ponesrečencev
+                </li>
+                <br />
+                <li className="right-112">
+                    kakšne so <strong>POŠKODBE</strong>
+                </li>
+                <br />
+                <li className="right-112">
+                    kakšne so <strong>OKOLIŠČINE</strong>
+                </li>
+                <br />
+                <li className="right-112">
+                    <strong>kakšno POMOČ</strong> potrebujete.
+                </li>
+            </ul>
         </div>
-        <br />
 
-        <p className="main-content-right-title">Povezave</p>
+        <hr />
+
+        <p className="right-112-title">POVEZAVE</p>
 
         <div className="povezave-content content-section">
             <a
@@ -50,7 +83,8 @@ const ContentRight = () => (
                 <img src="../icons/gzs.gif" alt="Logo" />
             </a>
         </div>
-        <div className="povezave-right">
+        <hr />
+        <div className="povezave-right address">
             <br />
             <p className="">PGD Štangarske Poljane</p>
             <p className="">Štangarske Poljane 1a</p>
@@ -64,7 +98,7 @@ const ContentRight = () => (
         </p>
         <br />
         <hr />
-    </div>
+    </div >
 )
 
 export default ContentRight

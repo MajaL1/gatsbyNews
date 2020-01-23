@@ -9,6 +9,24 @@ body, article, section, .main-content-right   {
     min-height: 800px;
 }
 
+.right-112 {
+    text-align: left;
+}
+
+.right-112-title {
+    font-weight: bold;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+.right-112 .right-112-title {
+    text-align: left;
+}
+
+ul.right-list-112 {
+    list-style-type: circle;
+}
+
 .main-content {
     background-color: #eaeaea;
     padding: 10px;
@@ -26,6 +44,11 @@ body, article, section, .main-content-right   {
     text-align: center;
     margin-top: 30px;
     padding: 0px 5px;
+}
+
+.povezave-right.address {
+    font-weight: bold;
+    font-size: small;
 }
 
 .main-content-left {
