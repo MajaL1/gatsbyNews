@@ -416,6 +416,7 @@ a.header-title-link:hover {
     font-size: x-small;
     color: #7d0b0b;
     font-family: Verdana;
+    word-break: break-all;
 }
 
 .header-icons > a {
@@ -517,6 +518,26 @@ a.header-title-link:hover {
     } 
     .news-front-image {
         min-width: 200px;
+    }
+
+    .right-112-title {
+        padding-left: 10px;
+    }
+}
+
+@media (max-height: 400px) and (min-width: 500px) and (orientation: landscape) {
+
+    .right-112-title {
+        padding-left: 10px;
+    }
+
+    .povezave-right {
+        margin-left: -20px;
+    }
+
+    .povezave-right.address {
+        font-size: x-small;
+        margin: 5px;
     }
 }
 
