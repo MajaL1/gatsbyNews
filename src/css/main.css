@@ -4,6 +4,10 @@ body, article, section, .main-content-right   {
     font-family: "Montserrat";
     color: black;
 }
+body {
+    position: sticky;
+    width: 100%;
+}
 
 .top-div {
     min-height: 800px;
