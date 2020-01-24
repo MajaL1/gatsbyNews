@@ -539,6 +539,10 @@ a.header-title-link:hover {
         font-size: x-small;
         margin: 5px;
     }
+
+    .navbar-nav {
+        position: absolute;
+    }
 }
 
 @media only screen and (min-width: 1024px) {
