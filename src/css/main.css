@@ -47,7 +47,6 @@ ul.right-list-112 {
 }
 
 .povezave-right.address {
-    font-weight: bold;
     font-size: small;
 }
 
@@ -534,5 +533,9 @@ a.header-title-link:hover {
   @media only screen and (max-width: 767px) and (min-width: 200px) {
     .gallery-content {
       column-count: 2;
+    }
+
+    .news-item-header {
+        display: block;
     }
   }

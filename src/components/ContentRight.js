@@ -50,6 +50,7 @@ const ContentRight = () => (
                 target="_blank"
                 rel="noopener noreferrer"
                 href="https://meteo.arso.gov.si/met/sl/warning/fire"
+                title="ARSO-Požarna ogroženost"
             >
                 {/* Arso-Požarna ogroženost */}
                 <img src="../icons/arso.png" alt="Logo" />
@@ -60,6 +61,7 @@ const ContentRight = () => (
                 target="_blank"
                 rel="noopener noreferrer"
                 href="http://wap.sos112.si/Dogodek"
+                title="Dogodki v zadnjih 24-ih urah"
             >
                 {/* SOS */}
                 <img src="../icons/spin112.png" alt="Logo" />
@@ -69,6 +71,7 @@ const ContentRight = () => (
                 target="_blank"
                 rel="noopener noreferrer"
                 href="https://spin3.sos112.si/javno/zemljevid"
+                title="Spin javno"
             >
                 {/* Spin */}
                 <img src="../icons/spin.png" alt="Logo" />
@@ -78,6 +81,7 @@ const ContentRight = () => (
                 target="_blank"
                 rel="noopener noreferrer"
                 href="https://www.gasilec.net"
+                title="Gasilska zveza Slovenije"
             >
                 {/* Gasilska zveza Slovenije */}
                 <img src="../icons/gzs.gif" alt="Logo" />
