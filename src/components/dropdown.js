@@ -2,7 +2,7 @@ import React, { Component } from "react"
 import Dropdown from "react-dropdown"
 import "react-dropdown/style.css"
 
-const options = ["2019", "2018", "2017"]
+const options = ["2020", "2019", "2018", "2017"]
 
 class DropdownMenu extends Component {
   constructor(props) {

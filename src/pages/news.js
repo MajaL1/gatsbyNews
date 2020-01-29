@@ -12,6 +12,7 @@ class News extends Component {
 
     this.state = {
       currentNews: this.props.news2019,
+      news2020: this.props.news2020,
       news2019: this.props.news2019,
       news2018: this.props.news2018,
       news2017: this.props.news2017,
@@ -19,6 +20,11 @@ class News extends Component {
   }
   onChange(option) {
     switch (option.label) {
+      case "2020":
+        this.setState({
+          currentNews: this.props.news2020,
+        })
+        break
       case "2019":
         this.setState({
           currentNews: this.props.news2019,
