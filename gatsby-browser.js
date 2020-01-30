@@ -1,1 +1,2 @@
-require("./src/css/Navigation.css")
+require("./src/css/Navigation.scss")
+require("./src/css/main.scss")

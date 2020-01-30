@@ -58,6 +58,7 @@ module.exports = {
     }, */
     "gatsby-plugin-offline",
     "gatsby-theme-gallery",
+    "gatsby-plugin-sass",
     "gatsby-plugin-react-helmet",
     {
       resolve: `gatsby-source-filesystem`,

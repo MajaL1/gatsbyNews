@@ -1,6 +1,5 @@
 import React, { Component } from "react"
 import { Link } from "gatsby"
-import "../css/main.css"
 import { FaCalendarAlt } from "react-icons/fa"
 import Img from "gatsby-image"
 

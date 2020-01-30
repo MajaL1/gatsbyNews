@@ -1,5 +1,18 @@
-.navigation-content {
+$nav-link-color: #611e25;
+$nav-link-color-2: #50030b;
+$navigation-link-hover: rgb(94, 93, 93);
+$navigation-dropdown-hover: rgb(94, 93, 93);
+
+@mixin nav-background(){
     background-image: linear-gradient(#c5c1c1,#aba8a8,#8e8e8e);
+}
+
+@mixin navigation-dropdown-menu(){
+    background-image: linear-gradient(#b5b3b3,#ccc7c7,#a5a4a4);
+}
+
+.navigation-content {
+    background-image:linear-gradient(#c5c1c1,#aba8a8,#8e8e8e);
     height: 44px;
 }
 
@@ -8,7 +21,7 @@
 }
 
 .navigation-dropdown-link.navigation-link.dropdown.nav-item{
-    color: #611e25;
+    color: $nav-link-color;
     border: none;
 }
 a.dropdown-toggle.nav-link {
@@ -16,12 +29,12 @@ a.dropdown-toggle.nav-link {
 }
 
 .navigation-dropdown-link.navigation-link.dropdown.nav-item>a {
-    color: #611e25;
+    color: $nav-link-color;
     border: none;
 }
 
 .navigation-dropdown-link.navigation-link.dropdown.nav-item>a:hover {
-    color: lightgrey;
+    color: $navigation-dropdown-hover;
    
 }
 
@@ -30,7 +43,7 @@ a.dropdown-toggle.nav-link {
 }
 
 .navigation-link {
-    color: #50030b;
+    color: $nav-link-color-2;
     text-shadow: "5px 0 #444242, 0 1px black, 1px 0 black, 0 -1px black";
     display: block;
     margin: auto;
@@ -43,8 +56,7 @@ a.dropdown-toggle.nav-link {
 }
 
 .navigation-link:hover{
-    background: rgb(94, 93, 93);
-    background-color: rgb(94, 93, 93);
+    background-color: $navigation-link-hover;
     color: lightgrey;
     text-decoration: none;
     padding: 0px;
