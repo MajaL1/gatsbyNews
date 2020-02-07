@@ -1,6 +1,6 @@
 ---
 title: Občni zbor 2020
-date: 2020-02-07T19:49:31.013Z
+date: 2020-01-25T22:49:31.013Z
 intro: >+
   Kot običajno se enkrat letno člani zberemo na Občnem zboru. Tokratni je
   potekal v soboto, 25. januarja 2020 s pričetkom ob 19. uri. Ker v našem
