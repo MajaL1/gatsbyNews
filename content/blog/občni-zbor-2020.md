@@ -9,10 +9,11 @@ intro: >+
   predvsem po podeljenih napredovanjih, priznanjih in odlikovanjih. Letos je
   tako napredovalo kar nekaj gasilcev. 
 
-image1: /assets/img_20200125_202340.jpg
+image1: /assets/dsc_0717.jpg
 image2: /assets/img_20200125_200532.jpg
 image3: /assets/img_20200125_200616.jpg
 image4: /assets/img_20200125_200714.jpg
+image5: /assets/img_20200125_202340.jpg
 top: false
 category: Dogodki
 ---
