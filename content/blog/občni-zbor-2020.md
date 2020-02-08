@@ -10,23 +10,18 @@ intro: >+
   tako napredovalo kar nekaj gasilcev. 
 
 image1: /assets/img_20200125_202340.jpg
+image2: /assets/img_20200125_200532.jpg
+image3: /assets/img_20200125_200616.jpg
+image4: /assets/img_20200125_200714.jpg
 top: false
 category: Dogodki
 ---
 ## Podeljena so bila napredovanja za:
 
 * gasilca 1. stopnje (Lojze Jug, Sandi Slapničar, Damjan Miklavčič),
-
-![](/assets/img_20200125_200532.jpg "Damjan Miklavčič")
-
 * gasilca 2. stopnje (Damjan Juhant),
 * višjega gasilca 1. stopnje (Robi Maren, Anže Matoz, Tomaž Menegalija),
-
-![](/assets/img_20200125_200616.jpg)
-
 * gasilskega častnika 1. stopnje (Franc Černe). 
-
-![](/assets/img_20200125_200714.jpg)
 
 ## Gostje
 
