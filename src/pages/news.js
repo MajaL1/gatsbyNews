@@ -10,7 +10,7 @@ class News extends Component {
     this.onChange = this.onChange.bind(this)
 
     this.state = {
-      currentNews: this.props.news2019,
+      currentNews: this.props.news2020,
       news2020: this.props.news2020,
       news2019: this.props.news2019,
       news2018: this.props.news2018,
