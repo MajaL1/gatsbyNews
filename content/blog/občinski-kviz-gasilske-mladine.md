@@ -5,6 +5,8 @@ intro: >-
   V soboto, 29. 2. 2020, je v OŠ Šmartno pri Litiji potekal občinski kviz
   gasilske mladine, katerega sta se iz našega društva udeležili ekipi
   pripravnikov in pionirjev. 
+image1: /assets/img_5194.jpeg
+image2: /assets/img_5194.jpeg
 top: false
 category: Mladina
 ---
