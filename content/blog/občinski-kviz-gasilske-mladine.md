@@ -6,7 +6,7 @@ intro: >-
   gasilske mladine, katerega sta se iz našega društva udeležili ekipi
   pripravnikov in pionirjev. 
 image1: /assets/img_5194.jpeg
-image2: /assets/img_5194.jpeg
+image2: /assets/img_5205.jpeg
 top: false
 category: Mladina
 ---
