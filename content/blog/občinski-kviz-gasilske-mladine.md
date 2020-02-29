@@ -1,5 +1,5 @@
 ---
-title: Občinski kviz gasilske mladine
+title: Občinski kviz gasilske mladine 2020
 date: 2020-02-29T21:15:02.815Z
 intro: >-
   V soboto, 29. 2. 2020, je v OŠ Šmartno pri Litiji potekal občinski kviz
@@ -8,6 +8,7 @@ intro: >-
 image1: /assets/img_5194.jpeg
 image2: /assets/img_5205.jpeg
 image3: /assets/img_5215.jpg
+image4: /assets/img_4624.jpeg
 top: false
 category: Mladina
 ---
