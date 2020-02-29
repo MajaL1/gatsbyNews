@@ -7,6 +7,7 @@ intro: >-
   pripravnikov in pionirjev. 
 image1: /assets/img_5194.jpeg
 image2: /assets/img_5205.jpeg
+image3: /assets/img_5215.jpg
 top: false
 category: Mladina
 ---
