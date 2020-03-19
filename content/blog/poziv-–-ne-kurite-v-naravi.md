@@ -8,6 +8,7 @@ intro: >-
   saj je v okolici vse zelo suho in trava še ni ozelenela. Zato vas prosim, da
   se teh opravil lotite, ko bo verjetnost razširitve požara v naravnem okolju
   zmanjšana.
+image1: /assets/občina_šmartno_pri_litiji_grb.gif
 top: true
 category: Operativa
 ---
