@@ -1,6 +1,6 @@
 ---
 title: POZIV – ne kurite v naravi!
-date: 2020-03-19T17:48:14.078Z
+date: 2020-03-18T17:48:14.078Z
 intro: >-
   Občina Šmartno pri Litiji poziva vse občanke in občane, da pri kmetijskih
   opravilih na njivah, gozdovih, vrtovih in v okolici hiš NE SEŽIGAJO drevesnih
@@ -14,6 +14,6 @@ category: Operativa
 ---
 S tem ukrepom boste pripomogli, da gasilci v času epidemije, ne bodo po nepotrebnem izvažali na intervencije in s tem posledično ogrožali svoje, vaše in zdravje naših bližnjih.
 
- Občane vljudno prosim k doslednemu upoštevanju tega poziva, ki velja do preklica.
+Občane vljudno prosim k doslednemu upoštevanju tega poziva, ki velja do preklica.
 
 Rajko Meserko, župan
