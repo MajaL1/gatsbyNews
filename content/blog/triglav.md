@@ -1,5 +1,5 @@
 ---
-title: Triglav
+title: S PGD ŠTANGARSKE POLJANE NA VRHU SLOVENIJE
 date: 2020-09-08T18:19:08.566Z
 intro: >-
   Že kar nekaj časa je minilo, odkar se je v našem društvu pojavila ideja o
