@@ -19,7 +19,7 @@ image1: /assets/img_6066.jpeg
 image2: /assets/img_4966.jpeg
 image3: /assets/img_6071.jpeg
 image4: /assets/img_6067.jpeg
-top: true
+top: false
 category: Operativa
 ---
 Kmalu smo izvedele, da se člani lige ne bodo udeležili, kar nas je od vsega skupaj malo odvrnilo. A so nam vseeno obljubili njihovo podporo in navijaško zvestobo, zato smo vztrajno vadile in vadile vse do začetka zimske lige.
