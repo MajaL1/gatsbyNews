@@ -1,6 +1,6 @@
 ---
 title: Plaz Štangarske Poljane
-date: 2021-01-03T18:35:40.197Z
+date: 2021-01-03T18:00:00.000Z
 intro: >
   Ob 16:12 so v naselju Štangarske Poljane, občina Šmartno pri Litiji, opazili
   razpoke na brežini ob glavni cesti. Posredovali smo gasilci PGD Štangarske
