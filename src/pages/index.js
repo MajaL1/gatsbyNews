@@ -39,6 +39,7 @@ class IndexPage extends Component {
         <StickyNews stickyNews={this.props.data.stickyNews.edges} />
 
         <News
+          news2021={this.props.data.newsfor2021.edges}
           news2020={this.props.data.newsfor2020.edges}
           news2019={this.props.data.newsfor2019.edges}
           news2018={this.props.data.newsfor2018.edges}
@@ -60,6 +61,37 @@ export const pageQuery = graphql`
     }
     stickyNews: allMarkdownRemark(
       filter: { frontmatter: { top: { eq: true } } }
+    ) {
+      edges {
+        node {
+          excerpt
+          fields {
+            slug
+          }
+          frontmatter {
+            image1 {
+              childImageSharp {
+                fluid(maxWidth: 300) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            title
+            intro
+            date(formatString: "DD.MM.YYYY")
+            category
+            top
+          }
+        }
+      }
+    }
+    newsfor2021: allMarkdownRemark(
+      filter: {
+        frontmatter: {
+          date: { lt: "2022-01-01", gt: "2021-01-01 " }
+          top: { eq: false }
+        }
+      }
     ) {
       edges {
         node {

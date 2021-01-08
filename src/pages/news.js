@@ -10,7 +10,9 @@ class News extends Component {
     this.onChange = this.onChange.bind(this)
 
     this.state = {
-      currentNews: this.props.news2020,
+      currentNews: this.props.news2021,
+      currentNews2020: this.props.news2020,
+      news2021: this.props.news2021,
       news2020: this.props.news2020,
       news2019: this.props.news2019,
       news2018: this.props.news2018,
@@ -19,6 +21,11 @@ class News extends Component {
   }
   onChange(option) {
     switch (option.label) {
+      case "2021":
+        this.setState({
+          currentNews: this.props.news2021,
+        })
+        break
       case "2020":
         this.setState({
           currentNews: this.props.news2020,
@@ -94,8 +101,11 @@ class News extends Component {
                 </header>
               </section>
             </div>
+
           )
-        })}
+        })
+        }
+
         <div className="content-section">
           <DropdownMenu onChange={this.onChange} />
         </div>
