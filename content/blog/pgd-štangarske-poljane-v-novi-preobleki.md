@@ -7,6 +7,7 @@ intro: >-
   2022, ko društvo praznuje prav posebno obletnico. S številnimi pridnimi rokami
   in ogromno volje nam je to uspelo.
 image1: /assets/20211125_143312.jpg
+image2: /assets/20210923_183641.jpg
 top: true
 category: Dogodki
 ---
