@@ -1,6 +1,6 @@
 ---
 title: Požari na gozdnih in grmovnih površinah 21. 3. 2022
-date: 2022-04-17T07:44:49.164Z
+date: 2022-03-21T16:44:49.164Z
 intro: >-
   21. 3. 2022 ob 4.32 je nad kamnolomom v Višnjem Grmu, občina Šmartno pri
   Litiji, zagorelo v gozdu.
