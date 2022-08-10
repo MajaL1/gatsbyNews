@@ -1,0 +1,588 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat|Gudea|Hind+Guntur|Michroma|Sulphur+Point|Mallanna|Lora|Handlee|Raleway");
+
+$dark-red: #640c0c;
+$content-title: #505050;
+$main-content-background: #eaeaea;
+$border-bottom-news: #c6c6c6;
+$news-item-title-hover: #9a1c14;
+$th-item-title: rgb(224, 224, 224);
+$povezave-link: #7d0b0b;
+$header-title-link: #dbd9d9;
+$news-content-color: rgb(63, 63, 66);
+$header-subtitle: #d6d673;
+$gallery-image-background: #eeeeee;
+$title-hover: lightgray;
+$body-font-color: black;
+$header-title-color: #dbd9d9;
+
+@mixin bg-gradient-header() {
+    background-image: linear-gradient(to bottom, #991f0d, #9b1a1a, #820404);
+}
+
+@mixin item-title-gradient() {
+    background-image: linear-gradient(to left, #eae9e9, #e3e3e3, #e2dddd);
+}
+
+@mixin content-main-div-background() {
+    background-image: linear-gradient(#b5b5b5, #dedcdc, #cacaca, #b9b7b7);
+}
+
+@mixin news-item-header-background() {
+    background-image: linear-gradient(#cccbcb, #fff9f9, #d2d0d0);
+}
+
+body,
+article,
+section,
+.main-content-right {
+    font-family: "Montserrat";
+    color: $body-font-color;
+}
+body {
+    position: sticky;
+    width: 100%;
+}
+
+.top-div {
+    min-height: 800px;
+}
+
+.right-112 {
+    text-align: left;
+}
+
+.right-112-title {
+    font-weight: bold;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+.right-112 .right-112-title {
+    text-align: left;
+}
+
+ul.right-list-112 {
+    list-style-type: circle;
+}
+
+.main-content {
+    background-color: $main-content-background;
+    padding: 10px;
+    width: 60%;
+    margin: 0 auto;
+    min-height: 800px;
+    flex-grow: 3;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.povezave-right {
+    font-size: x-small;
+    text-align: center;
+    margin-top: 30px;
+    padding: 0px 5px;
+}
+
+.povezave-right.address {
+    font-size: small;
+}
+
+.main-content-left {
+    width: 15%;
+}
+
+.main-content-right {
+    width: 17%;
+    background: transparent;
+}
+
+.main-content-right-title {
+    color: black;
+    margin-top: 10px;
+    text-align: center;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.content-title {
+    color: $content-title;
+    font-family: "Montserrat";
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+li {
+    text-decoration: none;
+    list-style: none;
+}
+
+.news-content {
+    color: $news-content-color;
+    font-style: italic;
+}
+
+.header {
+    background-image: linear-gradient(to bottom, #991f0d, #9b1a1a, #820404);
+    margin-bottom: 0rem;
+}
+
+.header.row {
+    padding: 10px;
+    display: flex;
+}
+
+.news-date {
+    font-style: italic;
+    color: rgb(97, 96, 96);
+    display: inline;
+}
+
+.news-header {
+    display: inline-block;
+}
+
+.news-item-title {
+    width: 100%;
+    padding-left: 15px;
+    display: block;
+    border-bottom: 1px $border-bottom-news solid;
+    text-align: start;
+    font-family: "Montserrat";
+    color: $dark-red;
+    font-weight: bold;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+a.news-item-title:hover {
+    color: $news-item-title-hover;
+}
+
+.content-main-div {
+    margin: 0 auto;
+    width: auto;
+    padding-top: 0;
+    background-image: linear-gradient(#b5b5b5, #dedcdc, #cacaca, #b9b7b7);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+a.povezava-item > img {
+    width: 70px;
+    margin-bottom: 10px;
+}
+
+.dropdown {
+    width: 25%;
+}
+
+.news-item-header {
+    background-image: linear-gradient(#cccbcb, #fff9f9, #d2d0d0);
+    margin-bottom: 20px;
+    padding: 10px;
+    border-bottom: $povezave-link 1px solid;
+    font-size: smaller;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.news-front-image {
+    flex-basis: auto;
+    min-width: 300px;
+}
+
+.news-front-content {
+    flex-basis: auto;
+    padding: 2%;
+}
+
+.news-item-link {
+    margin-left: 5%;
+    color: $dark-red;
+}
+
+.news-item-date {
+    padding-left: 15px;
+    margin-bottom: 10px;
+    display: inline-block;
+    font-style: italic;
+    color: $dark-red;
+}
+
+.news-item-intro {
+    padding-left: 15px;
+    margin-bottom: 0px;
+    font-size: larger;
+}
+
+.nagovor-predsednika {
+    font-style: italic;
+    font-family: "Lora";
+}
+
+.section-title {
+    text-align: left;
+}
+
+.gallery-content {
+    margin: 4%;
+}
+
+.section-column {
+    float: left;
+    width: 20%;
+    padding: 10px;
+}
+
+.first-column {
+    width: 40%;
+}
+
+.section-table {
+    margin: auto;
+    font-size: smaller;
+}
+
+.item-title {
+    margin: 20px 0px 20px 0px;
+    border-bottom: 1px solid lightgrey;
+    font-family: "Montserrat";
+    padding: 5px;
+    background-image: linear-gradient(to left, #eae9e9, #e3e3e3, #e2dddd);
+    color: $povezave-link;
+    font-weight: 600;
+}
+
+.content-section {
+    padding: 0% 3%;
+}
+
+article.content-section {
+    padding: 2% 3%;
+    background-color: whitesmoke;
+}
+
+table {
+    font-size: small;
+    width: 60%;
+}
+
+.content-section-contact {
+    padding: 10px;
+    line-height: 0.4rem;
+}
+
+.footer {
+    background-image: linear-gradient(to bottom, #991f0d, #9b1a1a, #820404);
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-text {
+    color: white;
+    display: inline-block;
+}
+
+.login-text {
+    float: right;
+    margin-right: 10px;
+}
+
+.main-footer-div {
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+}
+
+article {
+    text-align: justify;
+    font-size: smaller;
+}
+
+.work-item {
+    margin-left: 15px;
+}
+
+.img-article {
+    margin-left: 15px;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.header-logo {
+    flex-grow: 1;
+}
+
+.header-main-div {
+    flex-grow: 4;
+    text-align: center;
+    padding: 10px;
+}
+
+.header-icons {
+    flex-grow: 1;
+    padding-top: 10px;
+}
+
+.navbar-nav .dropdown-menu {
+    position: absolute;
+}
+
+th.item-title {
+    background: none;
+    text-align: left;
+    background-color: $th-item-title;
+}
+
+tr > td:first-child {
+    text-align: left;
+}
+
+th {
+    padding: 5px;
+}
+
+td {
+    padding: 10px;
+}
+
+table > tr > th {
+    width: 35%;
+}
+
+.thumb {
+    width: 200px;
+}
+
+.ul-news-link {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+}
+
+.header-title-link {
+    color: $header-title-color;
+    text-decoration: none;
+    text-align: center;
+    font-family: "Verdana";
+    text-shadow: 0.5px 0 #444242, 0 0.5px black, 0.5px 0 black, 0 -0.5px black;
+}
+
+.header-title-p {
+    color: $header-subtitle;
+    text-decoration: none;
+    text-align: center;
+    font-family: "Hind Guntur";
+    font-size: smaller;
+    text-shadow: black 0.11px 0px, black 0px 0.1px, black 0.1px 0px, black 0px 0.1px;
+    display: block;
+    padding: 0 20px;
+}
+
+a.header-title-link:hover {
+    text-decoration: none;
+    color: $title-hover;
+    padding: 10px;
+}
+
+.gallery-image {
+    transition: 0.9s;
+}
+.gallery-image-content:hover {
+    filter: brightness(100%);
+    transform: scale(1.01);
+}
+
+.gallery-content {
+    /**/
+    display: flex;
+    flex-wrap: wrap;
+    /**/
+    justify-content: center;
+    /* */
+    /*  column-count: 4;
+  column-gap: 1em;
+*/
+    /* */
+}
+
+.gallery-image-content {
+    align-self: center;
+    transform-origin: 50% 65%;
+    transition: transform 1s, filter 2s ease-in-out;
+    filter: brightness(150%);
+    margin: 3px;
+    background-color: $gallery-image-background;
+    display: inline-block;
+    /*
+    margin: 0 0 1em;
+    width: 100%; */
+}
+
+.povezave-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.povezave-link {
+    text-align: center;
+    padding: 5px;
+}
+
+.povezave-link > a {
+    font-size: x-small;
+    color: $povezave-link;
+    font-family: Verdana;
+    word-break: break-all;
+}
+
+.header-icons > a {
+    margin: 5px;
+}
+
+.home-section {
+    min-height: 800px;
+}
+
+.link-news {
+    color: $povezave-link;
+    padding-top: 15px;
+    display: inline-block;
+    font-size: smaller;
+}
+
+@media (min-width: 200px) and (max-width: 500px) and (orientation: portrait),
+    (min-width: 200px) and (max-width: 500px) and (orientation: landscape) {
+    .header-icons {
+        align-self: center;
+    }
+
+    .povezave-content {
+        width: 100%;
+    }
+
+    .gallery-content {
+        margin: 0;
+    }
+
+    .gallery-image {
+        width: auto;
+        height: auto;
+    }
+
+    .news-front-image {
+        flex-basis: auto;
+        width: 100%;
+    }
+
+    .news-item-header {
+        flex-wrap: wrap;
+    }
+
+    .main-content {
+        width: 95%;
+    }
+
+    .main-content-right {
+        width: 100%;
+        border-top: 2px darkgray solid;
+    }
+
+    .povezave-right {
+        text-align: center;
+        margin-left: 0px;
+    }
+
+    .povezave-link {
+        text-align: center;
+        margin-left: 0px;
+    }
+
+    .news-item-title,
+    .news-item-intro,
+    .news-item-date,
+    .content-section {
+        padding: 0;
+        margin: 0;
+    }
+
+    .news-item-date {
+        margin-bottom: 10px;
+        margin-top: 5px;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    .news-front-image {
+        min-width: 200px;
+    }
+}
+
+@media (min-width: 700px) and (max-width: 1200px) and (orientation: portrait) {
+    .gallery-image {
+        width: 200px;
+    }
+    .news-front-image {
+        min-width: 200px;
+    }
+
+    .right-112-title {
+        padding-left: 10px;
+    }
+}
+
+@media (max-height: 400px) and (min-width: 500px) and (orientation: landscape) {
+    .right-112-title {
+        padding-left: 10px;
+    }
+
+    .povezave-right {
+        margin-left: -20px;
+    }
+
+    .povezave-right.address {
+        font-size: x-small;
+        margin: 5px;
+    }
+
+    .navbar-nav {
+        position: absolute;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .gallery-content {
+        column-count: 4;
+    }
+}
+
+/* Masonry on medium-sized screens */
+@media only screen and (max-width: 1023px) and (min-width: 768px) {
+    .gallery-content {
+        column-count: 3;
+    }
+}
+
+/* Masonry on small screens */
+@media only screen and (max-width: 767px) and (min-width: 200px) {
+    .gallery-content {
+        column-count: 2;
+    }
+
+    .news-item-header {
+        display: block;
+    }
+}

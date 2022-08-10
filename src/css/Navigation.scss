@@ -1,0 +1,111 @@
+$nav-link-color: #611e25;
+$nav-link-color-2: #50030b;
+$navigation-link-hover: rgb(94, 93, 93);
+$navigation-dropdown-hover: rgb(94, 93, 93);
+
+@mixin nav-background(){
+    background-image: linear-gradient(#c5c1c1,#aba8a8,#8e8e8e);
+}
+
+@mixin navigation-dropdown-menu(){
+    background-image: linear-gradient(#b5b3b3,#ccc7c7,#a5a4a4);
+}
+
+.navigation-content {
+    background-image:linear-gradient(#c5c1c1,#aba8a8,#8e8e8e);
+    height: 44px;
+}
+
+.dropdown-menu.show {
+    background-image: linear-gradient(#b5b3b3,#ccc7c7,#a5a4a4);
+}
+
+.navigation-dropdown-link.navigation-link.dropdown.nav-item{
+    color: $nav-link-color;
+    border: none;
+}
+a.dropdown-toggle.nav-link {
+    padding: 10px 0px;
+}
+
+.navigation-dropdown-link.navigation-link.dropdown.nav-item>a {
+    color: $nav-link-color;
+    border: none;
+}
+
+.navigation-dropdown-link.navigation-link.dropdown.nav-item>a:hover {
+    color: $navigation-dropdown-hover;
+   
+}
+
+.dropdown-menu > a.navigation-link {
+    margin-left: 0px;
+}
+
+.navigation-link {
+    color: $nav-link-color-2;
+    text-shadow: "5px 0 #444242, 0 1px black, 1px 0 black, 0 -1px black";
+    display: block;
+    margin: auto;
+    margin-left: 30px;
+    text-transform: uppercase;
+    font-family: "Montserrat";
+    font-weight: bold;
+    border: 10px solid transparent;
+    transition: 0.9s;
+}
+
+.navigation-link:hover{
+    background-color: $navigation-link-hover;
+    color: lightgrey;
+    text-decoration: none;
+    padding: 0px;
+}
+
+.mr-auto.navbar-nav {
+    margin: 0 auto;
+}
+
+@media (min-width: 200px) and (max-width: 500px) and (orientation: portrait) {
+  .navigation-link {
+        margin: unset;
+        padding: 5px;
+        border: 3px solid transparent;
+  }
+
+  .dropdown-menu > a.navigation-link {
+        padding: 5px;
+  }
+
+  .dropdown-menu.show {
+        border: none;
+  }
+
+  .navigation-content {
+        height: auto;
+  }
+
+  .navigation-link:hover{
+        background: none;
+  }
+
+  .navbar-nav .dropdown-menu {
+    background: #ababab;
+  }
+
+  .navigation-dropdown-link.navigation-link.dropdown.nav-item>a:hover {
+        color: #50030b;
+  }
+
+}
+
+@media (min-width: 300px) and (max-width: 800px) and (orientation: landscape) {
+    
+    .mr-auto.navbar-nav {
+        background-image: linear-gradient(#b5b3b3,#ccc7c7,#a5a4a4);
+        width: 50%;
+        float: left;
+        z-index: 99999;
+    }   
+}
+ 
