@@ -74,7 +74,7 @@ const ContentRight = () => (
                 title="Spin javno"
             >
                 {/* Spin */}
-                <img src="../icons/spin.png" alt="Logo" />
+                <img src="../icons/spin.jpg" alt="Logo" />
             </a>
             <a
                 className="povezava-item"
