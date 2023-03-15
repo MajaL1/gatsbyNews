@@ -56,6 +56,7 @@ const NagovorPredsednika = () => (
           </section>
           <section className="content-section">Davčna Št. : 14804638</section>
           <section className="content-section">Matična Št.: 5131413000</section>
+          <section className="content-section">TRR: SI56 1913 0501 0710 803</section>
           <section className="content-section">
             Predsednik: Matej Jug 031 351 579
           </section>
