@@ -11,7 +11,7 @@ class News extends Component {
 
     this.state = {
       currentNews: this.props.news2022,
-      currentNews2021: this.props.news2021,
+      currentNews2022: this.props.news2022,
       news2022: this.props.news2022,
       news2021: this.props.news2021,
       news2020: this.props.news2020,
@@ -54,7 +54,7 @@ class News extends Component {
         break
       default:
         this.setState({
-          currentNews: this.props.news2021,
+          currentNews: this.props.news2022,
         })
         break
     }

@@ -22,8 +22,8 @@ const Kontakt = () => (
         <span className="content-section-contact">
           <strong>TRR</strong>
         </span>
-        <span>IBAN SI56 0290 0000 0200 020</span>
-
+        <span>IBAN SI56 1913 0501 0710 803</span>
+       
         <p />
         <span className="content-section-contact">
           <strong>Matična številka</strong>

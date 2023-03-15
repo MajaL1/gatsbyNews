@@ -60,7 +60,10 @@ const NagovorPredsednika = () => (
             Predsednik: Matej Jug 031 351 579
           </section>
           <section className="content-section">
-            Poveljnik: Tomaž Menegalija 041 579 687
+            Poveljnik: Robi Maren 031 708 861
+          </section>
+          <section className="content-section">
+            Namestnik poveljnika: Tomaž Menegalija 041 579 687
           </section>
           <footer></footer>
         </header>
